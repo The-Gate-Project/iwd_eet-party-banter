@@ -7,7 +7,7 @@ IF
   !StateCheck("Garrick",CD_STATE_NOTVALID)
 THEN
   RESPONSE #100
-    SetGlobal("GarrTempForGod","ID3600",1)
+    SetGlobal("WIGarrTempForGod","ID3600",1)
 	DisplayString("Garrick",@950 /* Such picturesque mountains, such desolate snowy plains! I feel a song welling up inside me. Over hill and into icey dales; our valiant troupe we would not fail! Through snow and ice our resolve grew strong! Not the least bit because of my great new soooong! Oh where’s my pen, I need to start writing this down! */)
 END
 
@@ -20,6 +20,6 @@ IF
   !StateCheck("Minsc",CD_STATE_NOTVALID)
 THEN
   RESPONSE #100
-    SetGlobal("MinsTemForGodEx","ID3600",1)
+    SetGlobal("WIMinsTemForGodEx","ID3600",1)
 	DisplayString("Minsc",@951 /* Boo does not look to have grown out his winter coat yet and has retreated even deeper into my armor than normal. Fear not Boo! I have sat naked upon the cold plains of Rashemen in winter for days at a time! My body has warmth enough for both of us. Just... watch where you nibble! */)
 END

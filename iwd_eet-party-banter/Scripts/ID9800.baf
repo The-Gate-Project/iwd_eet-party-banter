@@ -1,5 +1,5 @@
 IF
-  Global("HexxJackClanCave","ID9800",0)
+  Global("WIHexxJackClanCave","ID9800",0)
   !StateCheck(Player1,CD_STATE_NOTVALID)
   CombatCounter(0)
   InParty("Hexxat")
@@ -7,6 +7,6 @@ IF
   !StateCheck("Hexxat",CD_STATE_NOTVALID)
 THEN
   RESPONSE #100
-    SetGlobal("HexxJackClanCave","ID9800",1)
+    SetGlobal("WIHexxJackClanCave","ID9800",1)
 	DisplayString("Hexxat",@2750 /* I can see the workings of traps up ahead spaced only steps after the last. Move slowly unless you wish for a quick death. */)
 END
