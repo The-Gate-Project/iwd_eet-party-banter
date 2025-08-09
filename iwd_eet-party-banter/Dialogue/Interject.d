@@ -1,16 +1,24 @@
 //IWD Main Dialogue Interjections
 I_C_T3 DDAMIEN 0 WIDDAMIEN0
+
 == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @10000 /* Oh dear! Come quickly here. We will not let any monsters hurt you. Hurry! */
 END
 
 I_C_T3 DDAMIEN 8 WIDDAMIEN8
+
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10001
+
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10001 /* Like taking candy from a baby... well, fish from a baby. Oh nevermind... */
+
 == DORNJ IF ~InParty("Dorn") InMyArea("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN @10002 /* If you would like your fish back, you must fight me for it boy. You can only truly say you own something when you can kill anyone who would take it from you. */ 
 END
 
 I_C_T3 DDAMIEN 11 WIDDAMIEN11
+
 == JANJ IF ~InParty("Jan") InMyArea("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @10003 /* Excuse me little one, but just in case you should possibly consider procuring a good crossbow to defend yourself with in the future. And it just so happens that I have a range of high quality and disputably legal bolts just for you! Imagine the next time a yeti comes into town only for BAM! A Jansen patented flash master bruiser mate to strike him blind. Why you and your friends could simply beat him with sticks into submission after! Just don't tell your dad you got these from me ok? */
+
 == DDAMIEN @10004 /* Oh that's so neat! Pew pew Yetis you're dead haha! */
+
 == JANJ IF ~InParty("Jan") InMyArea("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @10005 /* Oh... it just brings a tear to this gnome's heart to see a child empowered by slightly illegal ammunition. Remember don't tell your dad! */
 END
 
@@ -23,10 +31,17 @@ I_C_T3 DJHONEN 8 WIDJHONEN8
 END
 
 I_C_T3 DJHONEN 12 WIDJHONEN12
+
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10008
+
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10008 /* Ah, but it was our pleasure. Voices from the deep are never to be entertained with anything but healthy caution and fear. It is to your benefit you know this. */
+
 == HAERDAJ IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @10009 /* An inversion of the expected outcome is it? You have made the tragedy a satire and turned it on its head. Though I prefer the bittersweet myself. Better to dream and long for a thing that cannot be than flee in fear from a thing that isn't there. */
+
 == GARRIJ IF ~InParty("Garrick") InMyArea("Garrick") !StateCheck("Garrick",CD_STATE_NOTVALID)~ THEN @10010 /* Well that was a very... disappointing conclusion to this story. Maybe I'll leave this one out of the songs altogether... */
+
 == VICONIJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10011 /* Such a gullible fool. Just like all surfacers their first reaction to all things they do not understand is to run and hide.  */
+
 == DJHONEN @10012 /* I think I'll take the next caravan to Targos. */
 END
 
@@ -35,13 +50,19 @@ I_C_T3 DJHONEN 14 WIDJHONEN14
 == GARRIJ IF ~InParty("Garrick") InMyArea("Garrick") !StateCheck("Garrick",CD_STATE_NOTVALID)~ THEN @10014 /* I think I'll miss it too. I only just heard it the once, but it's not something you ever forget. Maybe I'll might write a song about it. */
 == QUAYLJ IF ~InParty("Quayle") InMyArea("Quayle") !StateCheck("Quayle",CD_STATE_NOTVALID) InParty("Garrick") InMyArea("Garrick") !StateCheck("Garrick",CD_STATE_NOTVALID)~ THEN @10015 /* A song about a song? No one is going to want to listen to that. */
 == GARRIJ IF ~InParty("Garrick") InMyArea("Garrick") !StateCheck("Garrick",CD_STATE_NOTVALID) InParty("Quayle") InMyArea("Quayle") !StateCheck("Quayle",CD_STATE_NOTVALID)~ THEN @10016 /* *sigh* You're probably right.* */
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10017
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10017 /* Such sentimentality is a bore. There are always more maidens out there. Let me assure you that any strumpet's song will do when it is sung in the bedchambers. Once that entertains your thoughts, you'll forget this whole tiresome affair. */
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID) InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10018
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10018 /* I'm sorry, what was that? */
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID) InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10019
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10019 /* Always search for true love my friend! True love and nothing else for anything but is a fleeting dream. True love lasts forever as I've found with my... true... love... here (Ugh, it hurts even to say) */
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID) InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10020
 == SKIEJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10020 /* Oh Eldoth you're such a romantic! */
 END
 
 I_C_T3 DJHONEN 22 WIDJHONEN22
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10021
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10021
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10021 /* The enchantments on this blade were well hidden in its shattered state. It seems that Jhonen was the missing trigger to activate them and reform the blade. I doubt it will be enough to turn the tide of this battle, but we can use all the help we can get. */
 == NALIAJ IF ~InParty("Nalia") InMyArea("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @10022 /* It seems that all the blade needed to reform itself was Jhonen's presence. If it's keyed to his ancestry, that makes sense. I'm not sure the enchantment will hold if we stray far from Easthaven, but right now that's probably not the biggest concern. */
 END
@@ -80,6 +101,8 @@ I_C_T3 DELISIA 0 WIDELISIA0
 == IMOEN2J IF ~InParty("Imoen2") InMyArea("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10038 /* Sure thing Viccy. You keep playin' that heart of stone thing you got goin on. Obviously it's workin for ya. */
 == NEERAJ IF ~InParty("Neera") InMyArea("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN @10039 /* Aww did you make yourself blue? I once cast a spell that made my skin a really disgusting shade of green. I was a complete eyesore for like a week until I was finally able to dispel it. Some people even thought I was part orc and tried to set me on fire. Good times. */
 == KIVANJ IF ~InParty("Kivan") InMyArea("Kivan") !StateCheck("Kivan",CD_STATE_NOTVALID)~ THEN @10040 /* Sweet is the song she sings. So sweet, it pains me to hear it, but I cannot help but listen. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10041
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10041
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10041 /* Her song... it is pleasing to the ear. But there is a dread as well and I feel like I might be drowning. The sweetest death so they say, and by they, I mean complete idiots who think any death could be sweet. */
 == CORANJ IF ~InParty("Coran") InMyArea("Coran") !StateCheck("Coran",CD_STATE_NOTVALID)~ THEN @10042 /* Greetings m'lady. Might I say, your skin is such a fine shade of blue. I dare say I've seen many exotic women in my time, but none attracted the eye so favorably as you.  */
 == HAERDAJ IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @10043 /* Ahh the Dreamer's dilemma takes shape before us. I sense a longing, a lingering love in her tune my raven.  */
@@ -105,6 +128,7 @@ END
 
 I_C_T3 DOLDJED 13 WIDOLDJED13
 == ANOMENJ IF ~InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @10053 /* Ugh, leave this drunk to his hole. There's work to be done. */
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10054
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10054 /* Well, at least one person has the right of the situation. Just watch the shoes old chap. */
 END
 
@@ -127,17 +151,41 @@ I_C_T3 DHILDRTH 4 WIDHILDRTH4
 END
 
 I_C_T3 DGRISELL 7 WIDGRISELL7
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10067
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10067 /* Killing pests from this old bag's cellar just for a drink? How insipid... You don't mind if I sit this one out do you? Pest removal is simply not one of my numerous talents. */
+// Baeloth BG2 == ZDBAEJ IF ~InParty("ZDBAE") InMyArea("ZDBAE") !StateCheck("ZDBAE",CD_STATE_NOTVALID)~ THEN @10068
 == BAELOTHJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @10068 /* Surely this woman is so rotund we could simply roll her down the stairs to crush the vermin below? What? I'm just thinking for efficiency's sake here! */
 == CERNDJ IF ~InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN @10069 /* Hmm burrowing insects in this climate... Surely a large beetle of some kind. I used to collect beetles when I was a boy but... I suppose now is not the time. */
 END
 
 I_C_T3 DGRISELL 13 WIDGRISELL13
+
 == IMOEN2J IF ~InParty("Imoen2") InMyArea("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN @10070 /* This all feels like the humble beginnings of someone else's story. I've stolen my fair share of things but I dunno how comfortable I feel stealing legends. */
+
 == CORANJ IF ~InParty("Coran") InMyArea("Coran") !StateCheck("Coran",CD_STATE_NOTVALID)~ THEN @10071 /* Hmm... Enough coin to buy another round. Well, a victory is a victory. Let us drink to celebrate our courageous battle against those small and mostly defenseless insects. */
-== XANJ IF ~InParty("Coran") InMyArea("Coran") !StateCheck("Coran",CD_STATE_NOTVALID) InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10072 /* Yes, let us drink now, for the next battle shall surely be our last. */
-== CORANJ IF ~InParty("Coran") InMyArea("Coran") !StateCheck("Coran",CD_STATE_NOTVALID) InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10073 /* And just like that, the desire is gone. Leave it to you to kill the mood in record speed Xan. */
-== XANJ IF ~InParty("Coran") InMyArea("Coran") !StateCheck("Coran",CD_STATE_NOTVALID) InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10074 /* I live to exceed your expectations. */
+
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID) OR(3) InParty("Coran") InParty("O#Coran") InParty("7XCoran") OR(3) InMyArea("Coran") InMyArea("O#Coran") InMyArea("7XCoran") OR(3) !StateCheck("Coran",CD_STATE_NOTVALID) !StateCheck("O#Coran",CD_STATE_NOTVALID) !StateCheck("7XCoran",CD_STATE_NOTVALID)~ THEN @10072
+
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID) OR(3) InParty("Coran") InParty("O#Coran") InParty("7XCoran") OR(3) InMyArea("Coran") InMyArea("O#Coran") InMyArea("7XCoran") OR(3) !StateCheck("Coran",CD_STATE_NOTVALID) !StateCheck("O#Coran",CD_STATE_NOTVALID) !StateCheck("7XCoran",CD_STATE_NOTVALID)~ THEN @10072
+
+== XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)
+OR(3) InParty("Coran") InParty("O#Coran") InParty("7XCoran")
+OR(3) InMyArea("Coran") InMyArea("O#Coran") InMyArea("7XCoran")
+OR(3) !StateCheck("Coran",CD_STATE_NOTVALID) !StateCheck("O#Coran",CD_STATE_NOTVALID) !StateCheck("7XCoran",CD_STATE_NOTVALID)~ THEN @10072 /* Yes, let us drink now, for the next battle shall surely be our last. */
+
+== CORANJ IF ~InParty("Coran") InMyArea("Coran") !StateCheck("Coran",CD_STATE_NOTVALID)
+OR(3) InParty("Xan") InParty("O#XAN") InParty("7XXAN")
+OR(3) InMyArea("Xan") InMyArea("O#XAN") InMyArea("7XXAN")
+OR(3) !StateCheck("Xan",CD_STATE_NOTVALID) !StateCheck("O#XAN",CD_STATE_NOTVALID) !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10073 /* And just like that, the desire is gone. Leave it to you to kill the mood in record speed Xan. */
+
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID) OR(3) InParty("Coran") InParty("O#Coran") InParty("7XCoran") OR(3) InMyArea("Coran") InMyArea("O#Coran") InMyArea("7XCoran") OR(3) !StateCheck("Coran",CD_STATE_NOTVALID) !StateCheck("O#Coran",CD_STATE_NOTVALID) !StateCheck("7XCoran",CD_STATE_NOTVALID)~ THEN @10074
+
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID) OR(3) InParty("Coran") InParty("O#Coran") InParty("7XCoran") OR(3) InMyArea("Coran") InMyArea("O#Coran") InMyArea("7XCoran") OR(3) !StateCheck("Coran",CD_STATE_NOTVALID) !StateCheck("O#Coran",CD_STATE_NOTVALID) !StateCheck("7XCoran",CD_STATE_NOTVALID)~ THEN @10074
+
+== XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)
+OR(3) InParty("Coran") InParty("O#Coran") InParty("7XCoran")
+OR(3) InMyArea("Coran") InMyArea("O#Coran") InMyArea("7XCoran")
+OR(3) !StateCheck("Coran",CD_STATE_NOTVALID) !StateCheck("O#Coran",CD_STATE_NOTVALID) !StateCheck("7XCoran",CD_STATE_NOTVALID)~ THEN @10074 /* I live to exceed your expectations. */
 END
 
 I_C_T3 DPOMAB 0 WIDPOMAB0
@@ -153,18 +201,32 @@ END
 
 I_C_T3 DEREVAIN 0 WIDEREVAIN0
 == KIVANJ IF ~InParty("Kivan") InMyArea("Kivan") !StateCheck("Kivan",CD_STATE_NOTVALID)~ THEN @10080 /* Ho there Erevain Blacksheaf. I am Kivan of Shilmistra. It is good to see another of the fair folk so far afield. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10081
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10081
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10081 /* E... Erevain? You are here? */
 == DEREVAIN IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10082 /* Xan? Cousin? Well isn't this a surprise! You know me, always in for a spot of adventure. If anyone needs to explain themselves it's you. I didn't think the Greycloaks would ever get you out of your tower. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10083
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10083
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10083 /* They asked me to investigate some foreign concerns here. Very umm... very secret mission. So here I am, improbably at the far ends of Faerun. */
 == DEREVAIN IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10084 /* What's wrong Xan? Why I dare say you look unusually pale, even to your snowy complexion. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10085
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10085
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10085 /* The frigid air here is truly horrendous. I have had a cough for the last several days and the leaking of my nose is incessent. It has left me quite miserable. */
 == DEREVAIN IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10086 /* Well, at least you're giving it a try. I hope you aren't getting your companions too down. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10087
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10087
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10087 /* I needn't bother. The hopelessness of our quest is self-evident. */
 == DEREVAIN IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10088 /* Never change Xan. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10089
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10089
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10089 /* ...Erevain, you know your father has forgiven you. You needn't be on this quest. If you'd just but go home... */
 == DEREVAIN IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10090 /* And let you take all the glory of exploring this untamed wild? Ah, I could never live with myself. Besides... I think I need this time away. It's best for everyone. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10091
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10091
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10091 /* I understand. Farewell Erevain. */
 == DEREVAIN IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10092 /* And you as well Xan. I'll see you back in Evereska. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10093
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10093
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10093 /* Should we both make it. I'll not dare to hope but... perhaps. */
 END
 
@@ -174,7 +236,7 @@ END
 
 I_C_T3 DACCALIA 15 WIDACCALIA15
 == BRANWJ IF ~InParty("Branwen") InMyArea("Branwen") !StateCheck("Branwen",CD_STATE_NOTVALID)~ THEN @10095 /* Ah tis good of you to take up the cause even with such beliefs. The womenfolk of the realms are just as impacted by the battles throughout the Realms as men. Tis only right they learn to participate directly as is Tempus' will. I have had to deal with much scorn myself, but tis only made me stronger for it! */
-== DACCALIA IF ~InParty("Branwen") InMyArea("Branwen") !StateCheck("Branwen",CD_STATE_NOTVALID)~ THEN @10096 /* I see that in your poise. Fight well in the name of Tempus as an example for all of us. */
+== DACCALIA IF ~OR(3) InParty("Branwen") InParty("O#Bran") InParty("7XBRAN") OR(3) InMyArea("Branwen") InMyArea("O#Bran") InMyArea("7XBRAN") OR(3) !StateCheck("Branwen",CD_STATE_NOTVALID) !StateCheck("O#Bran",CD_STATE_NOTVALID) !StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @10096 /* I see that in your poise. Fight well in the name of Tempus as an example for all of us. */
 == SHARTJ IF ~InParty("SharTeel") InMyArea("SharTeel") !StateCheck("SharTeel",CD_STATE_NOTVALID)~ THEN @10097 /* Why am I not surprised to hear the men of the barbarian tribes are as foolish as any other? Should we encounter any, I will be sure to show them what woman-wielded steel can do, first hand. */
 == DACCALIA IF ~InParty("SharTeel") InMyArea("SharTeel") !StateCheck("SharTeel",CD_STATE_NOTVALID)~ THEN @10098 /* The fire in your heart is... admirable, but remember that Tempus teaches us we should not fight battles without considering if such battles are necessary. */
 == SHARTJ IF ~InParty("SharTeel") InMyArea("SharTeel") !StateCheck("SharTeel",CD_STATE_NOTVALID)~ THEN @10099 /* Stuff your considerations. I'll be out there giving men the steel they deserve right where they deserve it and doing more for the better sex than you ever will kneeling at the altar of your male god. */
@@ -196,9 +258,16 @@ I_C_T3 DEVERARD 6 WIDEVERARD6
 END
 
 I_C_T3 DEVERARD 8 WIDEVERARD8
+
 == BRANWJ IF ~InParty("Branwen") InMyArea("Branwen") !StateCheck("Branwen",CD_STATE_NOTVALID)~ THEN @10109 /* *The* Jarrod? Here? His glorious battle lives on in the annals of all mine faith... I must speak a prayer in silence... but please <CHARNAME> if you hadst not heard the tale yet, please ask further. Tis a great story and should be known by all! */
-== ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID) InParty("Branwen") InMyArea("Branwen") !StateCheck("Branwen",CD_STATE_NOTVALID)~ THEN @10110 /* *giggles* I've never seen Branny so excited before. It's so cute! */
-== NEERAJ IF ~InParty("Neera") InMyArea("Neera") !StateCheck("Neera",CD_STATE_NOTVALID) InParty("Branwen") InMyArea("Branwen") !StateCheck("Branwen",CD_STATE_NOTVALID)~ THEN @10111 /* Don't fangirl too hard or anything... */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID)  OR(3) InParty("Branwen") InParty("O#Bran") InParty("7XBRAN") OR(3) InMyArea("Branwen") InMyArea("O#Bran") InMyArea("7XBRAN") OR(3) !StateCheck("Branwen",CD_STATE_NOTVALID) !StateCheck("O#Bran",CD_STATE_NOTVALID) !StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @10110
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID) OR(3) InParty("Branwen") InParty("O#Bran") InParty("7XBRAN") OR(3) InMyArea("Branwen") InMyArea("O#Bran") InMyArea("7XBRAN") OR(3) !StateCheck("Branwen",CD_STATE_NOTVALID) !StateCheck("O#Bran",CD_STATE_NOTVALID) !StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @10110
+
+== ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID) OR(3) InParty("Branwen") InParty("O#Bran") InParty("7XBRAN") OR(3) InMyArea("Branwen") InMyArea("O#Bran") InMyArea("7XBRAN") OR(3) !StateCheck("Branwen",CD_STATE_NOTVALID) !StateCheck("O#Bran",CD_STATE_NOTVALID) !StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @10110 /* *giggles* I've never seen Branny so excited before. It's so cute! */
+
+== NEERAJ IF ~InParty("Neera") InMyArea("Neera") !StateCheck("Neera",CD_STATE_NOTVALID) OR(3) InParty("Branwen") InParty("O#Bran") InParty("7XBRAN") OR(3) InMyArea("Branwen") InMyArea("O#Bran") InMyArea("7XBRAN") OR(3) !StateCheck("Branwen",CD_STATE_NOTVALID) !StateCheck("O#Bran",CD_STATE_NOTVALID) !StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @10111 /* Don't fangirl too hard or anything... */
 END
 
 I_C_T3 DEVERARD 10 WIDEVERARD10
@@ -214,6 +283,8 @@ END
 I_C_T3 DEVERARD 16 WIDEVERARD16
 == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @10116 /* He obviously felt very strongly at the time, and because of what he did the world is saved. It seems unfair to judge him so harshly now... */
 == BRANWJ IF ~InParty("Branwen") InMyArea("Branwen") !StateCheck("Branwen",CD_STATE_NOTVALID)~ THEN @10117 /* ‘Tis possible Tempus did not require Jerrod to sacrifice so. But none but Tempus can say. ‘Twas a valiant sacrifice nonetheless and must have been blessed by Tempus to have succeeded so. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10118
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10118
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10118 /* Overwhelmed by the forces of hell, survival seeming ever hopeless, he simply threw himself into the portal? A story I can relate to keenly. Though I doubt my death will have as much meaning. */
 == FALDOJ IF ~InParty("Faldorn") InMyArea("Faldorn") !StateCheck("Faldorn",CD_STATE_NOTVALID)~ THEN @10119 /* This archdruid trusted a human to carry his message? Feh, the the druids of the north are just as misguided as those heretical circles in the south.  */
 END
@@ -251,9 +322,21 @@ I_C_T3 DEVERARD 33 WIDEVERARD33
 END
 
 I_C_T3 DHROTH 4 WIDHROTH4
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10128
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10128
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10128 /* Ooo look at all this neat stuff. Oh is that a stuffed minotaur's head?! Can I touch it? Can I? Pleaaaase... */
-== DHROTH IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10129 /* I see no reason why not. Do you need me to give you a boost? */
+
+== DHROTH IF ~OR(3) InParty("Alora") InParty("CMAlora") InParty("7XALORA") OR(3) InMyArea("Alora") InMyArea("CMAlora") InMyArea("7XALORA") OR(3) !StateCheck("Alora",CD_STATE_NOTVALID) !StateCheck("CMAlora",CD_STATE_NOTVALID) !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10129 /* I see no reason why not. Do you need me to give you a boost? */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10130
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10130
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10130 /* Yippeee! */
+
 == YOSHJ IF ~InParty("Yoshimo") InMyArea("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ THEN @10131 /* I see here trinkets from as far as far east as Taan and... is this a fetish from Zakhara? Oh ho my friend, if one's life is measured by the span of land they've traveled, you have lived quite the full one. */
 END
 
@@ -275,11 +358,16 @@ I_C_T3 DHROTH 11 WIDHROTH11
 == MINSCJ IF ~InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID) InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @10141 /* Minsc will always stand by his witch, and Boo will always stand by him! Even the thickest snow will not hide evil from us! */
 == QUAYLJ IF ~InParty("Quayle") InMyArea("Quayle") !StateCheck("Quayle",CD_STATE_NOTVALID)~ THEN @10143 /* I've got it! We'll check out what's been going on in Kuldahar. For now we'll have to accompany this Hrothgar guy, we can just ditch him once we're through the pass though. He would probably just weigh us down with his inferior intelligence. */
 == KORGANJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @10144 /* Protectin' caravans be a dull trade. Well, lets see what money he's offerin'... I ain't seein a better chance fer bloodshed yet. */
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10145
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @10145
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10145 /* Are we traveling even further into the north? Well, maybe this would be a good time to shop for some even colder weather wear? Or some better boots. I think I need better boots... */
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID) InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10146
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10146 /* Now now Skie, I seem to recall just getting you a new pair of shoes shortly before we left. Let's not be greedy. */
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10147
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10147 /* But those shoes were so last season... I can't be seen wearing them now. */
-== GARRIJ IF ~InParty("Garrick") InMyArea("Garrick") !StateCheck("Garrick",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10148 /* It would be an honor to procure a new pair of shoes for you m'lady. */
-== ELDOTJ IF ~InParty("Garrick") InMyArea("Garrick") !StateCheck("Garrick",CD_STATE_NOTVALID) InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10149 /* Better your wallet than mine. */
+== GARRIJ IF ~InParty("Garrick") InMyArea("Garrick") !StateCheck("Garrick",CD_STATE_NOTVALID) OR(3) InParty("Skie") InParty("L#2SDSkie") InParty("7XSki") OR(3) InMyArea("Skie") InMyArea("L#2SDSkie") InMyArea("7XSki") OR(3) !StateCheck("Skie",CD_STATE_NOTVALID) !StateCheck("L#2SDSkie",CD_STATE_NOTVALID) !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10148 /* It would be an honor to procure a new pair of shoes for you m'lady. */
+// BG1inBG2 == 7XEldoJ IF ~OR(2) InParty("Garrick") InParty("7XGar") OR(2) InMyArea("Garrick")InMyArea("7XGar") OR(2) !StateCheck("Garrick",CD_STATE_NOTVALID) !StateCheck("7XGar",CD_STATE_NOTVALID) InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID) InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10149
+== ELDOTJ IF ~OR(2) InParty("Garrick") InParty("7XGar") OR(2) InMyArea("Garrick")InMyArea("7XGar") OR(2) !StateCheck("Garrick",CD_STATE_NOTVALID) !StateCheck("7XGar",CD_STATE_NOTVALID) InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10149 /* Better your wallet than mine. */
 == KHALIJ IF ~InParty("Khalid") InMyArea("Khalid") !StateCheck("Khalid",CD_STATE_NOTVALID)~ THEN @10150 /* Well, y-you know that I am willing <CHARNAME>. This sounds like a noble c-cause and I'd be happy t-to lend my arm to it. */
 == JAHEIRAJ IF ~InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @10151 /* <CHARNAME>, I'd like for us to travel with this man. I know little of this area but I feel that there is something important happening here... something that deeply threatens the balance of this region... and perhaps even beyond. */
 == KHALIJ IF ~InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID) InParty("Khalid") InMyArea("Khalid") !StateCheck("Khalid",CD_STATE_NOTVALID)~ THEN @10152 /* Be that b-b-because of your druid's senses? */
@@ -316,34 +404,80 @@ I_C_T3 DHROTH 35 WIDHROTH35
 END
 
 I_C_T3 DHROTH 37 WIDHROTH37
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10171
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10171 /* How much wine is on that list? We should triple whatever old Hrothgar here thinks is necessary. No wait, quintuple. I have a powerful thirst and meniality only makes it stronger. */
 == EDWINJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID) InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @10172 /* The bard's nature is boorish but I am in agreement. One cannot underestimate the benefits of drink in dulling unpleasant company. */
 END
 
 I_C_T3 DHERMIT 0 WIDHERMIT0
+
 == XZARJ IF ~InParty("Xzar") InMyArea("Xzar") !StateCheck("Xzar",CD_STATE_NOTVALID)~ THEN @10173 /* Only the mind, but t'was a casualty of an avalanche long before this one. */
+
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10174
+
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10174
+
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10174 /* Somehow, inexplicably, we have avoided death yet again. Though the shock of our survival may overwhelm my heart yet. */
-== ALORAJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID) InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10175 /* HEY XAN ARE YOU OK?! */
-== XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID) InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10176 /* Hurk! Wh-whe-who...?! Oh... it's just you. Yes, gods yes, I'm fine. */
-== ALORAJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID) InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10177 /* Just makin sure! *giggles* */
+
+// Alora for BG2 == CMALORAJ IF ~OR(3) InParty("Xan") InParty("O#XAN") InParty("7XXAN") OR(3) InMyArea("Xan") InMyArea("O#XAN") InMyArea("7XXAN") OR(3) !StateCheck("Xan",CD_STATE_NOTVALID) !StateCheck("O#XAN",CD_STATE_NOTVALID) !StateCheck("7XXAN",CD_STATE_NOTVALID) InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10175
+
+// BG1inBG2 == 7XALORAJ IF ~OR(3) InParty("Xan") InParty("O#XAN") InParty("7XXAN") OR(3) InMyArea("Xan") InMyArea("O#XAN") InMyArea("7XXAN") OR(3) !StateCheck("Xan",CD_STATE_NOTVALID) !StateCheck("O#XAN",CD_STATE_NOTVALID) !StateCheck("7XXAN",CD_STATE_NOTVALID) InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10175
+
+== ALORAJ IF ~OR(3) InParty("Xan") InParty("O#XAN") InParty("7XXAN") OR(3) InMyArea("Xan") InMyArea("O#XAN") InMyArea("7XXAN") OR(3) !StateCheck("Xan",CD_STATE_NOTVALID) !StateCheck("O#XAN",CD_STATE_NOTVALID) !StateCheck("7XXAN",CD_STATE_NOTVALID) InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10175 /* HEY XAN ARE YOU OK?! */
+
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID) OR(3) InParty("Alora") InParty("CMAlora") InParty("7XALORA") OR(3) InMyArea("Alora") InMyArea("CMAlora") InMyArea("7XALORA") OR(3) !StateCheck("Alora",CD_STATE_NOTVALID) !StateCheck("CMAlora",CD_STATE_NOTVALID) !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10176
+
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID) OR(3) InParty("Alora") InParty("CMAlora") InParty("7XALORA") OR(3) InMyArea("Alora") InMyArea("CMAlora") InMyArea("7XALORA") OR(3) !StateCheck("Alora",CD_STATE_NOTVALID) !StateCheck("CMAlora",CD_STATE_NOTVALID) !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10176
+
+== XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID) OR(3) InParty("Alora") InParty("CMAlora") InParty("7XALORA") OR(3) InMyArea("Alora") InMyArea("CMAlora") InMyArea("7XALORA") OR(3) !StateCheck("Alora",CD_STATE_NOTVALID) !StateCheck("CMAlora",CD_STATE_NOTVALID) !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10176 /* Hurk! Wh-whe-who...?! Oh... it's just you. Yes, gods yes, I'm fine. */
+
+// Alora for BG2 == CMALORAJ IF ~OR(3) InParty("Xan") InParty("O#XAN") InParty("7XXAN") OR(3) InMyArea("Xan") InMyArea("O#XAN") InMyArea("7XXAN") OR(3) !StateCheck("Xan",CD_STATE_NOTVALID) !StateCheck("O#XAN",CD_STATE_NOTVALID) !StateCheck("7XXAN",CD_STATE_NOTVALID) InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10177
+
+// BG1inBG2 == 7XALORAJ IF ~OR(3) InParty("Xan") InParty("O#XAN") InParty("7XXAN") OR(3) InMyArea("Xan") InMyArea("O#XAN") InMyArea("7XXAN") OR(3) !StateCheck("Xan",CD_STATE_NOTVALID) !StateCheck("O#XAN",CD_STATE_NOTVALID) !StateCheck("7XXAN",CD_STATE_NOTVALID) InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10177
+
+
+== ALORAJ IF ~OR(3) InParty("Xan") InParty("O#XAN") InParty("7XXAN") OR(3) InMyArea("Xan") InMyArea("O#XAN") InMyArea("7XXAN") OR(3) !StateCheck("Xan",CD_STATE_NOTVALID) !StateCheck("O#XAN",CD_STATE_NOTVALID) !StateCheck("7XXAN",CD_STATE_NOTVALID) InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10177 /* Just makin sure! *giggles* */
+
 == VICONIJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10178 /* Away from me rivvil! The avalanche would be a comforting embrace next to your revolting concern. */
+
 == IMOEN2J IF ~InParty("Imoen2") InMyArea("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10179 /* That's Viccy's way of saying 'I'm swell, gee thanks for askin'! */
+
 == KHALIJ IF ~InParty("Khalid") InMyArea("Khalid") !StateCheck("Khalid",CD_STATE_NOTVALID)~ THEN @10180 /* I t-think we are alright. T-that w-was a c-c-close one. Oh b-but... the others... */
+
 == JAHEIRAJ IF ~InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID) InParty("Khalid") InMyArea("Khalid") !StateCheck("Khalid",CD_STATE_NOTVALID)~ THEN @10181 /* Steady yourself Khalid. We made it. *I* made it. Listen to my voice... we are ok. */
+
 == KHALIJ IF ~InParty("Khalid") InMyArea("Khalid") !StateCheck("Khalid",CD_STATE_NOTVALID) InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID) ~ THEN @10182 /* Y-yes dear... yes. I hear you. Thank the g-gods you're ok. */
+
 == YOSHJ IF ~InParty("Yoshimo") InMyArea("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ THEN @10183 /* It seems that luck was indeed on our side. Even for adventurers as seasoned as ourselves, one can still fall victim to a clever trap laid by a foe at a superior vantage. */
+
 == ANOMENJ IF ~InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) InParty("Yoshimo") InMyArea("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ THEN @10184 /* Such are the tricks of craven villains. Were they to face us honorably, ours would have been the upper hand. */
+
 == YOSHJ IF ~InParty("Yoshimo") InMyArea("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID) InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @10185 /* Ah but Anomen my friend, that is exactly why they did not face us on even ground. A wise tactician only goes to war when they can be certain they've secured victory before the fight has started. */
+
 == ANOMENJ IF ~InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) InParty("Yoshimo") InMyArea("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ THEN @10186 /* I'd expect as much from a rogue such as you. */
+
 == YOSHJ IF ~InParty("Yoshimo") InMyArea("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID) InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @10187 /* Ah, such is the way of things. We live now, so I suppose there still is chance for us to find the fair fight you so desire. */
+
 == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @10188 /* We're fine but... Hrothgar and the others... I think *sniff* I d-don't think we can go back for them... */
+
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10189
+
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @10189
+
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10189 /* I cannot believe this! My coat is ruined. That was... I got that from my father. Maybe... maybe I'm better off without it but... no this is just not good. */
+
 == TIAXJ IF ~InParty("Tiax") InMyArea("Tiax") !StateCheck("Tiax",CD_STATE_NOTVALID)~ THEN @10190 /* Your concern is unneeded. Tiax cannot be felled by any mere act of nature. Cyric would not permit it while his ascension still approaches. Ohhh but his toes are FREEZING. UNACCEPTABLE! */
 END
 
 I_C_T3 DHERMIT 4 WIDHERMIT4
 == RASAADJ IF ~InParty("Rasaad") InMyArea("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN @10191 /* Please my friend, responsible though you may have not been, show a little respect at least. They deserved that much. */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10192
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10192
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10192 /* Hey that wasn't a very nice thing to say! Did the cave moss you licked his morning give you bad gas or something? You should be a bit nicer. */
+
 == MONTAJ IF ~InParty("Montaron") InMyArea("Montaron") !StateCheck("Montaron",CD_STATE_NOTVALID)~ THEN @10193 /* Aye, tis job for a gravedigger an' this group certainly ain't payin' me enough fer such a task. Besides, snow's as good as dirt fer the dead. */
 END
 
@@ -443,8 +577,23 @@ END
 I_C_T3 DJERMSY 3 WIDJERMSY3
 == KELDORJ IF ~InParty("Keldorn") InMyArea("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN @10232 /* I do not like the idea of letting this child go unattended, especially given the horrifying events that have transpired here. But I suppose there's not much to be done about it now. */
 == BRANWJ IF ~InParty("Branwen") InMyArea("Branwen") !StateCheck("Branwen",CD_STATE_NOTVALID)~ THEN @10233 /* A fine young lad. He hath been touched by war and seems to not dwell overmuch on his loss of kin. Tis my hope he finds strength in his hardship. */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10234
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10234
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10234 /* You know, even though he's lost his home, his livelihood, everyone he's loved, and now has to live in a boring temple as an orphan where he faces an uncertain future, he doesn't seem all that sad about it. */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10060
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10060
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10060 /* ... */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10235
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10235
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10235 /* That's great! */
 END
 
@@ -455,6 +604,7 @@ I_C_T3 DNATE 0 WIDNATE0
 == HEXXATJ IF ~InParty("Hexxat") InMyArea("Hexxat") !StateCheck("Hexxat",CD_STATE_NOTVALID) InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN @10239 /* Certainly if you'd like to elaborate further. I am always interested in listening to what a wise druid has to say. */
 == CERNDJ IF ~InParty("Hexxat") InMyArea("Hexxat") !StateCheck("Hexxat",CD_STATE_NOTVALID) InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN @10240 /* ...No, that about covers it really. */
 == IMOEN2J IF ~InParty("Imoen2") InMyArea("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN @10241 /* Thanks kid! I knew we'd make it through too. */
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10242
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10242 /* Is this the welcoming parade? Just wonderful... */
 END
 
@@ -516,6 +666,7 @@ I_C_T3 DMIREK 4 WIDMIREK4
 END
 
 I_C_T3 DMIREK 6 WIDMIREK6
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10272
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10272 /* That's not a bad idea if you don't mind skinning and handling their disgusting hides. Shall we pull straws for it? I just so happen to have some with me. Ah look, and I've already pulled a long straw. Who wants to go next? */
 == NALIAJ IF ~InParty("Nalia") InMyArea("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @10273 /* We won't be too long. I hope we can give you some closure at least, even if we can't bring your brother back. Stay safe. */
 == DMIREK IF ~InParty("Nalia") InMyArea("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @10274 /* Aye, thank you m'lady. */
@@ -535,12 +686,37 @@ I_C_T3 DGERTH 10 WIDGERTH10
 END
 
 I_C_T3 DWEENOG 1 WIDWEENOG1
+
 == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @10282 /* Oh I know he's a goblin but... he doesn't look like he's dangerous. Let's just leave him be ok? */
+
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10283
+
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @10283
+
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10283 /* Eww... how could anyone stand to have a goblin as a servant? It's all... ugly and gross... Servants should be presentable and be able to reach the higher cabinets for things that are out of reach. */
-== KAGAIJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Kagain") InMyArea("Kagain") !StateCheck("Kagain",CD_STATE_NOTVALID)~ THEN @10284 /* Eh, I prefer my servants small. They eat less, can crawl into hard to get into spaces, and usually don't expect as much pay. */
-== SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Kagain") InMyArea("Kagain") !StateCheck("Kagain",CD_STATE_NOTVALID)~ THEN @10285 /* That's... a good point. I think? */
+
+== KAGAIJ IF ~InParty("Kagain") InMyArea("Kagain") !StateCheck("Kagain",CD_STATE_NOTVALID)
+OR(3) InParty("Skie") InParty("L#2SDSkie") InParty("7XSki")
+OR(3) InMyArea("Skie") InMyArea("L#2SDSkie") InMyArea("7XSki")
+OR(3) !StateCheck("Skie",CD_STATE_NOTVALID) !StateCheck("L#2SDSkie",CD_STATE_NOTVALID) !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10284 /* Eh, I prefer my servants small. They eat less, can crawl into hard to get into spaces, and usually don't expect as much pay. */
+
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID) OR(2) InParty("Kagain") InParty("7Xkaga") OR(2) InMyArea("Kagain") InMyArea("7Xkaga") OR(2) !StateCheck("Kagain",CD_STATE_NOTVALID) !StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @10285
+
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID) OR(2) InParty("Kagain") InParty("7Xkaga") OR(2) InMyArea("Kagain") InMyArea("7Xkaga") OR(2) !StateCheck("Kagain",CD_STATE_NOTVALID) !StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @10285
+
+== SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)
+OR(2) InParty("Kagain") InParty("7Xkaga")
+OR(2) InMyArea("Kagain") InMyArea("7Xkaga")
+OR(2) !StateCheck("Kagain",CD_STATE_NOTVALID) !StateCheck("7Xkaga",CD_STATE_NOTVALID)~ THEN @10285 /* That's... a good point. I think? */
+
 == VICONIJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10286 /* Such subservience is to be expected of his kind. I'd care not for this gol's well being but killing another's slave is a grave offense, at least among my former people. Let us continue and not suffer his disgusting appearance any longer. */
-== BAELOTHJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10287 /* I remember when my gol attendent was killed by a freak accident in a knife-throwing contest. It was enjoyable flaying his killer alive, but it was so hard to find a head flat enough to balance fruit on afterwards. */
+
+// Baeloth BG2 == ZDBAEJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10287
+
+== BAELOTHJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)
+InParty("Viconia")
+InMyArea("Viconia")
+!StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10287 /* I remember when my gol attendent was killed by a freak accident in a knife-throwing contest. It was enjoyable flaying his killer alive, but it was so hard to find a head flat enough to balance fruit on afterwards. */
 END
 
 I_C_T3 DWEENOG 10 WIDWEENOG10
@@ -551,6 +727,8 @@ I_C_T3 DWEENOG 10 WIDWEENOG10
 END
 
 I_C_T3 DORRICK 3 WIDORRICK3
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10292
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10292
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10292 /* I feel an odd kinship with this man. He has a perspective sadly lacking in most. */
 == KELDORJ IF ~InParty("Keldorn") InMyArea("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN @10293 /* Seeing as your tower is located in this town, I must disagree with you on that point. Anything that threatens this town threatens you as well. Even speaking strictly from pragmatism you must value your surroundings more than that. */
 == DORRICK IF ~InParty("Keldorn") InMyArea("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN @10294 /* Had I not contingencies prepared that would transport me immediately to a sanctuary far from here, I might agree. My own personal safety is untethered to this region. */
@@ -574,23 +752,37 @@ I_C_T3 DORRICK 6 WIDORRICK6
 END
 
 I_C_T3 DORRICK 7 WIDORRICK7
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10306
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10306
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10306 /* The world is a dismal place. If there is one thing that transcends it, it is the pursuit of knowledge. I must admit I feel no small amount of envy at your position. */
 == DORRICK IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10307 /* Ah, at least one who understands. And an elf no less. I may need to pick your brain on something if you've a moment. */
 END
 
 I_C_T3 DORRICK 8 WIDORRICK8
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10308
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10308
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10308 /* Even to the Greycloaks, the knowledge of a mythal is not well known. They are enchantments that epitomise the ancient magic of my people, yet are kept in deepest secret. */
 == DORRICK IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10309 /* *sigh* I had thought it might be too good to be true. */
 == EDWINJ IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @10310 /* Details of the ancient Mythals are here in the north? Hmm... perhaps this journey has merit afterall. The knowledge of the Mythal would augment my already considerable powers (and then perhaps I could finally leave these monkeys to roll in their mud without me) */
 END
 
 I_C_T3 DORRICK 10 WIDORRICK10
+
 == KIVANJ IF ~InParty("Kivan") InMyArea("Kivan") !StateCheck("Kivan",CD_STATE_NOTVALID)~ THEN @10311 /* That is for the best. The relics of my people should not be plunder for some mage. */
+
 == DORRICK IF ~InParty("Kivan") InMyArea("Kivan") !StateCheck("Kivan",CD_STATE_NOTVALID)~ THEN @10312 /* While I need not justify myself to you, know that I do not intend ill with this knowledge. */
+
 == KIVANJ IF ~InParty("Kivan") InMyArea("Kivan") !StateCheck("Kivan",CD_STATE_NOTVALID)~ THEN @10313 /* The same of most who misuse dangerous knowledge. */
+
 == TIAXJ IF ~InParty("Tiax") InMyArea("Tiax") !StateCheck("Tiax",CD_STATE_NOTVALID)~ THEN @10314 /* Tiax is bored now by this conversation. Such magical abilities are but trifling things to his power. Why, his very sneeze has more magic in it than all of the mythals elves have ever made! */
-== TIAXJ IF ~InParty("Tiax") InMyArea("Tiax") !StateCheck("Tiax",CD_STATE_NOTVALID) InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10315 /* ...Tiax demands to know what you are doing with that feather! */
-== ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID) InParty("Tiax") InMyArea("Tiax") !StateCheck("Tiax",CD_STATE_NOTVALID)~ THEN @10316 /* Trying to get a demonstration of your power silly! *giggles* */
+
+== TIAXJ IF ~InParty("Tiax") InMyArea("Tiax") !StateCheck("Tiax",CD_STATE_NOTVALID) OR(3) InParty("Alora") InParty("CMAlora") InParty("7XALORA") OR(3) InMyArea("Alora") InMyArea("CMAlora") InMyArea("7XALORA") OR(3) !StateCheck("Alora",CD_STATE_NOTVALID) !StateCheck("CMAlora",CD_STATE_NOTVALID) !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10315 /* ...Tiax demands to know what you are doing with that feather! */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) OR(3) InParty("Tiax") InParty("7XTIAX") InParty("O#Tiax") OR(3) InMyArea("Tiax") InMyArea("7XTIAX") InMyArea("O#Tiax") OR(3) !StateCheck("Tiax",CD_STATE_NOTVALID) !StateCheck("7XTIAX",CD_STATE_NOTVALID) !StateCheck("O#Tiax",CD_STATE_NOTVALID)~ THEN @10316
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID) OR(3) InParty("Tiax") InParty("7XTIAX") InParty("O#Tiax") OR(3) InMyArea("Tiax") InMyArea("7XTIAX") InMyArea("O#Tiax") OR(3) !StateCheck("Tiax",CD_STATE_NOTVALID) !StateCheck("7XTIAX",CD_STATE_NOTVALID) !StateCheck("O#Tiax",CD_STATE_NOTVALID)~ THEN @10316
+
+== ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID) OR(3) InParty("Tiax") InParty("7XTIAX") InParty("O#Tiax") OR(3) InMyArea("Tiax") InMyArea("7XTIAX") InMyArea("O#Tiax") OR(3) !StateCheck("Tiax",CD_STATE_NOTVALID) !StateCheck("7XTIAX",CD_STATE_NOTVALID) !StateCheck("O#Tiax",CD_STATE_NOTVALID)~ THEN @10316 /* Trying to get a demonstration of your power silly! *giggles* */
 END
 
 I_C_T3 DORRICK 11 WIDORRICK11
@@ -729,12 +921,19 @@ I_C_T3 DARUNDEL 66 WIDARUNDEL66
 END
 
 I_C_T3 DARUNDEL 68 WIDARUNDEL68
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10370
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @10370
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10370 /* Oh are we to set out again? Could we get some cake to have on the trip? I've been craving something sweet. */
-== VICONIJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10371 /* Female, could you be any more oblivious? */
+== VICONIJ IF ~OR(3) InParty("Skie") InParty("L#2SDSkie") InParty("7XSki") OR(3) InMyArea("Skie") InMyArea("L#2SDSkie") InMyArea("7XSki") OR(3) !StateCheck("Skie",CD_STATE_NOTVALID) !StateCheck("L#2SDSkie",CD_STATE_NOTVALID) !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10371 /* Female, could you be any more oblivious? */
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10372
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10372
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10372 /* Hey! But I... */
+// BG1inBG2 == 7XEldoJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10373
 == ELDOTJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10373 /* Viconia, please do be civil. Skie tries ever so hard. Lets give her a bit of credit shall we? */
+// BG1inBG2 == 7XEldoJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10374
 == ELDOTJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10374 /* *aside* She is rather blind, deaf, and dumb isn't she? Perhaps you'd like to discuss things in private... */
-== VICONIJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10375 /* If you say one word futher to me I will curse your manhood with the pox. That is if it isn't already too scabbed over for it to matter. */
+== VICONIJ IF ~OR(2) InParty("Skie") InParty("7XSki") OR(2) InMyArea("Skie") InMyArea("7XSki") OR(2) !StateCheck("Skie",CD_STATE_NOTVALID) !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10375 /* If you say one word futher to me I will curse your manhood with the pox. That is if it isn't already too scabbed over for it to matter. */
+// BG1inBG2 == 7XEldoJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10376
 == ELDOTJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10376 /* Fine, away! Bah, women will be the death of me! */
 == RASAADJ IF ~InParty("Rasaad") InMyArea("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN @10377 /* We shall set out immediately and with Selune's blessing return swiftly and safely with the gem in hand. Stay well master Arundel. */
 == SAFANJ IF ~InParty("Safana") InMyArea("Safana") !StateCheck("Safana",CD_STATE_NOTVALID)~ THEN @10378 /* A bit of burglary is more my style than wading through undead crypts anyway. */
@@ -746,12 +945,19 @@ I_C_T3 DARUNDEL 68 WIDARUNDEL68
 END
 
 I_C_T3 DARUNDEL 69 WIDARUNDEL69
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10370
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @10370
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10370 /* Oh are we to set out again? Could we get some cake to have on the trip? I've been craving something sweet. */
-== VICONIJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10371 /* Female, could you be any more oblivious? */
+== VICONIJ IF ~OR(3) InParty("Skie") InParty("L#2SDSkie") InParty("7XSki") OR(3) InMyArea("Skie") InMyArea("L#2SDSkie") InMyArea("7XSki") OR(3) !StateCheck("Skie",CD_STATE_NOTVALID) !StateCheck("L#2SDSkie",CD_STATE_NOTVALID) !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10371 /* Female, could you be any more oblivious? */
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10372
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10372
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10372 /* Hey! But I... */
+// BG1inBG2 == 7XEldoJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10373
 == ELDOTJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10373 /* Viconia, please do be civil. Skie tries ever so hard. Lets give her a bit of credit shall we? */
+// BG1inBG2 == 7XEldoJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10374
 == ELDOTJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10374 /* *aside* She is rather blind, deaf, and dumb isn't she? Perhaps you'd like to discuss things in private... */
-== VICONIJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10375 /* If you say one word futher to me I will curse your manhood with the pox. That is if it isn't already too scabbed over for it to matter. */
+== VICONIJ IF ~OR(2) InParty("Skie") InParty("7XSki") OR(2) InMyArea("Skie") InMyArea("7XSki") OR(2) !StateCheck("Skie",CD_STATE_NOTVALID) !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10375 /* If you say one word futher to me I will curse your manhood with the pox. That is if it isn't already too scabbed over for it to matter. */
+// BG1inBG2 == 7XEldoJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10376
 == ELDOTJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10376 /* Fine, away! Bah, women will be the death of me! */
 == RASAADJ IF ~InParty("Rasaad") InMyArea("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN @10377 /* We shall set out immediately and with Selune's blessing return swiftly and safely with the gem in hand. Stay well master Arundel. */
 == SAFANJ IF ~InParty("Safana") InMyArea("Safana") !StateCheck("Safana",CD_STATE_NOTVALID)~ THEN @10378 /* A bit of burglary is more my style than wading through undead crypts anyway. */
@@ -795,10 +1001,14 @@ I_C_T3 DARUNDEL 83 WIDARUNDEL83
 END
 
 I_C_T3 DARUNDEL 85 WIDARUNDEL85
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10397
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10397
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10397 /* Impossible. Severed Hand is a ruin. Although perhaps Larrel... he wouldn't have... would he? */
-== RASAAD IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID) InParty("Rasaad") InMyArea("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN @10398 /* Is that hope I see in your normally dour eyes? */
+== RASAAD IF ~OR(3) InParty("Xan") InParty("O#XAN") InParty("7XXAN") OR(3) InMyArea("Xan") InMyArea("O#XAN") InMyArea("7XXAN") OR(3) !StateCheck("Xan",CD_STATE_NOTVALID) !StateCheck("O#XAN",CD_STATE_NOTVALID) !StateCheck("7XXAN",CD_STATE_NOTVALID) InParty("Rasaad") InMyArea("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN @10398 /* Is that hope I see in your normally dour eyes? */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID) InParty("Rasaad") InMyArea("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN @10399
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID) InParty("Rasaad") InMyArea("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN @10399
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID) InParty("Rasaad") InMyArea("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN @10399 /* Perhaps some small amount, though getting to Larrel himself will be an insurmountable task if he yet lives. */
-== RASAAD IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID) InParty("Rasaad") InMyArea("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN @10400 /* Ah, but it would not be the first time we surmount the insurmountable my friend. */
+== RASAAD IF ~OR(3) InParty("Xan") InParty("O#XAN") InParty("7XXAN") OR(3) InMyArea("Xan") InMyArea("O#XAN") InMyArea("7XXAN") OR(3) !StateCheck("Xan",CD_STATE_NOTVALID) !StateCheck("O#XAN",CD_STATE_NOTVALID) !StateCheck("7XXAN",CD_STATE_NOTVALID) InParty("Rasaad") InMyArea("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN @10400 /* Ah, but it would not be the first time we surmount the insurmountable my friend. */
 == KIVANJ IF ~InParty("Kivan") InMyArea("Kivan") !StateCheck("Kivan",CD_STATE_NOTVALID)~ THEN @10401 /* I've heard the stories of what happened to Severed Hand. If we journey to this place, we must do so with respect for the tragedy that occurred there. */
 END
 
@@ -824,10 +1034,22 @@ I_C_T3 DARUNDEL 94 WIDARUNDEL94
 END
 
 I_C_T3 DALDWIN 1 WIDALDWIN1
+
 == MONTAJ IF ~InParty("Montaron") InMyArea("Montaron") !StateCheck("Montaron",CD_STATE_NOTVALID)~ THEN @10411 /* Blunt. I like this one. Too many o' my kind trip o'er their own hairy feet to be "well-mannered". */
+
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10412
+
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @10412
+
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10412 /* Ex... excuse me? Sir we are potential customers. You can't just treat us like that. */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10413
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10413
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10413 /* Hey don't be such a meany! Innkeepers are supposed to be friendly! */
-== DALDWIN IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10414 /* Look sunshine, why don't you put a curtain over it while you're here. I and anyone I choose to rent out rooms to appreciate the quiet. */
+
+== DALDWIN IF ~OR(3) InParty("Alora") InParty("CMAlora") InParty("7XALORA") OR(3) InMyArea("Alora") InMyArea("CMAlora") InMyArea("7XALORA") OR(3) !StateCheck("Alora",CD_STATE_NOTVALID) !StateCheck("CMAlora",CD_STATE_NOTVALID) !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10414 /* Look sunshine, why don't you put a curtain over it while you're here. I and anyone I choose to rent out rooms to appreciate the quiet. */
 END
 
 I_C_T3 DALDWIN 11 WIDALDWIN11
@@ -836,6 +1058,7 @@ I_C_T3 DALDWIN 11 WIDALDWIN11
 END
 
 I_C_T3 DALDWIN 12 WIDALDWIN12
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10417
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10417 /* Left you with the claim and took off with your coin did he? Ah, an old con I'm quite familiar with. You really should be more aware of these things before looking to become a property owner. */
 == DALDWIN @10418 /* Yeah I uhh... I really got played for a fool, didn't I? */
 END
@@ -860,14 +1083,24 @@ I_C_T3 DALDWIN 21 WIDALDWIN21
 END
 
 I_C_T3 DALDWIN 22 WIDALDWIN22
+
 == MONTAJ IF ~InParty("Montaron") InMyArea("Montaron") !StateCheck("Montaron",CD_STATE_NOTVALID)~ THEN @10425 /* Ugh, just kill me quickly if I ever get that blasted desire. And ta think I was starting ta respect you... */
+
 == XZARJ IF ~InParty("Montaron") InMyArea("Montaron") !StateCheck("Montaron",CD_STATE_NOTVALID) InParty("Xzar") InMyArea("Xzar") !StateCheck("Xzar",CD_STATE_NOTVALID)~ THEN @10426 /* But Monty, I had such dreams for us to settle in a cottage in the hills! */
+
 == MONTAJ IF ~InParty("Xzar") InMyArea("Xzar") !StateCheck("Xzar",CD_STATE_NOTVALID) InParty("Montaron") InMyArea("Montaron") !StateCheck("Montaron",CD_STATE_NOTVALID)~ THEN @10427 /* I swear, every word from yer blasted mouth brings me knife hand one inch closer to yer eye... */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10428
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10428
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10428 /* Aww he was just looking to settle down. If he could just lose a bit of the grumpsies I bet we could be fast friends! */
-== DALDWIN IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10429 /* Oh gods kill me now... */
+
+== DALDWIN IF ~OR(3) InParty("Alora") InParty("CMAlora") InParty("7XALORA") OR(3) InMyArea("Alora") InMyArea("CMAlora") InMyArea("7XALORA") OR(3) !StateCheck("Alora",CD_STATE_NOTVALID) !StateCheck("CMAlora",CD_STATE_NOTVALID) !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10429 /* Oh gods kill me now... */
 END
 
 I_C_T3 DALDWIN 23 WIDALDWIN23
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10430
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10430 /* Now that is a most equitable arrangement!  */
 END
 
@@ -878,8 +1111,11 @@ I_C_T3 DALDWIN 24 WIDALDWIN24
 END
 
 I_C_T3 DAMELIA 2 WIDAMELIA2
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10434
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10434 /* Ah... a charming woman. I think my drink will sit better if she serves us in silence. */
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10435
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10435 /* Eldoth, how surprised and mad do you think my family would get if we got married on this trip? */
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10436
 == ELDOTJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10436 /* I... seem to be a bit queasy all of a sudden. */
 END
 
@@ -892,6 +1128,7 @@ END
 I_C_T3 DAMELIA 8 WIDAMELIA8
 == JAHEIRAJ IF ~InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @10440 /* That does raise suspicions. Perhaps we should have a look about the inn for signs of foul play <CHARNAME>? */
 == DORNJ IF ~InParty("Dorn") InMyArea("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN @10441 /* I despise small towns and their drama. Every hint of gossip I hear puts me a few moments closer to razing the whole thing. */
+// Baeloth BG2 == ZDBAEJ IF ~InParty("Dorn") InMyArea("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID) InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @10442
 == BAELOTHJ IF ~InParty("Dorn") InMyArea("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID) InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @10442 /* *I* wouldn't shed any tears over this pissant town suddenly disappearing. */
 END
 
@@ -930,6 +1167,8 @@ I_C_T DCONLAN 2 WIDCONLAN2
 END
 
 I_C_T DCONLAN 4 WIDCONLAN4
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10459
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10459
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10459 /* Your perception of your situation is indeed keen. I think even winter seems an unlikely forecast for our survival. Yet still we fight against the inevitable... *sigh* */
 END
 
@@ -950,9 +1189,12 @@ I_C_T DCONLAN 8 WIDCONLAN8
 END
 
 I_C_T3 DCONLAN 10 WIDCONLAN10
+
 == JANJ IF ~InParty("Jan") InMyArea("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @10467 /* The same has been said of uncle Scratchy's onion patch. Surely it took the black arts to create onions that succulent (and odorous) they would say. But they didn't know the half of it. We don't talk about uncle Scratchy's onion patch anymore. */
+
 == BRANWJ IF ~InParty("Branwen") InMyArea("Branwen") !StateCheck("Branwen",CD_STATE_NOTVALID)~ THEN @10468 /* We seek to challenge such notions. There tis no vale so shadowed that we will not brave it. */
-== AJANTJ IF ~InParty("Ajantis") InMyArea("Ajantis") !StateCheck("Ajantis",CD_STATE_NOTVALID) InParty("Branwen") InMyArea("Branwen") !StateCheck("Branwen",CD_STATE_NOTVALID)~ THEN @10469 /* Well said. Helm's justice will bring light to the vale and uncover whatever hides in the shadows. */
+
+== AJANTJ IF ~InParty("Ajantis") InMyArea("Ajantis") !StateCheck("Ajantis",CD_STATE_NOTVALID) OR(3) InParty("Branwen") InParty("O#Bran") InParty("7XBRAN") OR(3) InMyArea("Branwen") InMyArea("O#Bran") InMyArea("7XBRAN") OR(3) !StateCheck("Branwen",CD_STATE_NOTVALID) !StateCheck("O#Bran",CD_STATE_NOTVALID) !StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @10469 /* Well said. Helm's justice will bring light to the vale and uncover whatever hides in the shadows. */
 END
 
 I_C_T3 DCONLAN 17 WIDCONLAN17
@@ -961,13 +1203,21 @@ I_C_T3 DCONLAN 17 WIDCONLAN17
 == ANOMENJ IF ~InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID) InParty("Rasaad") InMyArea("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN @10472 /* Perhaps... I do concede that the plight of this boy has moved me. Though please don't tell anyone, it might hurt my stoic reputation *chuckles* */
 == RASAADJ IF ~InParty("Rasaad") InMyArea("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID) InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @10473 /* Of course. My lips are sealed sir knight. */
 == IMOEN2J IF ~InParty("Imoen2") InMyArea("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN @10474 /* Aw it weren't nuthin. He's a good kid. He probably woulda escaped and found his own way back even without us. */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10475
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10475
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10475 /* Hehe you're welcome! Now just remember to give him a big hug every day until he think he's too old to be hugged by his dad... and then you do it twice! */
+
 == MINSCJ IF ~InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN @10476 /* Little boy is safe and Minsc and Boo are heroes yet again!  */
 END
 
 I_C_T DCONLAN 27 WIDCONLAN27
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10477 /* Magic o' this kind ain't me ken, but if there's one thing I be knowin it's the dwarven craft. Mayhaps this be one of a pair of items and whatever spell cast upon were meant to be for both and apart they are frazzled and dim? */
-== XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID) InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10478 /* I believe you are correct sir dwarf. I can feel the magic of this piece... it has a texture of longing. It wants to be together with something else. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID) OR(3) InParty("Yeslick") InParty("LK#YESLK") InParty("7XYES") OR(3) InMyArea("Yeslick") InMyArea("LK#YESLK") InMyArea("7XYES") OR(3) !StateCheck("Yeslick",CD_STATE_NOTVALID) !StateCheck("LK#YESLK",CD_STATE_NOTVALID) !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10478
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID) OR(3) InParty("Yeslick") InParty("LK#YESLK") InParty("7XYES") OR(3) InMyArea("Yeslick") InMyArea("LK#YESLK") InMyArea("7XYES") OR(3) !StateCheck("Yeslick",CD_STATE_NOTVALID) !StateCheck("LK#YESLK",CD_STATE_NOTVALID) !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10478
+== XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID) OR(3) InParty("Yeslick") InParty("LK#YESLK") InParty("7XYES") OR(3) InMyArea("Yeslick") InMyArea("LK#YESLK") InMyArea("7XYES") OR(3) !StateCheck("Yeslick",CD_STATE_NOTVALID) !StateCheck("LK#YESLK",CD_STATE_NOTVALID) !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10478 /* I believe you are correct sir dwarf. I can feel the magic of this piece... it has a texture of longing. It wants to be together with something else. */
 END
 
 I_C_T3 DOSWALD 1 WIDOSWALD1
@@ -1104,6 +1354,11 @@ I_C_T DLYSANPR 11 WIDLYSANPR11
 END
 
 I_C_T DLYSANPR 14 WIDLYSANPR14
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10537
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10537
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10537 /* When I die I hope to have all of my stuffed animals around me. Just because you're dead doesn't mean you can't enjoy fluffy animals! */
 == DLYSANPR @10538 /* I swear, all adventurers must be mad. */
 END
@@ -1133,11 +1388,22 @@ I_C_T DSHADOW 3 WIDSHADOW3
 END
 
 I_C_T DMYTOS 0 WIDMYTOS0
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10549
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10549
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10549 /* A bone dance? Oh what kinda dance is that? I'm imagining lotsa shaking and rattling and heeby jeebies! */
 END
 
 I_C_T3 DMYTOS 4 WIDMYTOS4
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10550
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10550
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10550 /* Aww... that's no fun at all. Unless you also dance a little on the side. Go ahead and do it, I won't tell your death god on you! */
+
 == XZARJ IF ~InParty("Xzar") InMyArea("Xzar") !StateCheck("Xzar",CD_STATE_NOTVALID)~ THEN @10551 /* So strange how these antiquated tombs still carry such old notions of the gods. Ahh, I guess the same is of the living. How long did nan insist leeches would cure all her humors? Not even a vivisection would teach her otherwise... and sure enough it didn't... hehehe... */
 END
 
@@ -1189,7 +1455,10 @@ END
 
 I_C_T3 DKRESSEL 11 WIDKRESSEL11
 == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @10568 /* That... that's horrifying! You're a monster! */
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10569
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @10569
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10569 /* All these dead were... faithful servants you killed? Oh.. oh I think I'm going to be sick... */
+// Baeloth BG2 == ZDBAEJ IF ~InParty("ZDBAE") InMyArea("ZDBAE") !StateCheck("ZDBAE",CD_STATE_NOTVALID)~ THEN @10570
 == BAELOTHJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @10570 /* Hey, that was *MY* retirement plan! Oh now I need to rethink the entire thing... */
 END
 
@@ -1201,6 +1470,8 @@ END
 
 I_C_T3 DKRESSEL 13 WIDKRESSEL13
 == KELDORJ IF ~InParty("Keldorn") InMyArea("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN @10574 /* Justice is a path to redemption, not just punishment for its own sake. I suppose even you may find forgiveness some day. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10575
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10575
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10575 /* Is this the fate that awaits us when we die? To reflect upon one's life for all time? Perhaps death is even worse than I imagined it. */
 END
 
@@ -1238,12 +1509,24 @@ I_C_T3 DKRESSEL 40 WIDKRESSEL40
 == SAFANJ IF ~InParty("Safana") InMyArea("Safana") !StateCheck("Safana",CD_STATE_NOTVALID)~ THEN @10587 /* And this is why I only make deals with the living. */
 == IMOEN2J IF ~InParty("Imoen2") InMyArea("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN @10588 /* At this point I don't even care anymore. I just wanna leave this hole as quick as we can. Let's get outta here <CHARNAME>. */
 == KORGANJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @10589 /* Ain't no man livin's robbed me of my due... but then ye be dead already so maybe I'll just piss in yer tomb for the trouble. */
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10590
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10590 /* Well this was perfectly pointless. Let's retire back to town and drink on it shall we? */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10591
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10591
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10591 /* Ok well then toodles mister scary spirit man! Have a great day! */
+
 == YOSHJ IF ~InParty("Yoshimo") InMyArea("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ THEN @10592 /* Ah well, what can be done? The plunder from this crypt was at least worth the time yes? Perhaps our next venture will be blessed with more luck. */
 END
 
 I_C_T DREDTOE 0 WIDREADTOE0
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10593
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10593
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10593 /* Whoa big guy! What's the rush? */
 END
 
@@ -1327,6 +1610,7 @@ I_C_T DCAPKID 8 WICAPKID8
 END
 
 I_C_T3 DCAPVIL 0 WICAPVIL0Eldoth
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10624
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10624 /* Please, keep the sobbing ones away from me. I'm allergic to sniveling you see. */
 END
 
@@ -1335,14 +1619,23 @@ I_C_T DCAPVIL 7 WICAPVIL7
 END
 
 I_C_T DCAPVIL 8 WICAPVIL8
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10626
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10626
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10626 /* Always look on the bright side! */
 END
 
 I_C_T DCAPVIL 13 WICAPVIL13
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10627
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @10627
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10627 /* Hmph! You'd expect these peasants to be more grateful! */
 END
 
 I_C_T DCAPVIL 17 WICAPVIL17
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10628
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10628
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10628 /* *sigh* In a far better place now than any of us are. */
 END
 
@@ -1409,7 +1702,7 @@ I_C_T3 DUNDLT1 1 WIDUNDLT11
 == AJANTJ IF ~InParty("Ajantis") InMyArea("Ajantis") !StateCheck("Ajantis",CD_STATE_NOTVALID)~ THEN @10646 /* A necromancer's parlor tricks and nothing more. Throw your minions at us! We will climb a mountain of your servants to destroy you if we must. */
 == DUNDLT1 IF ~InParty("Ajantis") InMyArea("Ajantis") !StateCheck("Ajantis",CD_STATE_NOTVALID)~ THEN @10647 /* Ha! Come then warrior of light! */
 == BRANWJ IF ~InParty("Branwen") InMyArea("Branwen") !StateCheck("Branwen",CD_STATE_NOTVALID)~ THEN @10648 /* Too much a coward to lift thy own sword? I spit on thy dark magics. Tempus give us victory! */
-== DUNDLT1 IF ~InParty("Branwen") InMyArea("Branwen") !StateCheck("Branwen",CD_STATE_NOTVALID)~ THEN @10649 /* A priestess of Tempus here? Fine then, come and test your might against my minions! */
+== DUNDLT1 IF ~OR(3) InParty("Branwen") InParty("O#Bran") InParty("7XBRAN") OR(3) InMyArea("Branwen") InMyArea("O#Bran") InMyArea("7XBRAN") OR(3) !StateCheck("Branwen",CD_STATE_NOTVALID) !StateCheck("O#Bran",CD_STATE_NOTVALID) !StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @10649 /* A priestess of Tempus here? Fine then, come and test your might against my minions! */
 END
 
 I_C_T3 DUNDLT1 3 WIDUNDLT13
@@ -1445,19 +1738,22 @@ I_C_T3 DUNDLT2 3 WIDUNDLT23
 == ANOMENJ IF ~InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @10663 /* If you truly believe that she will keep her bargain, send me forth. I would relish the opportunity to lay this witch low. */
 == DUNDLT2 IF ~InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @10664 /* Yes, come then righteous one and let us face one another directly. */
 == BRANWJ IF ~InParty("Branwen") InMyArea("Branwen") !StateCheck("Branwen",CD_STATE_NOTVALID)~ THEN @10665 /* I volunteer to go forth in thy stead. Tempus shalt be mine shield. */
-== DUNDLT2 IF ~InParty("Branwen") InMyArea("Branwen") !StateCheck("Branwen",CD_STATE_NOTVALID)~ THEN @10666 /* Then approach, silly priest. Let us end this. */
+== DUNDLT2 IF ~OR(3) InParty("Branwen") InParty("O#Bran") InParty("7XBRAN") OR(3) InMyArea("Branwen") InMyArea("O#Bran") InMyArea("7XBRAN") OR(3) !StateCheck("Branwen",CD_STATE_NOTVALID) !StateCheck("O#Bran",CD_STATE_NOTVALID) !StateCheck("7XBRAN",CD_STATE_NOTVALID)~ THEN @10666 /* Then approach, silly priest. Let us end this. */
 == AJANTJ IF ~InParty("Ajantis") InMyArea("Ajantis") !StateCheck("Ajantis",CD_STATE_NOTVALID)~ THEN @10667 /* We must accept this challenge. Let me go forth and by the strength of Helm I will prevail. */
 == DUNDLT2 IF ~InParty("Ajantis") InMyArea("Ajantis") !StateCheck("Ajantis",CD_STATE_NOTVALID)~ THEN @10668 /* Oh, I would so love a chance to bring this self-righteous fool to his knees. */
 END
 
 I_C_T3 DALBION 0 WIDALBION0
 == HEXXATJ IF ~InParty("Hexxat") InMyArea("Hexxat") !StateCheck("Hexxat",CD_STATE_NOTVALID)~ THEN @10669 /* How peculiar. His body is colder than it should be.  */
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10670
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @10670
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10670 /* Oh thank goodness a friendly face. No, I think... I think we are alright. */
 == DYNAHJ IF ~InParty("Dynaheir") InMyArea("Dynaheir") !StateCheck("Dynaheir",CD_STATE_NOTVALID)~ THEN @10671 /* Something feelst strange about this one. Be wary <CHARNAME>, things are not as they appear. */
 END
 
 I_C_T3 DALBION 1 WIDALBION1
 == KHALIJ IF ~InParty("Khalid") InMyArea("Khalid") !StateCheck("Khalid",CD_STATE_NOTVALID)~ THEN @10672 /* Tis strange to find s-such a peaceful f-f-faith in so remote and dangerous a l-location. I w-would welcome the reprieve though. */
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10673
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10673 /* The clothes of a priest but the face of a con-artist. This is a familiar racket. Do watch that you do not let yourself be taken advantage of here. */
 END
 
@@ -1512,6 +1808,8 @@ I_C_T3 DMARCH 5 WIDMARCH5
 END
 
 I_C_T3 DHIGHRIT 0 WIDHIGHRIT0
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10690
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @10690
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10690 /* *hurk* Don't... don't throw up... don't throw up... */
 == HEXXATJ IF ~InParty("Hexxat") InMyArea("Hexxat") !StateCheck("Hexxat",CD_STATE_NOTVALID)~ THEN @10691 /* I'd prefer to eat in private. Feeding like this seems so impersonal. */
 == MAZZYJ IF ~InParty("Mazzy") InMyArea("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN @10692 /* By Avoreen... these horrors cannot continue. */
@@ -1628,6 +1926,8 @@ I_C_T DLETHIAS 10 WIDLETHIAS10
 END
 
 I_C_T DLETHIAS 11 WIDLETHIAS11
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10732
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10732
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10732 /* A grim sacrifice to make, but one that would have been necessary given the hopelessness of the situation. The power of those artifacts could never fall into orcish hands. */
 END
 
@@ -1642,7 +1942,13 @@ I_C_T3 DLETHIAS 15 WIDLETHIAS15
 END
 
 I_C_T3 DLEHLAND 0 WIDLEHLAND0
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10737
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10737
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10737 /* Ooo! Shinies! */
+
 == KAGAIJ IF ~InParty("Kagain") InMyArea("Kagain") !StateCheck("Kagain",CD_STATE_NOTVALID)~ THEN @10738 /* Whatever you're selling we don't want it. Lousey ghost elf speaks like a carriage salesman. */
 END
 
@@ -1661,6 +1967,8 @@ I_C_T3 DLEHLAND 2 WIDLEHLAND2
 END
 
 I_C_T3 DLEHLAND 12 WIDLEHLAND12
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10747
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @10747
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10747 /* Uhh... that's... no, that's really not true. */
 == NALIAJ IF ~InParty("Nalia") InMyArea("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @10748 /* I don't think this man has ever been south of his own nose.  */
 END
@@ -1668,6 +1976,7 @@ END
 I_C_T3 DTEALNIS 0 WIDTEALNIS0
 == CORANJ IF ~InParty("Coran") InMyArea("Coran") !StateCheck("Coran",CD_STATE_NOTVALID)~ THEN @10749 /* Greetings Telanis. It is refreshing to see that even as a haunt of these halls, your lust for life has not faded.  */
 == GARRIJ IF ~InParty("Garrick") InMyArea("Garrick") !StateCheck("Garrick",CD_STATE_NOTVALID)~ THEN @10750 /* Oh fantastic! Imagine what stories and songs he'd have to tell! */
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10751
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10751 /* Oh, do spare us. He is like a dog waiting to show his master a new trick. */
 == HAERDAJ IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @10752 /* Not even the cold tug of oblivion seems to have diminished this one. Aha! Fair enough my hound, please continue. */
 END
@@ -1701,10 +2010,18 @@ I_C_T3 DSERRHYA 3 WIDSERRHYA3
 == MINSCJ IF ~InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID) InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @10766 /* You must not feel sad little Aerie. We will help here. You will see. */
 == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID) InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN @10767 /* Oh I hope so Minsc. I hope so... */
 == QUAYLJ IF ~InParty("Quayle") InMyArea("Quayle") !StateCheck("Quayle",CD_STATE_NOTVALID)~ THEN @10768 /* Don't you worry Sehriya. I'm the smartest guy you've ever met so you just stay there and I'll go find your mom for you. */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("Quayle") InMyArea("Quayle") !StateCheck("Quayle",CD_STATE_NOTVALID) InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10769
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("Quayle") InMyArea("Quayle") !StateCheck("Quayle",CD_STATE_NOTVALID) InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10769
+
 == ALORAJ IF ~InParty("Quayle") InMyArea("Quayle") !StateCheck("Quayle",CD_STATE_NOTVALID) InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10769 /* Aww you're a nice guy afterall! I'm never gonna let you forget it hehe. */
+
 == AJANTJ IF ~InParty("Quayle") InMyArea("Quayle") !StateCheck("Quayle",CD_STATE_NOTVALID) InParty("Ajantis") InMyArea("Ajantis") !StateCheck("Ajantis",CD_STATE_NOTVALID)~ THEN @10770 /* This is... an unexpected degree of charity from you. */
+
 == SAFANJ IF ~InParty("Quayle") InMyArea("Quayle") !StateCheck("Quayle",CD_STATE_NOTVALID) InParty("Safana") InMyArea("Safana") !StateCheck("Safana",CD_STATE_NOTVALID)~ THEN @10771 /* Since when did you decide to stop being an insufferable ass? */
-== QUAYLJ IF ~OR(3) InMyArea("Safana") InMyArea("Ajantis") InMyArea("Viconia") InMyArea("Alora") InParty("Quayle") InMyArea("Quayle") !StateCheck("Quayle",CD_STATE_NOTVALID)~ THEN @10772 /* I just... I hate to see children in situations like this. They don't deserve it. Unlike adults, they at least might one day grow up to be smart and...  oh forget it! */
+
+== QUAYLJ IF ~OR(5) InMyArea("Safana") InMyArea("Ajantis") InParty("Alora") InParty("CMAlora") InParty("7XALORA")  InParty("Quayle") InMyArea("Quayle") !StateCheck("Quayle",CD_STATE_NOTVALID)~ THEN @10772 /* I just... I hate to see children in situations like this. They don't deserve it. Unlike adults, they at least might one day grow up to be smart and...  oh forget it! */
 END
 
 I_C_T DSERRHYA 6 WIDSERRHYA6
@@ -1718,6 +2035,8 @@ END
 
 I_C_T3 DDENAINI 5 WIDDENAINI5
 == EDWINJ IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @10776 /* A truly potent spell. A shame the knowledge of it was held by one insufficient in spellcraft. (elven claims of superiority in the arts overblown as always) */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10777
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10777
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10777 /* Only the most senior elven archmages are taught such spells. It must be for that very reason that knowledge is so restricted. No mortal hand should wield such power. */
 END
 
@@ -1726,6 +2045,8 @@ I_C_T DDENAINI 9 WIDDENAINI9
 END
 
 I_C_T DDENAINI 12 WIDDENAINI12
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10779
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10779
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10779 /* It must be a miserable existence even beyond life itself to be stuck between it and death. Destroying these shadows would be a mercy to them now. */
 END
 
@@ -1744,6 +2065,8 @@ I_C_T DKAYLESS 7 WIDKAYLESS7
 END
 
 I_C_T3 DKAYLESS 8 WIDKAYLESS8
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10785
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10785
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10785 /* A Baelnorn? Very few elven mages ever achieve such a state. It's considered a great sacrifice to our people. Life never ending as a lich... even blessed by the Seldarine as Baelnorn are, I would never wish it even on my enemies. */
 == EDWINJ IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @10786 /* The process of casting the mythal must have accidentally transformed him to a lich. (how frustrating that fate should gift inept fools with such powers!) */
 END
@@ -1794,6 +2117,8 @@ END
 
 I_C_T3 DCUSTHAN 0 WIDCUSTHAN0
 == EDWINJ IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @10803 /* We are fortunate that this elf is addled. This should let us peruse what works we like without intrusion (and take whatever is of worth). */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10804
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10804
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10804 /* It's truly impressive that this library should be as well preserved as it is. If you do not mind, I would like to look through the stacks before this knowledge fades away forever. */
 END
 
@@ -1807,6 +2132,11 @@ I_C_T DCUSTHAN 9 WIDCUSTHAN9
 END
 
 I_C_T DGELARIT 0 WIDGELARIT0
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10808
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10808
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10808 /* Don't say that! I bet with just a bit of elbow grease, you'll get it running just like new! */
 END
 
@@ -1825,6 +2155,8 @@ I_C_T DLARREL 1 WIDLARREL1
 END
 
 I_C_T3 DLARREL 9 WIDLARREL9
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10813
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10813
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10813 /* Finally, you are restored to coherence Larrel. I am Xan, a Greycloak of Evereska. Your knowledge may be all that can save this region in these desperate hours. */
 END
 
@@ -1835,6 +2167,8 @@ END
 
 I_C_T3 DLARREL 20 WIDLARREL20
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10816 /* The best of both our people's crafts forged together? What fine works those would be. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10817
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10817
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10817 /* A potent combination but our people's arts should be more than just for war. */
 END
 
@@ -1860,6 +2194,8 @@ END
 
 I_C_T3 DLARREL 36 WIDLARREL36
 == VALYGARJ IF ~InParty("Valygar") InMyArea("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN @10823 /* You stand by a decision that damned your people forever? Mages are ever quick to justify their reliance on magic... */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10824
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10824
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10824 /* Such a cause would be hopeless without invoking the most powerful magic. What choice did you have? */
 END
 
@@ -1880,6 +2216,8 @@ I_C_T3 DLARREL 44 WIDLARREL44
 END
 
 I_C_T3 DLARREL 45 WIDLARREL45
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10832
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10832
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10832 /* I've never heard of the Baelnorn condition inflicted on someone as a curse... this is a punishment I cannot fathom being justified... */
 == VALYGARJ IF ~InParty("Valygar") InMyArea("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN @10833 /* Harsh, but perhaps the world would be a better place if the gods took a more active role in moderating the use of such magics. */
 END
@@ -1905,6 +2243,8 @@ I_C_T3 DLARREL 55 WIDLARREL55
 == SAFANJ IF ~InParty("Safana") InMyArea("Safana") !StateCheck("Safana",CD_STATE_NOTVALID)~ THEN @10842 /* Please, if we are to continue on this journey, let's take the nice skeleton on his offer shall we? My feet will be very thankful for it. */
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10843 /* The accusations Larrel made of me people sicken me t' the core. We should take whatever route gets us to Dorn's Deep fastest ta settle this feelin' in me gut. */
 == HEXXATJ IF ~InParty("Hexxat") InMyArea("Hexxat") !StateCheck("Hexxat",CD_STATE_NOTVALID)~ THEN @10844 /* A dwarven stronghold would be a rich location for exotic valuables. If we are fortunate, some ill will have befallen it to allow us to take we will without complication. */
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10845
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @10845
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10845 /* I'm sorry, I wasn't paying attention... my coat has this tear in it... where are we going now? */
 == DLARREL @10846 /* If you insist on heading that way, allow me to cast a spell to save you the days of travel through the frost. */
 END
@@ -1923,15 +2263,34 @@ END
 
 I_C_T3 DBANDOTH 7 WIDBANDOTH7
 == RASAADJ IF ~InParty("Rasaad") InMyArea("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN @10853 /* Peace friend, we mean you no harm, and none shall learn of your sanctuary from us. If you would spare but only a moment. */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10854
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10854
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10854 /* Don't be such a grump! Let's play a game! I spy with my little eye... something that begins with the letter... */
-== DBANDOTH IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10855 /* M, Mage. You're looking right at me. */
+
+== DBANDOTH IF ~OR(3) InParty("Alora") InParty("CMAlora") InParty("7XALORA") OR(3) InMyArea("Alora") InMyArea("CMAlora") InMyArea("7XALORA") OR(3) !StateCheck("Alora",CD_STATE_NOTVALID) !StateCheck("CMAlora",CD_STATE_NOTVALID) !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10855 /* M, Mage. You're looking right at me. */
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10856 /* Oh you got it! */
 END
 
 I_C_T3 DBANDOTH 8 WIDBANDOTH8
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10857
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10857
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10857 /* How about this game? I'm thinking of an object... it's not bigger than a breadbox... */
-== DBANDOTH IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10858 /* It's a breadbox. You're thinking of a breadbox. */
+
+== DBANDOTH IF ~OR(3) InParty("Alora") InParty("CMAlora") InParty("7XALORA") OR(3) InMyArea("Alora") InMyArea("CMAlora") InMyArea("7XALORA") OR(3) !StateCheck("Alora",CD_STATE_NOTVALID) !StateCheck("CMAlora",CD_STATE_NOTVALID) !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10858 /* It's a breadbox. You're thinking of a breadbox. */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10859
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10859
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10859 /* Jeezies, you're good. */
+
 == NALIAJ IF ~InParty("Nalia") InMyArea("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @10860 /* Oh yes, I'm sure your research is just sooo important... */
 END
 
@@ -1963,8 +2322,19 @@ I_C_T DBANDOTH 19 WIDBANDOTH19
 END
 
 I_C_T3 DBANDOTH 22 WIDBANDOTH22
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10872
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10872
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10872 /* Ok how about this one. A riddle! What's in my pock... */
-== DBANDOTH IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10873 /* You have a ring in your pocket. Now leave. */
+
+== DBANDOTH IF ~OR(3) InParty("Alora") InParty("CMAlora") InParty("7XALORA") OR(3) InMyArea("Alora") InMyArea("CMAlora") InMyArea("7XALORA") OR(3) !StateCheck("Alora",CD_STATE_NOTVALID) !StateCheck("CMAlora",CD_STATE_NOTVALID) !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10873 /* You have a ring in your pocket. Now leave. */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10874
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10874
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10874 /* Whew, this guy is just too good. */
 END
 
@@ -1977,6 +2347,7 @@ END
 
 I_C_T3 DBANDOTH 28 WIDBANDOTH28
 == SAFANJ IF ~InParty("Safana") InMyArea("Safana") !StateCheck("Safana",CD_STATE_NOTVALID)~ THEN @10879 /* I'd certainly rather be dead than a giant disgusting bug. (shudders) But then I'd just be smaller bits of bug now wouldn't I? Let's change this topic. */
+// Baeloth BG2 == ZDBAEJ IF ~InParty("ZDBAE") InMyArea("ZDBAE") !StateCheck("ZDBAE",CD_STATE_NOTVALID)~ THEN @10880
 == BAELOTHJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @10880 /* He gives them better brains to hate with and this is how they repay him? The world is truly unfair. */
 END
 
@@ -1993,6 +2364,8 @@ I_C_T3 DBANDOTH 31 WIDBANDOTH31
 END
 
 I_C_T3 DSAABLIC 0 WIDSAABLIC0
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10886
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @10886
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10886 /* Ew! Is that bug thing talking to us? Keep it away... */
 == VALYGARJ IF ~InParty("Valygar") InMyArea("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN @10887 /* Hm... never have I known an Umber Hulk to speak. Perhaps it would be wise to hold our blades for now. */
 END
@@ -2013,11 +2386,18 @@ END
 I_C_T3 DSAABLIC 10 WIDSAABLIC10
 == EDWINJ IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @10892 /* None back home will hear of this. It is better you be forgotten. */
 == DSAABLIC IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @10893 /* Yes... yes that is... best. */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10894
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10894
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10894 /* Bye bye bug guy! Maybe after chewing on some rocks he'll be a little bit happier? */
-== DSAABLIC IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10060 /* ... */
+
+== DSAABLIC IF ~OR(3) InParty("Alora") InParty("CMAlora") InParty("7XALORA") OR(3) InMyArea("Alora") InMyArea("CMAlora") InMyArea("7XALORA") OR(3) !StateCheck("Alora",CD_STATE_NOTVALID) !StateCheck("CMAlora",CD_STATE_NOTVALID) !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10060 /* ... */
 END
 
 I_C_T DOROGCHI 1 WIDOROGCHI1
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10895
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10895 /* Why bother engaging this monster in conversation? Just kill him, take the badge, and be done with it. */
 == DOROGCHI @10896 /* What do you whisper about over there? */
 END
@@ -2057,6 +2437,7 @@ END
 
 I_C_T3 DNORLINO 14 WIDNORLINO14
 == MAZZYJ IF ~InParty("Mazzy") InMyArea("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN @10909 /* It's fortunate that some villains prefer to keep their weaknesses close to them. This gives us a target to strike at. */
+// Baeloth BG2 == ZDBAEJ IF ~InParty("ZDBAE") InMyArea("ZDBAE") !StateCheck("ZDBAE",CD_STATE_NOTVALID)~ THEN @10910
 == BAELOTHJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @10910 /* What an amatuer! Every would-be-lich knows you put your phylactery either at the bottom of the deepest underdark ocean, or you fire protect that baby and throw it into an active volcano.  */
 END
 
@@ -2097,6 +2478,8 @@ END
 
 I_C_T3 DNORLINO 34 WIDNORLINO34
 == MAZZYJ IF ~InParty("Mazzy") InMyArea("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN @10925 /* And so your alliance fell. I can't help but wonder if there had been more communication, you might have stood with one another in these times of crisis. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10926
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10926
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10926 /* My people, in their long lives, can sometimes let their old prejudices bias their judgments. If only they had listened better instead of following their assumptions... */
 END
 
@@ -2121,6 +2504,7 @@ I_C_T DKONTIK 8 WIDKONTIK8
 END
 
 I_C_T3 DGORG 4 WIDGORG4
+// Baeloth BG2 == ZDBAEJ IF ~InParty("ZDBAE") InMyArea("ZDBAE") !StateCheck("ZDBAE",CD_STATE_NOTVALID)~ THEN @10935
 == BAELOTHJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @10935 /* That low fence in a circle? What kind of slave pen is that? You'd be lucky if your slaves weren't escaping accidentally on their way to be whipped! */
 == IMOEN2J IF ~InParty("Imoen2") InMyArea("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN @10936 /* Oh I don't much like the sound of that... */
 == YOSHJ IF ~InParty("Yoshimo") InMyArea("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ THEN @10937 /* Guarding an easily escapable pen of slaves? You know that this must be the strongest and smartest giant to be given this post. */
@@ -2132,10 +2516,16 @@ I_C_T3 DDAVIN 2 WIDDAVIN2
 END
 
 I_C_T DDAVIN 6 WIDDAVIN6
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10940
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10940 /* Look, a slave who knows how to subtract. You've missed your calling as an accountant. Perhaps you should manage the giant's finances. */
 END
 
 I_C_T DDAVIN 7 WIDDAVIN7
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @10941
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @10941
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @10941 /* How rude! I mean, both the sacrificing and also the gloating. Really unnecessary. */
 END
 
@@ -2184,6 +2574,7 @@ I_C_T3 DJORIL 6 WIDJORIL6
 END
 
 I_C_T3 DJORIL 8 WIDJORIL8
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10958
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10958 /* Well that's hardly sporting. Also exactly what I would have done... */
 == BRANWJ IF ~InParty("Branwen") InMyArea("Branwen") !StateCheck("Branwen",CD_STATE_NOTVALID)~ THEN @10959 /* Hath he no honor? He offends Tempus by resorting to such low tactics. */
 END
@@ -2210,12 +2601,14 @@ I_C_T DKERISH 15 WIDKERISHG15
 END
 
 I_C_T DKERISH 25 WIDKERISHG25
+// Baeloth BG2 == ZDBAEJ IF ~InParty("ZDBAE") InMyArea("ZDBAE") !StateCheck("ZDBAE",CD_STATE_NOTVALID)~ THEN @10966
 == BAELOTHJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @10966 /* Marketh!? What is that pretender doing here!? */
 END
 
 I_C_T3 DVERA 10 WIDVERA10Mazzy
 == MAZZYJ IF ~InParty("Mazzy") InMyArea("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN @10967 /* Given the danger at hand, your initiative is commendable. */
 == DVERA IF ~InParty("Mazzy") InMyArea("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN @10968 /* Just trying to do what I can. */
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10969
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10969 /* Helping poor people is exactly the kind of activity that will get you into trouble. Though undoubtedly you know this, given your current predicament. */
 == DVERA IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10970 /* It admittedly hasn't gone so well as I wished it to. */
 END
@@ -2257,6 +2650,8 @@ END
 I_C_T3 DSOTH 12 WIDSOTH
 == KIVANJ IF ~InParty("Kivan") InMyArea("Kivan") !StateCheck("Kivan",CD_STATE_NOTVALID)~ THEN @10982 /* Tis an impressive structure, but I can understand why some among the dwarf folk would find it rather peculiar. They prefer simple, practical designs. */
 == NALIAJ IF ~InParty("Nalia") InMyArea("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @10983 /* It's really quite impressive. I know nobles who'd pay a small fortune to view the animals here... well if they were unfrozen anyway. */
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10984
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @10984
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10984 /* It's wonderful. I wish Baldur's Gate had a zoo. I never get to see any interesting animals. */
 == FALDOJ IF ~InParty("Faldorn") InMyArea("Faldorn") !StateCheck("Faldorn",CD_STATE_NOTVALID)~ THEN @10985 /* And so he created an unsightly blight upon the land filled with cages. Better if the dwarves stayed underground and did not disturb nature so. */
 == TIAXJ IF ~InParty("Tiax") InMyArea("Tiax") !StateCheck("Tiax",CD_STATE_NOTVALID)~ THEN @10986 /* Tis but a small reflection of the Museum that will be built in Tiax's name. In Tiax's museum, there will be astral kraken and demon princes in chains and on display. None but Tiax shall be permitted to view them, unless they please him greatly. */
@@ -2267,6 +2662,7 @@ I_C_T DSOTH 16 WIDSOTH16
 END
 
 I_C_T3 DSOTH 17 WIDSOTH17
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10988
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10988 /* I'm sure the court tried very hard to never bring it up in the King's presence. Ah, to be an onlooker then would have been quite the treat. */
 == NALIAJ IF ~InParty("Nalia") InMyArea("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @10989 /* I've been at a few parties with a uhh... unique relative of a noble with some condition. Everyone tries so hard to not acknowledge them that they become even more awkward doing it. Sort of amusing for a while though usually it makes me feel bad for the... uhh... person being avoided. It's just a cruelty of another kind really. */
 END
@@ -2280,6 +2676,8 @@ I_C_T DGARETH 2 WIDGARETH2
 END
 
 I_C_T DGARETH 8 WIDGARETH8
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10991
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10991
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10991 /* I find myself shocked to see when those in captivity find strength to fight against their situation. The willpower required to ignore how hopeless things are... or perhaps it is simply ignorance. */
 END
 
@@ -2328,6 +2726,7 @@ I_C_T DGUELLO 2 WIDGUELLO2
 END
 
 I_C_T3 DGUELLO 5 WIDGUELLO5
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @11009
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @11009 /* You give an inch and you're liable to be taken for an entire league. Next they will no doubt be asking us to massage their dirty feet for them. */
 == JAHEIRAJ IF ~InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @11010 /* Hmm... while it would be irresponsible not to offer our aid to protect them from this danger, it would be best if this community could learn to sustain themselves for the long run. Adventurers will not be around to save them forever. */
 END
@@ -2354,17 +2753,24 @@ I_C_T DILMADIA 6 WIDILMADIA6
 END
 
 I_C_T DILMADIA 8 WIDILMADIA8
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @11020
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @11020
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @11020 /* A row boat full of giants? What kind of songs do you think fire giants would sing? They must have some kind of giant shanties to bellow! Yo hooo! */
 END
 
 I_C_T3 DILMADIA 9 WIDILMADIA9
 == VICONIJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @11021 /* Hmm... it would be an effective strategy if carried out perfectly. I do not believe they would foresee such an attack, but the chance to capitalize on it would be short. If given a chance to recover, the retaliation would surely be more than a few giants could handle. */
 == KIVANJ IF ~InParty("Kivan") InMyArea("Kivan") !StateCheck("Kivan",CD_STATE_NOTVALID)~ THEN @11022 /* Buried under lava would be a better fate than the dark elves deserve. */
+// Baeloth BG2 == ZDBAEJ IF ~InParty("ZDBAE") InMyArea("ZDBAE") !StateCheck("ZDBAE",CD_STATE_NOTVALID)~ THEN @11023
 == BAELOTHJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @11023 /* Oh that would never wor... actually come to think of it, it really might. */
 END
 
 I_C_T3 DILMADIA 10 WIDILMADIA10
 == HEXXATJ IF ~InParty("Hexxat") InMyArea("Hexxat") !StateCheck("Hexxat",CD_STATE_NOTVALID)~ THEN @11024 /* Hmm... virgin blood is always the sweetest.... oh do not mind me, just thinking aloud. */
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @11025
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @11025 /* I suppose every man in the world should be grateful. Not that she is bad on the eyes but that glare could turn a man impotent. */
 == KIVANJ IF ~InParty("Kivan") InMyArea("Kivan") !StateCheck("Kivan",CD_STATE_NOTVALID)~ THEN @11026 /* Finish your discussion with this vile woman shortly. My arrows will not remain in my quiver much longer. */
 == VALYGARJ IF ~InParty("Valygar") InMyArea("Valygar") !StateCheck("Valygar",CD_STATE_NOTVALID)~ THEN @11027 /* We should not carry on this conversation much longer. Every word this woman speaks is bile and I cannot stand it much longer. */
@@ -2396,6 +2802,8 @@ I_C_T3 DTARNELM 1 WIDTARNELM1
 END
 
 I_C_T3 DTARNELM 2 WIDTARNELM2
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @11036
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @11036
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @11036 /* Such is living really. All triumphs simply form a greater precipice from which to fall from. The cruel jest of the Gods. */
 == MAZZYJ IF ~InParty("Mazzy") InMyArea("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN @11037 /* Really sir, we mean you no harm. We would like to help you if we could. */
 END
@@ -2406,6 +2814,8 @@ END
 
 I_C_T3 DTARNELM 12 WIDTARNELM12
 == ANOMENJ IF ~InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @11039 /* We could certainly use a base of operations closer to here. Kuldahar is a long ways to go back for a safe haven. */
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11040
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @11040
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11040 /* Is it too much to hope they have warm beds without any sort of underground flea or tick infesting them? */
 END
 
@@ -2439,12 +2849,16 @@ I_C_T3 DBEORN 9 WIDBEORN9
 == DBEORN IF ~InParty("Quayle") InMyArea("Quayle") !StateCheck("Quayle",CD_STATE_NOTVALID)~ THEN @11052 /* Ah yes, well if you do decide to pray, perhaps you could do so quietly toward the back of the temple... */
 == DBEORN IF ~InParty("Quayle") InMyArea("Quayle") !StateCheck("Quayle",CD_STATE_NOTVALID)~ THEN @11053 /* (...what a jerk.) */
 == TIAXJ IF ~InParty("Tiax") InMyArea("Tiax") !StateCheck("Tiax",CD_STATE_NOTVALID)~ THEN @11054 /* Where is your temple to Tiax?! */
-== DBEORN IF ~InParty("Tiax") InMyArea("Tiax") !StateCheck("Tiax",CD_STATE_NOTVALID)~ THEN @11055 /* Ah, excuse me? Who is this uhh... Tiax? I've never heard of him. */
+
+== DBEORN IF ~OR(3) InParty("Tiax") InParty("7XTIAX") InParty("O#Tiax") OR(3) InMyArea("Tiax") InMyArea("7XTIAX") InMyArea("O#Tiax") OR(3) !StateCheck("Tiax",CD_STATE_NOTVALID) !StateCheck("7XTIAX",CD_STATE_NOTVALID) !StateCheck("O#Tiax",CD_STATE_NOTVALID)~ THEN @11055 /* Ah, excuse me? Who is this uhh... Tiax? I've never heard of him. */
+
 == TIAXJ IF ~InParty("Tiax") InMyArea("Tiax") !StateCheck("Tiax",CD_STATE_NOTVALID)~ THEN @11056 /* Who is Tiax? WHO IS TIAX?! He stands before you now! Tiax is the lord of all you survey! He commands the sun and moon to rise! He could undo all of creation with a snap of his fingers. All will worship him when he ascends to power! */
-== DBEORN IF ~InParty("Tiax") InMyArea("Tiax") !StateCheck("Tiax",CD_STATE_NOTVALID)~ THEN @11057 /* Ah, I see. Well perhaps you could worship yourself quietly toward the back of the temple... */
+
+== DBEORN IF ~OR(3) InParty("Tiax") InParty("7XTIAX") InParty("O#Tiax") OR(3) InMyArea("Tiax") InMyArea("7XTIAX") InMyArea("O#Tiax") OR(3) !StateCheck("Tiax",CD_STATE_NOTVALID) !StateCheck("7XTIAX",CD_STATE_NOTVALID) !StateCheck("O#Tiax",CD_STATE_NOTVALID)~ THEN @11057 /* Ah, I see. Well perhaps you could worship yourself quietly toward the back of the temple... */
 END
 
 I_C_T3 DBEORN 19 WIDBEORN19
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @11058
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @11058 /* Until the next person with a firm hand comes and enslaves you at least. */
 == VICONIJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @11059 /* They are fools to think that generations will live unaccosted by my kin. You've bought them a few years at best before a new master finds them. */
 END
@@ -2460,9 +2874,14 @@ I_C_T DNYM 4 WIDNYM4
 END
 
 I_C_T DNYM 6 WIDNYM6
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11064
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @11064
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11064 /* Wow... I hope that one day I can travel that far! It sounds so exotic. */
 == DNYM IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11065 /* Perhaps one day you might accompany me then? You are a lovely thing and would make for fine company on the road. */
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11066
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @11066
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11066 /* Oh that might be nice... */
+// BG1inBG2 == 7XEldoJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11067
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11067 /* Uhh excuse me, but hands off. (that's my meal ticket) */
 == DNYM @11068 /* Consider my offer. */
 END
@@ -2501,11 +2920,18 @@ I_C_T3 DDIRTYLL 5 WIDDIRTYLL5
 END
 
 I_C_T3 DDIRTYLL 7 WIDDIRTYLL7Skie
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11084
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @11084
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11084 /* Maybe standards are different for under-people? I probably shouldn't judge... */
 == SAFANJ IF ~InParty("Safana") InMyArea("Safana") !StateCheck("Safana",CD_STATE_NOTVALID)~ THEN @11085 /* Look how adorable his attempts to seduce you are. Oh isn't it just *precious*? */
 END
 
 I_C_T DNORL 3 WIDNORL3
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @11086
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @11086
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @11086 /* I mean... that's definitely something to be happy about... */
 END
 
@@ -2524,8 +2950,10 @@ I_C_T3 DNORL 6 WIDNORL6
 END
 
 I_C_T3 DMALASIM 0 WIDMALASIM0
+// Baeloth BG2 == ZDBAEJ IF ~InParty("ZDBAE") InMyArea("ZDBAE") !StateCheck("ZDBAE",CD_STATE_NOTVALID)~ THEN @11092
 == BAELOTHJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @11092 /* MALAVON! You wretched sorry excuse for a wizard! What's this I hear about you settling with an army of mere Umber Hulks? I thought you were a man of ambition! Don't think I've forgotten about the time you switched in a non-poisonous spider into my ritual circle! They mocked me for days and I told you then that there'd be a day of reckoning. Then I heard you had died and I cursed the gods for robbing me of the chance to get back at you. Behold your great rival BAELOTH! Your day of reckoning HAS ARRIVED! */
 == DMALASIM IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @11093 /* I'm sorry, who are you? */
+// Baeloth BG2 == ZDBAEJ IF ~InParty("ZDBAE") InMyArea("ZDBAE") !StateCheck("ZDBAE",CD_STATE_NOTVALID)~ THEN @11094
 == BAELOTHJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @11094 /* You don't even recognize me? WH-WHAT?! I... Indignities upon indignities! */
 == DMALASIM IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @10060 /* ... */
 == XZARJ IF ~InParty("Xzar") InMyArea("Xzar") !StateCheck("Xzar",CD_STATE_NOTVALID)~ THEN @11095 /* Oh noooo, not the wittle itty bitty gnomes. Won't someone please think of their tiny children?! Ah, but so long as we preserve their skulls, it'll be something for the little tykes to play with. Hehe hahahaha! */
@@ -2539,13 +2967,17 @@ END
 
 I_C_T3 DMALASIM 7 WIDMALASIM7
 == AJANTJ IF ~InParty("Ajantis") InMyArea("Ajantis") !StateCheck("Ajantis",CD_STATE_NOTVALID)~ THEN @11099 /* Keep him talking. Perhaps in his madness he will leave an opening for us to strike without undue harm befalling the prisoners. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @11100
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @11100
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @11100 /* This drow has succumbed to madness, yet I sense something odd about him. He is disconnected somehow. */
 == DMALASIM @11101 /* It's less than she deserves. If you knew the things she's done, you would say so too. */
 END
 
 I_C_T DMALAVON 0 WIDMALAVON0
+// Baeloth BG2 == ZDBAEJ IF ~InParty("ZDBAE") InMyArea("ZDBAE") !StateCheck("ZDBAE",CD_STATE_NOTVALID)~ THEN @11102
 == BAELOTHJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @11102 /* You mean I gave that whole speech and it wasn't even the real Malavon?! Oh I hate him more than I can describe! But at least I have found the real Malavon. Malavon you bastard! Know that I, Baeloth, will have your head! */
 == DMALAVON @11103 /* Do I know you? */
+// Baeloth BG2 == ZDBAEJ IF ~InParty("ZDBAE") InMyArea("ZDBAE") !StateCheck("ZDBAE",CD_STATE_NOTVALID)~ THEN @11104
 == BAELOTHJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @11104 /* AHHHH! My head could just EXPLODE right now. */
 == DMALAVON @11105 /* That can be arranged! */
 END
@@ -2560,6 +2992,8 @@ I_C_T DCALLARD 3 WIDCALLARD3
 END
 
 I_C_T DCALLARD 5 WIDCALLARD5
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11109
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @11109
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11109 /* Oh, I should see if we can get a svirfneblin sculptor back at the manor when we get back to Baldur's Gate. The statuary at the estate is so lacking. */
 END
 
@@ -2590,6 +3024,7 @@ I_C_T DGINAFAE 0 WIDGINAFAE0
 END
 
 I_C_T3 DGINAFAE 5 WIDGINAFAE5
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @11120
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @11120 /* It seems this Marketh is quite good at training his bitches. And a drow bitch no less. That may deserve some congratulations. */
 == SAFANJ IF ~InParty("Safana") InMyArea("Safana") !StateCheck("Safana",CD_STATE_NOTVALID)~ THEN @11121 /* Darling, you must have just a teensy bit more self-respect than that. */
 END
@@ -2639,6 +3074,7 @@ I_C_T DGINA2 0 WIDGINA20
 END
 
 I_C_T3 DGINA2 5 WIDGINA25
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @11120
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @11120 /* It seems this Marketh is quite good at training his bitches. And a drow bitch no less. That may deserve some congratulations. */
 == SAFANJ IF ~InParty("Safana") InMyArea("Safana") !StateCheck("Safana",CD_STATE_NOTVALID)~ THEN @11121 /* Darling, you must have just a teensy bit more self-respect than that. */
 END
@@ -2675,6 +3111,11 @@ I_C_T3 DGINA2 17 WIDGINA217
 END
 
 I_C_T DCOOK 0 WIDCOOK0
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @11140
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @11140
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @11140 /* Oh let's ask if he has any sweets! I sure could go for a strawberry pie, yum yum! */
 END
 
@@ -2685,6 +3126,11 @@ END
 
 I_C_T3 DSETH 13 WIDSETH13
 == MONTAJ IF ~InParty("Montaron") InMyArea("Montaron") !StateCheck("Montaron",CD_STATE_NOTVALID)~ THEN @11142 /* Yes, kinsman all around here. Pay no mind, we'll step so softly that none will know we be here... */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @11143
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @11143
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @11143 /* Aww thanks buddy! I guess he wasn't such a bad guy afterall! */
 == DSETH @11144 /* And just so we're clear, 'funny' meaning that you do anything to piss the boss off. */
 END
@@ -2783,6 +3229,8 @@ END
 
 I_C_T3 DPERDIEM 5 WIDPERDIEM5
 == KELDORJ IF ~InParty("Keldorn") InMyArea("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN @11176 /* There is an evil that clings to his mind like a black fog. We must find the source of his confusion. There will be no talking sense into him in this state. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @11177
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @11177
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @11177 /* <CHARNAME>, while his thoughts are his own, they are being altered by some enchanting force, perverting them against his true will. Whatever is doing this to him cannot be far. */
 END
 
@@ -2838,6 +3286,8 @@ I_C_T3 DPOQUELI 17 WIDPOQUELI17
 END
 
 I_C_T3 DPOQUELI 31 WIDPOQUELI31
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @11193
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @11193
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @11193 /* That's what I've been trying to tell them... yet still we continue, as futile as it may be. */
 == MINSCJ IF ~InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN @11194 /* Easthaven? No! We must... we must do something! It cannot be too late! */
 END
@@ -2868,6 +3318,7 @@ I_C_T DBELHIFE 1 WIDBELHIFE1
 END
 
 I_C_T DBELHIFE 4 WIDBELHIFE4
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @11202
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @11202 /* From one con man to another; my fellow, you've been had. */
 END
 
@@ -2889,9 +3340,11 @@ END
 
 I_C_T3 DBELHIFE 12 WIDBELHIFE12
 == IMOEN2J IF ~InParty("Imoen2") InMyArea("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN @11207 /* Well <CHARNAME>, you sure know where ta find a good adventure. You know me, with you till the end. */
+// Baeloth BG2 == ZDBAEJ IF ~InParty("ZDBAE") InMyArea("ZDBAE") !StateCheck("ZDBAE",CD_STATE_NOTVALID)~ THEN @11208
 == BAELOTHJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @11208 /* I shouldn't be fighting some kind of devil lord! I don't even know why I'm still here! */
 == MONTAJ IF ~InParty("Montaron") InMyArea("Montaron") !StateCheck("Montaron",CD_STATE_NOTVALID)~ THEN @11209 /* Ah hells, what did I let ye talk me into? If we live through this, my blade and you may need ta be havin' a talk. */
 == NALIAJ IF ~InParty("Nalia") InMyArea("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @11210 /* With the portal closed, now's our chance. He's obviously some type of Baatezu. Utilize any proofs against fire you have and uhh... hit it until it stops moving? */
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @11211
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @11211 /* If I am pulled into the past to engage in another battle for the fate of the world before the end of my days, it will be too soon. Let's avoid such things in the future, shall we? */
 == NEERAJ IF ~InParty("Neera") InMyArea("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN @11212 /* I'm going to try and unload everything I've got on him! Uhh... here's hoping I don't blow us all up! */
 == KIVANJ IF ~InParty("Kivan") InMyArea("Kivan") !StateCheck("Kivan",CD_STATE_NOTVALID)~ THEN @11213 /* By the Seldarine, may I strike true. */
@@ -2910,11 +3363,24 @@ I_C_T3 DBELHIFE 12 WIDBELHIFE12
 == VICONIJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @11226 /* I would prefer it if the surface was not infested with creatures of the lower planes when I escape from my kin. Nightsinger, provide me your blessing. Let me cast this creature back to the hole it crawled from! */
 == AJANTJ IF ~InParty("Ajantis") InMyArea("Ajantis") !StateCheck("Ajantis",CD_STATE_NOTVALID)~ THEN @11227 /* Onward! We push this fiend back to the hell it crawled from. For Helm! */
 == DYNAHJ IF ~InParty("Dynaheir") InMyArea("Dynaheir") !StateCheck("Dynaheir",CD_STATE_NOTVALID)~ THEN @11228 /* Thou corrupter of souls, begone and never return to this world again! */
+
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11229
+
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @11229
+
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11229 /* I think I might be in a bit over my head. Oh dear... */
 == KHALIJ IF ~InParty("Khalid") InMyArea("Khalid") !StateCheck("Khalid",CD_STATE_NOTVALID)~ THEN @11230 /* T-this will be a tough one. Give it everything you've g-got! */
 == EDWINJ IF ~InParty("Edwin") InMyArea("Edwin") !StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN @11231 /* I tire of witnessing your feeble flailings. Today you witness the arcane supremacy of Edwin Odesseiron! */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @11232
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @11232
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @11232 /* If you can't learn to be nice then we'll have to put you on time out for a couple thousand years. */
+
 == SAFANJ IF ~InParty("Safana") InMyArea("Safana") !StateCheck("Safana",CD_STATE_NOTVALID)~ THEN @11233 /* How much am I getting paid for this? Oh nevermind, we can discuss it after. Whatever share I'm getting isn't enough. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @11234
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @11234
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @11234 /* A faint glimmer of hope... will it be enough to triumph despite all odds being against us? I have my doubts but I will do what I can. */
 == HAERDAJ IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @11235 /* Ha! Now this be a tale for the ages! Give my regards to whichever Baatezu Lord you serve when you see them. */
 == JAHEIRAJ IF ~InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @11236 /* Show no hesitation. We have one chance. Strike with the wrath of Nature! */
@@ -2982,6 +3448,11 @@ I_C_T DHJOLLDE 31 WIDHJOLLDE31
 END
 
 I_C_T DHJOLLDE 33 WIDHJOLLDE33
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @11265
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @11265
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @11265 /* We're not ghosts! We're flesh and blood and cake and candy and all that good stuff! */
 END
 
@@ -3053,6 +3524,11 @@ I_C_T3 DHAILEE 7 WIDHAILEE7
 END
 
 I_C_T DHAILEE 11 WIDHAILEE11
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @11294
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @11294
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @11294 /* It's tough playin' games when ya got no one to play with. */
 END
 
@@ -3062,6 +3538,7 @@ I_C_T3 DHAILEE 12 WIDHAILEE12
 END
 
 I_C_T DHAILEE 15 WIDHAILEE15
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @11297
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @11297 /* Street urchins are the lifeblood of secrets in the city, and it seems things are not so different even in this filthy pile of northern refuse. Perhaps some dirt we can profit from later? */
 END
 
@@ -3096,6 +3573,8 @@ I_C_T DHAILEE 49 WIDHAILEE49
 END
 
 I_C_T DRAWL 4 WIDRAWL4
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11310
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @11310
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11310 /* How can you tell? You mean it isn't miserable like this just all the time? */
 == DRAWL @11311 /* Great... a southern "lady". Exactly what I don't need right now. */
 END
@@ -3186,6 +3665,7 @@ I_C_T DAMBERE 0 WIDAMBERE0
 END
 
 I_C_T DAMBERE 4 WIDAMBERE4
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @11340
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @11340 /* Yes, well, that is what marriage gets you. */
 END
 
@@ -3205,6 +3685,11 @@ I_C_T DAMBERE 7 WIDAMBERE7
 END
 
 I_C_T DAMBERE 15 WIDAMBERE15
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @11347
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @11347
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @11347 /* What?? She's lots of fun! We're going to go play hide and seek and make snow harpies later! */
 END
 
@@ -3214,6 +3699,7 @@ I_C_T DAMBERE 18 WIDAMBERE18
 END
 
 I_C_T DAMBERE 24 WIDAMBERE24
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @11350
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @11350 /* Well played <CHARNAME>. I'll be here keeping the stools warm and have myself a few drinks. You go do what you need to do. */
 END
 
@@ -3242,7 +3728,11 @@ I_C_T DHOBART 9 WIDHOBART9
 END
 
 I_C_T3 DHOBART 14 WIDHOBART
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11357
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @11357
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11357 /* No. I am not happy! Oh dear... I want to go back home! */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @11358
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @11358
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @11358 /* Great, now we find ourselves in the middle of nowhere, left to die in the sand. At least our bones will be well preserved. */
 END
 
@@ -3255,10 +3745,16 @@ I_C_T3 DHOBART 21 WIDHOBART21
 == RASAADJ IF ~InParty("Rasaad") InMyArea("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN @11360 /* You've told us a great many thing my friend except for one. The Truth. What are you hiding? */
 == DHOBART IF ~InParty("Rasaad") InMyArea("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN @11361 /* I... don't know what you're talking about. */
 == RASAADJ IF ~InParty("Rasaad") InMyArea("Rasaad") !StateCheck("Rasaad",CD_STATE_NOTVALID)~ THEN @11362 /* Your secrets are a briar that you bind yourself within. */
+// Baeloth BG2 == ZDBAEJ IF ~InParty("ZDBAE") InMyArea("ZDBAE") !StateCheck("ZDBAE",CD_STATE_NOTVALID)~ THEN @11363
 == BAELOTHJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @11363 /* "The Luremaster"? That's.. Not a bad title... */
 END
 
 I_C_T DHOBART 23 WIDHOBART23
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @11364
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @11364
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @11364 /* It's nice... I guess. Seems like ya'd get really bored here though... */
 END
 
@@ -3277,6 +3773,8 @@ END
 
 I_C_T3 DHOBART 34 WIDHOBART34
 == HAERDAJ IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @11369 /* Akin to being trapped in one of the Lady's mazes. Usually tis only a man's sanity that flies free from such traps. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @11370
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @11370
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @11370 /* Some sort of dimensional anchor... what a dreadful fate to be held captive here until your body falls apart. */
 END
 
@@ -3305,6 +3803,8 @@ I_C_T DMURDAUG 3 WIDMURDAUG3
 END
 
 I_C_T DMURDAUG 4 WIDMURDAUG4
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11382
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @11382
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11382 /* *giggles* You're quite funny. Do you ever do any performances? It's been a long time since I've seen a jester show. */
 == DMURDAUG @11383 /* Thank you ma'am for doing your part to ever keep my pride in check. Nay, there will be no performances for me tonight, however perhaps my simple company will amuse you enough. */
 END
@@ -3344,6 +3844,7 @@ END
 I_C_T3 DMURDAUG 48 WIDMURDAUG48
 == IMOEN2J IF ~InParty("Imoen2") InMyArea("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN @11392 /* Poor guy. But ya know, I betcha there is such a thing. He just hasn't looked in the right spot. */
 == NEERAJ IF ~InParty("Neera") InMyArea("Neera") !StateCheck("Neera",CD_STATE_NOTVALID)~ THEN @11393 /* That was... so beautiful... and... I think I'm having some trouble breathing... I think I need to... go sit over there... again... */
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @11394
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @11394 /* Ha! Not a bad tale... and with a riotous punchline to boot. */
 == GARRIJ IF ~InParty("Garrick") InMyArea("Garrick") !StateCheck("Garrick",CD_STATE_NOTVALID)~ THEN @11395 /* Fascinating! I think I have this all written down. Oh I'll make sure you're credited when I publish my book! */
 == HAERDAJ IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @11396 /* A fine tale indeed my melancholy magpie! */
@@ -3388,13 +3889,19 @@ I_C_T3 DKIERAN2 26 WIDKIERAN226
 END
 
 I_C_T DKIERAN2 27 WIDKIERAN227
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @11414
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @11414
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @11414 /* Certainly only a temporary measure. With time spent in this party's company, I fear all of your efforts will have been for naught. */
 == DKIERAN2 @11415 /* Unfortunately, I do not think a simple hope scroll will be enough to help your friend. */
 END
 
 I_C_T DKIERAN2 29 WIDKIERAN229
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @11416
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @11416
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @11416 /* Who can blame it? Left to languish in a cold tower, possessed by a cursed man who is himself unable to die. To what resort would a sword have to free itself from such a lamentable condition...? *sigh* */
 == DKIERAN2 @11417 /* Uhh is your friend over there ok? */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @11418
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @11418
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @11418 /* Positively jolly. */
 END
 
@@ -3408,6 +3915,7 @@ I_C_T3 DPURVIS 11 WIDPURVIS11
 END
 
 I_C_T DPURVIS 13 WIDPURVIS13
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @11422
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @11422 /* I certainly wouldn't blame you for it. What a pain. */
 END
 
@@ -3435,9 +3943,14 @@ I_C_T DTYBALD 1 WIDTYBALD1
 END
 
 I_C_T DTYBALD 5 WIDTYBALD5
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11431
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @11431
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11431 /* Oh, but why would she play such cruel jokes? A girl her age should be painting or reading poetry or trying on dresses. */
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID) InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11432
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11432 /* Skie dear, do these yokels look like they have paint or poetry books or fancy dresses? */
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @11433
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @11433 /* Oh.. well I suppose not... */
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID) InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11434
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11434 /* That's right. Now remember in the future to think before you talk. Or simply refrain from speaking at all. */
 END
 
@@ -3690,6 +4203,8 @@ I_C_T3 DWYLF 24 WIDWYLF24
 END
 
 I_C_T DWYLF 26 WIDWYLF26
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11524
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @11524
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11524 /* I see only three forks in this entire mead hall and one of them is to the *left* of a knife... what else are we supposed to think... */
 END
 
@@ -3699,10 +4214,17 @@ I_C_T3 DWYLF 38 WIDWYLF38
 END
 
 I_C_T DWYLF 49 WIDWYLF49
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @11527
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @11527
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @11527 /* It's a surpriiiiise! */
 END
 
 I_C_T3 DWYLF 50 WIDWYLF50
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11528
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @11528
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11528 /* I can't think of a scraggly group of people who would need a mirror more... */
 == HEXXATJ IF ~InParty("Hexxat") InMyArea("Hexxat") !StateCheck("Hexxat",CD_STATE_NOTVALID)~ THEN @11529 /* Sometimes I miss mirrors. Well, not mirrors themselves but my reflection rather. It's quite difficult to do my hair the way I like without. Ah, is this not a good time? Apologies. */
 END
@@ -3730,6 +4252,8 @@ END
 
 I_C_T3 DEDION 3 WIDEDION3
 == MINSCJ IF ~InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN @11539 /* Boo and I are glad to hear that you will be getting better! */
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11540
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @11540
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11540 /* Is he contagious? Should we really be so close to him? */
 END
 
@@ -3747,8 +4271,12 @@ END
 
 I_C_T3 DEDION 8 WIDEDION8
 == DORNJ IF ~InParty("Dorn") InMyArea("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN @11547 /* And so you, once a mighty mage, has given up and allowed yourself to simply fade away? I would pity you if you deserved any more than my contempt. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @11548
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @11548
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @11548 /* No, it would be a pleasant end to the suffering of wasting away. Then again, so would just about any end. I cannot imagine how you continue on each day. */
 == DEDION IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @11549 /* Mostly by focusing on the little things. The smell of the dew, the sound of the waves, an old familiar book in hand by a candle in the evening. I've also found a joy in fishing that I never imagined I could have when I was younger. */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @11550
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @11550
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @11550 /* It sounds miserable. */
 END
 
@@ -3766,6 +4294,8 @@ END
 
 I_C_T3 DEDION 18 WIDEDION18
 == MINSCJ IF ~InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN @11539 /* Boo and I are glad to hear that you will be getting better! */
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11540
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @11540
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11540 /* Is he contagious? Should we really be so close to him? */
 END
 
@@ -3774,6 +4304,8 @@ I_C_T DMEBD 1 WIDMEBD1
 END
 
 I_C_T DMEBD 2 WIDMEBD2
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @11555
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @11555
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @11555 /* Compelled... they serve because their wills are enslaved, not willingly. What a lamentable condition... */
 END
 
@@ -4104,7 +4636,10 @@ I_C_T3 10HEDRON 20 WI10HEDRON20
 == HAERDAJ IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @11663 /* My Raven! Fire and cinder all around. We are in the midst of a symphony. Shall we step on the stage and become players ourselves? Lead on! */
 == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @11664 /* Oh dear, this looks horrible! We should check on the people here to make sure they're ok before we talk to... whoever here is in charge. It looks like they've done more damage to their town on their own than the goblins will. */
 == MONTAJ IF ~InParty("Montaron") InMyArea("Montaron") !StateCheck("Montaron",CD_STATE_NOTVALID)~ THEN @11665 /* Must we journey to a place so damnably miserable?! The cold is bad enough, ye bring us to a siege as well? You would do well to remember that I expect to be paid for my hardships in gold or I'll take it in blood instead... */
+// Baeloth BG2 == ZDBAEJ IF ~InParty("ZDBAE") InMyArea("ZDBAE") !StateCheck("ZDBAE",CD_STATE_NOTVALID)~ THEN @11666
 == BAELOTHJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @11666 /* It's not enough I have to be dragged along on the surface, I must be brought to the most INHOSPITABLE AND VIOLENT place on it?! What did I ever do to deserve this? Did I beat my slaves too hard? Did I beat them not hard enough? Oh just forget it... lead the way... */ 
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11667
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @11667
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11667 /* This is so so exciting! How far do you think we are from my home now? Oh I never imagined we'd go this far. And it gave me a reason to wear this wonderful coat my father had commissioned for me for my 14th birthday. Isn't it lovely? Actual winter wolf fur. It's so soft... Uh so how long do you think we'll be staying anyway? Maybe... maybe we should go back soon? */ 
 == TIAXJ IF ~InParty("Tiax") InMyArea("Tiax") !StateCheck("Tiax",CD_STATE_NOTVALID)~ THEN @11668 /* We travel far and wide to spread word of Tiax's rule to the most distant lands! Blood and thunder in Tiax's name! Kneel before Tiax and he may show you mercy. Tiax demands groveling! */ 
 == TIAXJ IF ~InParty("Tiax") InMyArea("Tiax") !StateCheck("Tiax",CD_STATE_NOTVALID)~ THEN @10060 /* ... */ 
@@ -4125,12 +4660,21 @@ I_C_T3 10HEDRON 20 WI10HEDRON20
 == VICONIJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @11682 /* Travel by sea... it is an oddly familiar experience. In the Underdark, the darkness around you seems unceasing, just as the water at all sides. But if one can persist and survive it long enough, they eventually find daylight, or land. I would prefer we do it as little as possible. */ 
 == JANJ IF ~InParty("Jan") InMyArea("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @11683 /* Why, a Jansen hasn't been this far north since my great aunt Pembersam went white wyrm hunting. She didn't bear the dragons any ill will, of course, but she had heard that their breath could freeze turnip juice into a delightful treat. She would bait them by making rather overt implications of the diminutive size of the hoards they sat on (if you get my meaning) and when the dragons swooped down on her she would hide behind a rock and throw a bucket of turnip juice in the air. She lost a foot to frostbite, but she came home with turnip-cicles in tow, so a successful venture all things considered. */
 == SHARTJ IF ~InParty("SharTeel") InMyArea("SharTeel") !StateCheck("SharTeel",CD_STATE_NOTVALID)~ THEN @11684 /* You brought me here to kill didn't you? There's nothing else to talk about then. Just stay out of my way and I'll route this horde myself. */
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @11685
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @11685 /* I question the decision to come up this far. Wealth there may be, but not without significant danger. Why don't we simply retire back to the inn, board ourselves away and drink until the siege passes us, and then journey back south to woo the gold from the purse of some duchess? */
 == FALDOJ IF ~InParty("Faldorn") InMyArea("Faldorn") !StateCheck("Faldorn",CD_STATE_NOTVALID)~ THEN @11686 /* The humanoid races squabble over their petty town while nature suffers underneath their tantrum. If only they could meet mutual destruction quickly and allow nature to reclaim the land taken from her. */
 == SAREV25J IF ~InParty("Sarevok") InMyArea("Sarevok") !StateCheck("Sarevok",CD_STATE_NOTVALID)~ THEN @11687 /* Yes of course, I'm sure the Bhaalspawn crisis will simply wait while we traipse around slaughtering goblins. Unbelievable. */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @11688
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @11688
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @11688 /* Gosh there sure are a lot of frowns around here! You're all being attacked, I get it I get it. That's no reason to be so grumpy! I suppose we gotta do something to cheer everyone up around here huh? */
+
 == ANOMENJ IF ~InParty("Anomen") InMyArea("Anomen") !StateCheck("Anomen",CD_STATE_NOTVALID)~ THEN @11689 /* A goblin siege? Well this certainly recalls my last campaign in the Order, defing a mountain town against giant and ogre alike. Goblins are a small measure in comparison. Stand behind me for safety, I will bring these cretins low. */
 == KHALIJ IF ~InParty("Khalid") InMyArea("Khalid") !StateCheck("Khalid",CD_STATE_NOTVALID)~ THEN @11690 /* Oh no. <CHARNAME> we should disembark quickly. Every m-moment we waste another life is at risk. W-we should secure the docks and make sure there is no d-danger here and then aid in the siege. L-l-let's go! */
+// Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @11691
+// BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @11691
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @11691 /* It is a gratifying thing that you are always looking for new horrible places for us to die in. At least the snow is an easy thing to dig out one's own grave rather than the hard earth. */
 == CERNDJ IF ~InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN @11692 /* As the shark is drawn to blood in the water, it seems we are drawn to the violence and need of this northern town. While I certainly empathize with the needs of these people, I do wonder what has driven the goblin peoples to such an army. Balance dictates that there must be a reason behind it. I will give it further consideration after we have addressed the immediate needs of the situation. */
 == MINSCJ IF ~InParty("Minsc") InMyArea("Minsc") !StateCheck("Minsc",CD_STATE_NOTVALID)~ THEN @11693 /* Ohhh the injustice! The evil! This place stinks of it. Boo, you must steel yourself and hold on tight. Minsc's wrath will not be contained! RAUUUUUUGHH!!! */ 
@@ -4149,6 +4693,8 @@ I_C_T3 10HEDRON 20 WI10HEDRON20
 END
 
 I_C_T 10SCREED 1 WI10Screed1
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11706
+// LavaSkieBG2 == L#2SDSKJ IF ~InParty("L#2SDSkie") InMyArea("L#2SDSkie") !StateCheck("L#2SDSkie",CD_STATE_NOTVALID)~ THEN @11706
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11706 /* Umm... ew? Can we please not talk about that kind of thing. Father never let others talk like that around me... ohhh I'm never having fish again... */
 END
 
@@ -4201,6 +4747,7 @@ I_C_T3 10KICKSH 9 WI10Kicksh9
 END
 
 I_C_T3 10BLANC 6 WI10Blanc6
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @11725
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @11725 /* Now there's the real tragedy. I thought that the north at least had half-decent ale. What else here would even be worth protecting? */
 == CERNDJ IF ~InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN @11726 /* In my circle, we would prepare a very strong fermented berry wine in rain barrels. *chuckles* When they were cracked open on hot summer nights, the revelries we got up to were often considered very undruid-like. But then there are many misconcep... */
 == 10BLANC IF ~InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN @11727 /* You sure do like to hear yourself talk don't you flower man? */
@@ -4247,9 +4794,13 @@ END
 
 I_C_T3 10FIRTHA 1 WI10Firtha1
 == GARRIJ IF ~InParty("Garrick") InMyArea("Garrick") !StateCheck("Garrick",CD_STATE_NOTVALID)~ THEN @11743 /* Yes ma'am. Sorry ma'am. Won't do it again ma'am. Sorry. Sorry. */
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @11744
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @11744 /* Gods alive... I'm having flashbacks to my own deceased mother. (At least that old shrew had the decency to die before she could completely emasculate me...) */
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID) InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11745
 == SKIEJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11745 /* Your mother died? Why haven't you ever mentioned that? Oh that's so sad... */
+// BG1inBG2 == 7XEldoJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID) InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11746
 == ELDOTJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11746 /* Oh but my Skie, you musn't worry for me. The strength I have from my loss lets me better find a future for us and when I think of her burning in... err I mean watching us from the heavens, it puts a smile to my face. */
+// BG1inBG2 == 7XSkiJ IF ~InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID) InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @11747
 == SKIEJ IF ~InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @11747 /* Eldoth... Ohhh! You're so thoughtful and sweet! */
 END
 
@@ -4296,17 +4847,34 @@ END
 
 I_C_T3 10FIRTHA 16 WI10Firtha16
 == SAFANJ IF ~InParty("Safana") InMyArea("Safana") !StateCheck("Safana",CD_STATE_NOTVALID)~ THEN @11762 /* Oops. Busted. Uhh... well can't say I feel great about this one. I mean, robbing from an elderly blind woman is bad enough, but being caught? Makes me want to go take a nap. */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @11763
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @11763
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @11763 /* But but... there were shinies and I... ohhh now I feel awful... */
+
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11764 /* Wait now, did one of ye rob this woman? Have ye no decency? Oh I'll have to pray twice as hard to Clangeddin today ta be rid of the guilt... */
+
 == JANJ IF ~InParty("Jan") InMyArea("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @11765 /* <CHARNAME> how could you? For shame... for shame indeed (how's a guy supposed to know he's stealing from a sighted woman?) */
+
 == KELDORJ IF ~InParty("Keldorn") InMyArea("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN @11766 /* <CHARNAME>, you know I'm not one to preach about the virtues of not robbing your elders, as that seems entirely self-evident, but I do hope you at least give some thought about what you've done. */
 END
 
 I_C_T3 10FIRTHA 17 WI10Firtha17
+
 == SAFANJ IF ~InParty("Safana") InMyArea("Safana") !StateCheck("Safana",CD_STATE_NOTVALID)~ THEN @11762 /* Oops. Busted. Uhh... well can't say I feel great about this one. I mean, robbing from an elderly blind woman is bad enough, but being caught? Makes me want to go take a nap. */
+
+// Alora for BG2 == CMALORAJ IF ~InParty("CMAlora") InMyArea("CMAlora") !StateCheck("CMAlora",CD_STATE_NOTVALID) ~ THEN @11763
+
+// BG1inBG2 == 7XALORAJ IF ~InParty("7XALORA") InMyArea("7XALORA") !StateCheck("7XALORA",CD_STATE_NOTVALID)~ THEN @11763
+
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @11763 /* But but... there were shinies and I... ohhh now I feel awful... */
+
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11764 /* Wait now, did one of ye rob this woman? Have ye no decency? Oh I'll have to pray twice as hard to Clangeddin today ta be rid of the guilt... */
+
 == JANJ IF ~InParty("Jan") InMyArea("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @11765 /* <CHARNAME> how could you? For shame... for shame indeed (how's a guy supposed to know he's stealing from a sighted woman?) */
+
 == KELDORJ IF ~InParty("Keldorn") InMyArea("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN @11766 /* <CHARNAME>, you know I'm not one to preach about the virtues of not robbing your elders, as that seems entirely self-evident, but I do hope you at least give some thought about what you've done. */
 END
 
@@ -4388,6 +4956,7 @@ I_C_T 10MAGDR 3 WI10Magdr3Maz
 END
 
 I_C_T 10MAGDR 5 WI10Magdr5
+// Baeloth BG2 == ZDBAEJ IF ~InParty("ZDBAE") InMyArea("ZDBAE") !StateCheck("ZDBAE",CD_STATE_NOTVALID)~ THEN @11800
 == BAELOTHJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @11800 /* Debatably competent adventurers versus moldy, desiccated barrels. Round one, fight! */
 END
 
@@ -4398,6 +4967,7 @@ I_C_T 10MAGDR 5 WI10Magdr5
 END
 
 I_C_T 10MAGDR 18 WI10Magdr18
+// Baeloth BG2 == ZDBAEJ IF ~InParty("ZDBAE") InMyArea("ZDBAE") !StateCheck("ZDBAE",CD_STATE_NOTVALID)~ THEN @11800
 == BAELOTHJ IF ~InParty("Baeloth") InMyArea("Baeloth") !StateCheck("Baeloth",CD_STATE_NOTVALID)~ THEN @11800 /* Debatably competent adventurers versus moldy, desiccated barrels. Round one, fight! */
 END
 
