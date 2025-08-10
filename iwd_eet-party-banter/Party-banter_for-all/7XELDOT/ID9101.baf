@@ -1,0 +1,12 @@
+IF
+  Global("WIEldoWhistleGallo","ID9101",0)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  InParty("7XELDOT")
+  InMyArea("7XELDOT")
+  !StateCheck("7XELDOT",CD_STATE_NOTVALID)
+THEN
+  RESPONSE #100
+    SetGlobal("WIEldoWhistleGallo","ID9101",1)
+	DisplayString("7XELDOT",@2400 /* You know, not such a bad little tavern for being so remote. What say we have a few drinks and see if we can find any frontier lasses to warm our laps with. */)
+END

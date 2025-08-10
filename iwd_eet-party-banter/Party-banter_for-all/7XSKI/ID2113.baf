@@ -1,0 +1,12 @@
+IF
+  Global("WISkieGerthShop","ID2113",0)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  InMyArea("7XSKI") 
+  InParty("7XSKI")
+  !StateCheck("7XSKI",CD_STATE_NOTVALID)
+THEN
+  RESPONSE #100
+    SetGlobal("WISkieGerthShop","ID2113",1)
+	DisplayString("7XSKI",@750 /* You don't suppose this shop has some souvenirs? Maybe I could get a carving from the wood or oh a cloak made of leaves from it! My friends back home will be SO jealous. */)
+END

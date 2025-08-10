@@ -1,0 +1,12 @@
+IF
+  Global("WIEldoEveShade","ID2114",0)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  InParty("7XELDOT")
+  InParty("7XELDOT")
+  !StateCheck("7XELDOT",CD_STATE_NOTVALID)
+THEN
+  RESPONSE #100
+    SetGlobal("WIEldoEveShade","ID2114",1)
+	DisplayString("7XELDOT",@800 /* Ahh a fine place to settle down and put our feet up for a spell. There's no need to hurry, at least until we find a little trouble about town is there? */)
+END

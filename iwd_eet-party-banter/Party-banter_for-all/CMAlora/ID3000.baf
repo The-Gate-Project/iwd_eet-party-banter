@@ -1,0 +1,12 @@
+IF
+  Global("WIAlorValeShad","ID3000",0)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  InParty("CMAlora")
+  InMyArea("CMAlora") 
+  !StateCheck("CMAlora",CD_STATE_NOTVALID)
+THEN
+  RESPONSE #100
+    SetGlobal("WIAlorValeShad","ID3000",1)
+	DisplayString("CMAlora",@850 /* Oooo… it’s really spooooky here. Hey what’s that over th… BOO! Haha did I getcha? */)
+END

@@ -1,0 +1,12 @@
+IF
+  Global("WIBaelDragEyeEx","ID4000",0)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  InParty("ZDBAE")
+  InParty("ZDBAE")
+  !StateCheck("ZDBAE",CD_STATE_NOTVALID)
+THEN
+  RESPONSE #100
+    SetGlobal("WIBaelDragEyeEx","ID4000",1)
+	DisplayString("ZDBAE",@1100 /* By all the unholy gods how much do you people walk? All day and then all night it just never ends! Can’t we just enslave the next group of orcs we come across and have them carry us around for a change? I’m not asking for much here, these are basic needs people! */)
+END

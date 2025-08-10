@@ -1,0 +1,13 @@
+IF
+  Global("WIXanDragEye","ID4001",0)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  PartyHasItem("EREJOUR")
+  CombatCounter(0)
+  InParty("7XXAN")
+  InMyArea("7XXAN")
+  !StateCheck("7XXAN",CD_STATE_NOTVALID)
+THEN
+  RESPONSE #100
+    SetGlobal("WIXanDragEye","ID4001",1)
+	DisplayString("7XXAN",@1150 /* That is... Erevain. Oh my dear cousin. He never was content to stay home, to remain in Evereska where it was safe. I suppose... I suppose it was only a matter of time. But the event being inevitable does not make it easier to endure. I will mourn for you tonight and each night until I can bring news to our homeland. Farewell for the last time, Erevain */)
+END

@@ -1,0 +1,12 @@
+IF
+  Global("WIBaelLonewood","ID9100",0)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  InParty("ZDBAE")
+  InMyArea("ZDBAE")
+  !StateCheck("ZDBAE",CD_STATE_NOTVALID)
+THEN
+  RESPONSE #100
+    SetGlobal("WIBaelLonewood","ID9100",1)
+	DisplayString("ZDBAE",@2351 /* Great. More snow. More slack jawed yokels to stare at me. Have I ever told you how pleasant an experience my time on the surface has been? No? I wonder why not... */)
+END

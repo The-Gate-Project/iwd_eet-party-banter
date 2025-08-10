@@ -1,0 +1,12 @@
+IF
+  Global("WIAlorWyrmTooth","ID7005",0)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  InParty("7XALORA")
+  InMyArea("7XALORA") 
+  !StateCheck("7XALORA",CD_STATE_NOTVALID)
+THEN
+  RESPONSE #100
+    SetGlobal("WIAlorWyrmTooth","ID7005",1)
+	DisplayStringHead("7XALORA",@2150 /* Oh this is neat! Whooooo wants to go sledding!? */)
+END

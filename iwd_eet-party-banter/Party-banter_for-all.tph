@@ -6,9 +6,7 @@
 			REPLACE_TEXTUALLY ~// BG1inBG2 == 7XXANJ~ ~== 7XXANJ~
 
 		// Scripts 7XXAN
-		COPY ~iwd_eet-party-banter/Scripts/ID4001.baf~ ~weidu_external/iwd_eet-party-banter/Scripts/7XXAN/ID4001.baf~
-			REPLACE_TEXTUALLY ~"Xan"~ ~"7XXAN"~
-		EXTEND_TOP ~ID4001.bcs~ ~weidu_external/iwd_eet-party-banter/Scripts/7XXAN/ID4001.baf~
+		EXTEND_TOP ~ID4001.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/7XXAN/ID4001.baf~
 
 				PRINT ~
 				Xan : BG1 NPC in BG2 (Smiling Imp and Austin) is installed
@@ -22,9 +20,7 @@
 			REPLACE_TEXTUALLY ~// Xan for BG2 == O#XANJ~ ~== O#XANJ~
 
 		// Scripts
-		COPY ~iwd_eet-party-banter/Scripts/ID4001.baf~ ~weidu_external/iwd_eet-party-banter/Scripts/O#XAN/ID4001.baf~
-			REPLACE_TEXTUALLY ~"Xan"~ ~"O#XAN"~
-		EXTEND_TOP ~ID4001.bcs~ ~weidu_external/iwd_eet-party-banter/Scripts/O#XAN/ID4001.baf~
+		EXTEND_TOP ~ID4001.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/O#XAN/ID4001.baf~
 
 				PRINT ~
 				Xan : for BG2 (Kulyok) is installed
@@ -39,13 +35,8 @@
 				REPLACE_TEXTUALLY ~// Baeloth BG2 == ZDBAEJ~ ~== ZDBAEJ~
 
 		// Scripts
-		COPY ~iwd_eet-party-banter/Scripts/ID9100.baf~ ~weidu_external/iwd_eet-party-banter/Scripts/ZDBAE/ID9100.baf~
-			REPLACE_TEXTUALLY ~"Baeloth"~ ~"ZDBAE"~
-		EXTEND_TOP ~ID9100.bcs~ ~weidu_external/iwd_eet-party-banter/Scripts/ZDBAE/ID9100.baf~
-
-		COPY ~iwd_eet-party-banter/Scripts/ID4000.baf~ ~weidu_external/iwd_eet-party-banter/Scripts/ZDBAE/ID4000.baf~
-			REPLACE_TEXTUALLY ~"Baeloth"~ ~"ZDBAE"~
-		EXTEND_TOP ~ID4000.bcs~ ~weidu_external/iwd_eet-party-banter/Scripts/ZDBAE/ID4000.baf~
+		EXTEND_TOP ~ID9100.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/ZDBAE/ID9100.baf~
+		EXTEND_TOP ~ID4000.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/ZDBAE/ID4000.baf~
 
 				PRINT ~
 				Baeloth : in BG2 (Dark0dave) is installed
@@ -61,22 +52,12 @@
 				REPLACE_TEXTUALLY ~// BG1inBG2 == 7XEldoJ~ ~== 7XEldoJ~
 
 		// Scripts Skie 7XSKI
-		COPY ~iwd_eet-party-banter/Scripts/ID1007.baf~ ~weidu_external/iwd_eet-party-banter/Scripts/7XSKI/ID1007.baf~
-			REPLACE_TEXTUALLY ~"Skie"~ ~"7XSKI"~
-		EXTEND_TOP ~ID1007.bcs~ ~weidu_external/iwd_eet-party-banter/Scripts/7XSKI/ID1007.baf~
-		
-		COPY ~iwd_eet-party-banter/Scripts/ID2113.baf~ ~weidu_external/iwd_eet-party-banter/Scripts/7XSKI/ID2113.baf~
-			REPLACE_TEXTUALLY ~"Skie"~ ~"7XSKI"~
-		EXTEND_TOP ~ID2113.bcs~ ~weidu_external/iwd_eet-party-banter/Scripts/7XSKI/ID2113.baf~
+		EXTEND_TOP ~ID1007.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/7XSKI/ID1007.baf~
+		EXTEND_TOP ~ID2113.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/7XSKI/ID2113.baf~
 
 		// Scripts Eldoth 7XELDOT
-		COPY ~iwd_eet-party-banter/Scripts/ID2114.baf~ ~weidu_external/iwd_eet-party-banter/Scripts/7XELDOT/ID2114.baf~
-			REPLACE_TEXTUALLY ~"Eldoth"~ ~"7XELDOT~
-		EXTEND_TOP ~ID2114.bcs~ ~weidu_external/iwd_eet-party-banter/Scripts/7XELDOT/ID2114.baf~
-		
-		COPY ~iwd_eet-party-banter/Scripts/ID9101.baf~ ~weidu_external/iwd_eet-party-banter/Scripts/7XELDOT/ID9101.baf~
-			REPLACE_TEXTUALLY ~"Eldoth"~ ~"7XELDOT~
-		EXTEND_TOP ~ID9101.bcs~ ~weidu_external/iwd_eet-party-banter/Scripts/7XELDOT/ID9101.baf~
+		EXTEND_TOP ~ID2114.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/7XELDOT/ID2114.baf~
+		EXTEND_TOP ~ID9101.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/7XELDOT/ID9101.baf~
 
 				PRINT ~
 				Skie and Eldoth : BG1 NPC in BG2 (Smiling Imp and Austin) are installed
@@ -89,13 +70,8 @@
 				REPLACE_TEXTUALLY ~// LavaSkieBG2 == L#2SDSKJ~ ~== L#2SDSKJ~
 
 		// Scripts L#2SDSkie
-		COPY ~iwd_eet-party-banter/Scripts/ID1007.baf~ ~weidu_external/iwd_eet-party-banter/Scripts/L#2SDSK/ID1007.baf~
-			REPLACE_TEXTUALLY ~"Skie"~ ~"L#2SDSkie"~
-		EXTEND_TOP ~ID1007.bcs~ ~weidu_external/iwd_eet-party-banter/Scripts/L#2SDSK/ID1007.baf~
-		
-		COPY ~iwd_eet-party-banter/Scripts/ID2113.baf~ ~weidu_external/iwd_eet-party-banter/Scripts/L#2SDSK/ID2113.baf~
-			REPLACE_TEXTUALLY ~"Skie"~ ~"L#2SDSkie"~
-		EXTEND_TOP ~ID2113.bcs~ ~weidu_external/iwd_eet-party-banter/Scripts/L#2SDSK/ID2113.baf~
+		EXTEND_TOP ~ID1007.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/L#2SDSK/ID1007.baf~
+		EXTEND_TOP ~ID2113.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/L#2SDSK/ID2113.baf~
 
 				PRINT ~
 				Skie the cost of one girl's soul : for BG2 (Lava) is installed
@@ -110,17 +86,9 @@
 			REPLACE_TEXTUALLY ~// BG1inBG2 == 7XALORAJ~ ~== 7XALORAJ~
 
 		// Scripts 7XALORA
-		COPY ~iwd_eet-party-banter/Scripts/ID2001.baf~ ~weidu_external/iwd_eet-party-banter/Scripts/7XALORA/ID2001.baf~
-			REPLACE_TEXTUALLY ~"Alora"~ ~"7XALORA"~
-		EXTEND_TOP ~ID2001.bcs~ ~weidu_external/iwd_eet-party-banter/Scripts/7XALORA/ID2001.baf~
-
-		COPY ~iwd_eet-party-banter/Scripts/ID3000.baf~ ~weidu_external/iwd_eet-party-banter/Scripts/7XALORA/ID3000.baf~
-			REPLACE_TEXTUALLY ~"Alora"~ ~"7XALORA"~
-		EXTEND_TOP ~ID3000.bcs~ ~weidu_external/iwd_eet-party-banter/Scripts/7XALORA/ID3000.baf~
-
-		COPY ~iwd_eet-party-banter/Scripts/ID7005.baf~ ~weidu_external/iwd_eet-party-banter/Scripts/7XALORA/ID7005.baf~
-			REPLACE_TEXTUALLY ~"Alora"~ ~"7XALORA"~
-		EXTEND_TOP ~ID7005.bcs~ ~weidu_external/iwd_eet-party-banter/Scripts/7XALORA/ID7005.baf~
+		EXTEND_TOP ~ID2001.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/7XALORA/ID2001.baf~
+		EXTEND_TOP ~ID3000.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/7XALORA/ID3000.baf~
+		EXTEND_TOP ~ID7005.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/7XALORA/ID7005.baf~
 
 				PRINT ~
 				Alora : BG1 NPC in BG2 (Smiling Imp and Austin) is installed
@@ -134,20 +102,23 @@
 			REPLACE_TEXTUALLY ~// Alora for BG2 == CMALORAJ~ ~== CMALORAJ~
 
 		// Scripts CMAlora
-		COPY ~iwd_eet-party-banter/Scripts/ID2001.baf~ ~weidu_external/iwd_eet-party-banter/Scripts/CMAlora/ID2001.baf~
-			REPLACE_TEXTUALLY ~"Alora"~ ~"CMAlora"~
-		EXTEND_TOP ~ID2001.bcs~ ~weidu_external/iwd_eet-party-banter/Scripts/CMAlora/ID2001.baf~
-
-		COPY ~iwd_eet-party-banter/Scripts/ID3000.baf~ ~weidu_external/iwd_eet-party-banter/Scripts/CMAlora/ID3000.baf~
-			REPLACE_TEXTUALLY ~"Alora"~ ~"CMAlora"~
-		EXTEND_TOP ~ID3000.bcs~ ~weidu_external/iwd_eet-party-banter/Scripts/CMAlora/ID3000.baf~
-
-		COPY ~iwd_eet-party-banter/Scripts/ID7005.baf~ ~weidu_external/iwd_eet-party-banter/Scripts/CMAlora/ID7005.baf~
-			REPLACE_TEXTUALLY ~"Alora"~ ~"CMAlora"~
-		EXTEND_TOP ~ID7005.bcs~ ~weidu_external/iwd_eet-party-banter/Scripts/CMAlora/ID7005.baf~
+		EXTEND_TOP ~ID2001.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/CMAlora/ID2001.baf~
+		EXTEND_TOP ~ID3000.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/CMAlora/ID3000.baf~
+		EXTEND_TOP ~ID7005.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/CMAlora/ID7005.baf~
 
 				PRINT ~
 				Alora : for BG2 (Raven) is installed
 				~
 	END
 
+
+/*
+		// Scripts
+		COPY ~iwd_eet-party-banter/Scripts/ID4001.baf~ ~weidu_external/iwd_eet-party-banter/Scripts/O#XAN/ID4001.baf~
+			REPLACE_TEXTUALLY ~"Xan"~ ~"O#XAN"~
+		EXTEND_TOP ~ID4001.bcs~ ~weidu_external/iwd_eet-party-banter/Scripts/O#XAN/ID4001.baf~
+
+				PRINT ~
+				Xan : for BG2 (Kulyok) is installed
+				~
+*/
