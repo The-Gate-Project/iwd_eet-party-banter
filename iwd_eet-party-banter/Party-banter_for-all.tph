@@ -64,20 +64,6 @@
 				~
 	END
 
-	ACTION_IF (FILE_EXISTS_IN_GAME ~L#2SDSKJ.dlg~) BEGIN
-		// Dialog
-			COPY ~weidu_external/iwd_eet-party-banter/Dialogue/Interject.d~	~weidu_external/iwd_eet-party-banter/Dialogue/Interject.d~
-				REPLACE_TEXTUALLY ~// LavaSkieBG2 == L#2SDSKJ~ ~== L#2SDSKJ~
-
-		// Scripts L#2SDSkie
-		EXTEND_TOP ~ID1007.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/L#2SDSK/ID1007.baf~
-		EXTEND_TOP ~ID2113.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/L#2SDSK/ID2113.baf~
-
-				PRINT ~
-				Skie the cost of one girl's soul : for BG2 (Lava) is installed
-				~
-	END
-
 // Alora
 
 	ACTION_IF (FILE_EXISTS_IN_GAME ~7XALORAJ.dlg~) BEGIN
