@@ -1,0 +1,12 @@
+IF
+  Global("WIYeslTempleTempus","ID1001",0)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  InMyArea("lk#yeslk")
+  InParty("lk#yeslk")
+  !StateCheck("lk#yeslk",CD_STATE_NOTVALID)
+THEN
+  RESPONSE #100
+    SetGlobal("WIYeslTempleTempus","ID1001",1)
+	DisplayString("lk#yeslk",@101 /* A temple to Tempus is it? Among ye humans I believe he is much the same as me own Clangeddin. And yet, rarely do ye see worshippers of th’ two meet in peace. T’would be grand if we could all get together and discuss matters of war in peace. */)
+END

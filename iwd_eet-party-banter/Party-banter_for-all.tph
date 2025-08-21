@@ -97,6 +97,41 @@
 				~
 	END
 
+// Yeslick
+
+	ACTION_IF (FILE_EXISTS_IN_GAME ~lk#yesj.dlg~) BEGIN
+		// Dialog
+		COPY ~weidu_external/iwd_eet-party-banter/Dialogue/Interject.d~	~weidu_external/iwd_eet-party-banter/Dialogue/Interject.d~
+			REPLACE_TEXTUALLY ~// Yeslick for BG2 == lk#yesj~ ~== lk#yesj~
+
+		// Scripts lk#yeslk
+		EXTEND_TOP ~ID1001.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/lk#yeslk/ID1001.baf~
+		EXTEND_TOP ~ID2103.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/lk#yeslk/ID2103.baf~
+		EXTEND_TOP ~ID6004.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/lk#yeslk/ID6004.baf~
+		EXTEND_TOP ~ID6013.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/lk#yeslk/ID6013.baf~
+
+				PRINT ~
+				Yeslick : NPC for BG2 (Pixel Kaiser, K'aeloree and Lava Del'Vortel) is installed
+				~
+				
+	END
+
+	ACTION_IF (FILE_EXISTS_IN_GAME ~7XYESJ.dlg~) BEGIN
+		// Dialog
+		COPY ~weidu_external/iwd_eet-party-banter/Dialogue/Interject.d~	~weidu_external/iwd_eet-party-banter/Dialogue/Interject.d~
+			REPLACE_TEXTUALLY ~// BG1inBG2 == 7XYESJ~ ~== 7XYESJ~
+
+		// Scripts 7XYES
+		EXTEND_TOP ~ID1001.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/7XYES/ID1001.baf~
+		EXTEND_TOP ~ID2103.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/7XYES/ID2103.baf~
+		EXTEND_TOP ~ID6004.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/7XYES/ID6004.baf~
+		EXTEND_TOP ~ID6013.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/7XYES/ID6013.baf~
+
+				PRINT ~
+				Yeslick : BG1 NPC in BG2 (Smiling Imp and Austin) is installed
+				~
+	END
+
 
 /*
 		// Scripts

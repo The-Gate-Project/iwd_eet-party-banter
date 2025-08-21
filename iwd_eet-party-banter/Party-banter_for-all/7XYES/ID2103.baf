@@ -1,0 +1,12 @@
+IF 
+  Global("WIYeslConlanSmith","ID2103",0)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  InParty("7XYES")
+  InMyArea("7XYES")
+  !StateCheck("7XYES",CD_STATE_NOTVALID)
+THEN
+  RESPONSE #100
+    SetGlobal("WIYeslConlanSmith","ID2103",1)
+	DisplayString("7XYES",@550 /* A modest smithy, but a steady craftsman needs naught but their hammer and a stoking fire tae do Moradin proud. Aye, plenty of fine crafts to honor the gods here. */)
+END

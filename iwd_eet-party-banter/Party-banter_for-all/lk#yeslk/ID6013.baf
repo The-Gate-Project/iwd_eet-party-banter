@@ -1,0 +1,12 @@
+IF
+  Global("WIYislDDMoraTempLive","ID6013",0)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  InParty("lk#yeslk")						
+  InMyArea("lk#yeslk") 					
+  !StateCheck("lk#yeslk",CD_STATE_NOTVALID)
+THEN
+  RESPONSE #100
+    SetGlobal("WIYislDDMoraTempLive","ID6013",1)
+	DisplayString("lk#yeslk",@2000 /* Aha! Yes! Will ye look at that forge sing! I can feel the eyes of the Soul Forger on us once again. A proud day fer all dwarvenkind. */)
+END

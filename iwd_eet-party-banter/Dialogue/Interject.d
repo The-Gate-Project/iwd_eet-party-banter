@@ -143,6 +143,11 @@ END
 
 I_C_T3 DHILDRTH 4 WIDHILDRTH4
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10061 /* Don't be daft <CHARNAME>! Oh, I apologize on <PRO_HISHER> behalf me lady. Dwarven women aren't so common topside, though t'isn't an excuse for poor manners. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10061 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10061 
+
 == KORGANJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @10062 /* And a fine beard it be... Just the right amount o' curls to hold on tight ta while... *unintelligible noises* */
 == DHILDRTH @10063 /* Ugh, away from me. Ye make me ill. */
 == NALIAJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID) InParty("Nalia") InMyArea("Nalia") !StateCheck("Nalia",CD_STATE_NOTVALID)~ THEN @10064 /* Way to endear yourself to the natives Korgan... */
@@ -519,8 +524,21 @@ END
 
 I_C_T3 DOGRE 0 WIDOGRE0
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10208 /* Yer head hurts now? But me hammer hasn't even struck it yet! */
-== DOGRE IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10209 /* Already hit head on wall. It not work. But maybe hammer work? Little man hit head with hammer? */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10208 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10208 
+
+== DOGRE IF ~OR(3) InParty("Yeslick") InParty("lk#yeslk") InParty("7XYES")
+OR(3) InMyArea("Yeslick") InMyArea("lk#yeslk") InMyArea("7XYES")
+OR(3) !StateCheck("Yeslick",CD_STATE_NOTVALID) !StateCheck("lk#yeslk",CD_STATE_NOTVALID) !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10209 /* Already hit head on wall. It not work. But maybe hammer work? Little man hit head with hammer? */
+
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10210 /* Now ye askin me to hit it? I'll be a bearded gnome if I know what to make of this at all! */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10210 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10210 
+
 == SHARTJ IF ~InParty("SharTeel") InMyArea("SharTeel") !StateCheck("SharTeel",CD_STATE_NOTVALID)~ THEN @10211 /* I don't know about making his head feel better but severing it from his neck should at least stop his crying. */
 END
 
@@ -946,12 +964,14 @@ I_C_T3 DARUNDEL 69 WIDARUNDEL69
 
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10370 /* Oh are we to set out again? Could we get some cake to have on the trip? I've been craving something sweet. */
 
-== VICONIJ IF ~OR(2) InParty("Skie") InParty("7XSki") OR(2) InMyArea("Skie") InMyArea("7XSki") OR(2) !StateCheck("Skie",CD_STATE_NOTVALID) !StateCheck("7XSki",CD_
-STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10371 /* Female, could you be any more oblivious? */
+== VICONIJ IF ~OR(2) InParty("Skie") InParty("7XSki") OR(2) InMyArea("Skie") InMyArea("7XSki") OR(2) !StateCheck("Skie",CD_STATE_NOTVALID) !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10371 /* Female, could you be any more oblivious? */
+
 // BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10372
 
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10372 /* Hey! But I... */
+
 // BG1inBG2 == 7XEldoJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10373
+
 == ELDOTJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10373 /* Viconia, please do be civil. Skie tries ever so hard. Lets give her a bit of credit shall we? */
 // BG1inBG2 == 7XEldoJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID) InParty("7XEldo") InMyArea("7XEldo") !StateCheck("7XEldo",CD_STATE_NOTVALID)~ THEN @10374
 == ELDOTJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID) InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID) InParty("Eldoth") InMyArea("Eldoth") !StateCheck("Eldoth",CD_STATE_NOTVALID)~ THEN @10374 /* *aside* She is rather blind, deaf, and dumb isn't she? Perhaps you'd like to discuss things in private... */
@@ -1161,6 +1181,11 @@ END
 
 I_C_T DCONLAN 2 WIDCONLAN2
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10458 /* A fine forge ye got here. Modest. It reminds me o' the one me father set me afore as a child.  */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10458 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10458 
+
 END
 
 I_C_T DCONLAN 4 WIDCONLAN4
@@ -1212,9 +1237,18 @@ END
 
 I_C_T DCONLAN 27 WIDCONLAN27
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10477 /* Magic o' this kind ain't me ken, but if there's one thing I be knowin it's the dwarven craft. Mayhaps this be one of a pair of items and whatever spell cast upon were meant to be for both and apart they are frazzled and dim? */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10477 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10477 
+
 // Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID) OR(3) InParty("Yeslick") InParty("LK#YESLK") InParty("7XYES") OR(3) InMyArea("Yeslick") InMyArea("LK#YESLK") InMyArea("7XYES") OR(3) !StateCheck("Yeslick",CD_STATE_NOTVALID) !StateCheck("LK#YESLK",CD_STATE_NOTVALID) !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10478
+
 // BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID) OR(3) InParty("Yeslick") InParty("LK#YESLK") InParty("7XYES") OR(3) InMyArea("Yeslick") InMyArea("LK#YESLK") InMyArea("7XYES") OR(3) !StateCheck("Yeslick",CD_STATE_NOTVALID) !StateCheck("LK#YESLK",CD_STATE_NOTVALID) !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10478
-== XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID) OR(3) InParty("Yeslick") InParty("LK#YESLK") InParty("7XYES") OR(3) InMyArea("Yeslick") InMyArea("LK#YESLK") InMyArea("7XYES") OR(3) !StateCheck("Yeslick",CD_STATE_NOTVALID) !StateCheck("LK#YESLK",CD_STATE_NOTVALID) !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10478 /* I believe you are correct sir dwarf. I can feel the magic of this piece... it has a texture of longing. It wants to be together with something else. */
+
+== XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)OR(3) InParty("Yeslick") InParty("lk#yeslk") InParty("7XYES")
+OR(3) InMyArea("Yeslick") InMyArea("lk#yeslk") InMyArea("7XYES")
+OR(3) !StateCheck("Yeslick",CD_STATE_NOTVALID) !StateCheck("lk#yeslk",CD_STATE_NOTVALID) !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10478 /* I believe you are correct sir dwarf. I can feel the magic of this piece... it has a texture of longing. It wants to be together with something else. */
 END
 
 I_C_T3 DOSWALD 1 WIDOSWALD1
@@ -1420,7 +1454,13 @@ END
 
 I_C_T3 DMYTOS 19 WIDMYTOS19
 == MAZZYJ IF ~InParty("Mazzy") InMyArea("Mazzy") !StateCheck("Mazzy",CD_STATE_NOTVALID)~ THEN @10557 /* That is still yet to be determined. A man who gathered so many bodies to create such an undead procession can hardly be given the benefit of doubt. */
+
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10558 /* Many burial rites have I presided over but none so full o' corpses as this. Whoever the man buried here, I sense a baleful spirit about ‘im. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10558 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10558 
+
 END
 
 I_C_T3 DKRESSEL 2 WIDKRESSEL2
@@ -1443,7 +1483,13 @@ END
 
 I_C_T3 DKRESSEL 9 WIDKRESSEL9
 == DORNJ IF ~InParty("Dorn") InMyArea("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN @10565 /* Ridiculous. You were a great conqueror and you let yourself be cowed by age and the fear of death? True power is defying even that inevitability. You were damned by feeble ambition. */
+
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10566 /* And did ya spend the rest of yer years in supplication, begging forgiveness from the gods as ye shoulda? */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10566 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10566 
+
 END
 
 I_C_T DKRESSEL 10 WIDKRESSEL10
@@ -1690,8 +1736,15 @@ END
 
 I_C_T3 DEGENIA 7 WIDEGENIA7
 == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @10642 /* I will never understand how people can worship such terrible things. */
+
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10643 /* Me clan warred against a cult ta their kind in the days of me father. A cruel pantheon they are and twas only by the strength of Clangeddin did we prevail. That and natural dwarven hardiness against all manner've ailments anyway. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10643 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10643 
+
 == VICONIJ IF ~InParty("Viconia") InMyArea("Viconia") !StateCheck("Viconia",CD_STATE_NOTVALID)~ THEN @10644 /* Fickle and undeserving gods that grasp at true power. Even abandoned by Lloth as I was, I would never submit myself to their whims. */
+
 == DORNJ IF ~InParty("Dorn") InMyArea("Dorn") !StateCheck("Dorn",CD_STATE_NOTVALID)~ THEN @10645 /* Talonites are good for one thing. They know how to produce a deadly poison and are quite happy to grant it for a pittance when they know you intend to use it. */
 END
 
@@ -1846,6 +1899,11 @@ I_C_T3 DYXUNG 2 WIDYXUNG2
 == JAHEIRAJ IF ~InParty("Jaheira") InMyArea("Jaheira") !StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN @10705 /* Some plants must be burned for the safety of the forest. We do not shy from the flame. */
 == MONTAJ IF ~InParty("Montaron") InMyArea("Montaron") !StateCheck("Montaron",CD_STATE_NOTVALID)~ THEN @10706 /* I like the yappin o' this twerp th' less ‘n less I hear it.  */
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10707 /* Foul tidings be these... I like them not. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10707 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10707 
+
 END
 
 I_C_T3 DYXUNG 3 WIDYXUNG3
@@ -1990,6 +2048,11 @@ END
 
 I_C_T3 DTEALNIS 11 WIDTEALNIS11
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10757 /* No, it cannot be so! My people and elvenfolk have had rocky times, aye, but no dwarf worth his granite would give a weapon to an orc. It's unthinkable! */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10757 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10757 
+
 == KAGAIJ IF ~InParty("Kagain") InMyArea("Kagain") !StateCheck("Kagain",CD_STATE_NOTVALID)~ THEN @10758 /* Heh, maybe the orcs wised up and gave them a better offer. Elves shoulda been more wary of the competition if you ask me. */
 END
 
@@ -2164,8 +2227,15 @@ END
 
 I_C_T3 DLARREL 20 WIDLARREL20
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10816 /* The best of both our people's crafts forged together? What fine works those would be. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10816 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10816 
+
 // Xan for BG2 == O#XANJ IF ~InParty("O#XAN") InMyArea("O#XAN") !StateCheck("O#XAN",CD_STATE_NOTVALID)~ THEN @10817
+
 // BG1inBG2 == 7XXANJ IF ~InParty("7XXAN") InMyArea("7XXAN") !StateCheck("7XXAN",CD_STATE_NOTVALID)~ THEN @10817
+
 == XANJ IF ~InParty("Xan") InMyArea("Xan") !StateCheck("Xan",CD_STATE_NOTVALID)~ THEN @10817 /* A potent combination but our people's arts should be more than just for war. */
 END
 
@@ -2183,6 +2253,11 @@ END
 
 I_C_T DLARREL 29 WIDLARREL29
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10821 /* This cannot be! A dwarf's word is worth more than all the gold he's ever mined. There must have been a misunderstanding. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10821 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10821 
+
 END
 
 I_C_T DLARREL 31 WIDLARREL31
@@ -2221,14 +2296,27 @@ END
 
 I_C_T3 DLARREL 49 WIDLARREL49
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10834 /* His heart be poisoned by his pain... I know the good dwarves of Dorn's Deep be not responsible for his loss, there's no talkin' to him on it now. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10834 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10834 
+
 == KIVANJ IF ~InParty("Kivan") InMyArea("Kivan") !StateCheck("Kivan",CD_STATE_NOTVALID)~ THEN @10835 /* I understand the fury that comes with losing a loved one, but this cannot be the way. For the sake of his soul, we must find out the truth of the matter. */
+
 == KHALIJ IF ~InParty("Khalid") InMyArea("Khalid") !StateCheck("Khalid",CD_STATE_NOTVALID)~ THEN @10836 /* His bitterness... t-tis clouded his eyes to any other truth. I h-hope we can find some way t-to bring him peace */
 END
 
 I_C_T3 DLARREL 52 WIDLARREL52
 == KIVANJ IF ~InParty("Kivan") InMyArea("Kivan") !StateCheck("Kivan",CD_STATE_NOTVALID)~ THEN @10837 /* I wish you safe passage when it should come Larrel. May your trials be both lesson and inspiration for our people. */
+
 == CORANJ IF ~InParty("Coran") InMyArea("Coran") !StateCheck("Coran",CD_STATE_NOTVALID)~ THEN @10838 /* Do say hello to Hanali Celanil for me when you get to Arvandor if you could. It cannot hurt to have my name dropped to the goddess of love before my arrival. */
+
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10839 /* Glad I am to have this matter put ta' rest. Dwarf and Elf should not mistrust each other such when cooperation serves the both. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10839 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10839 
+
 == DLARREL @10840 /* Is there something I can do to speed your journey? */
 END
 
@@ -2238,11 +2326,19 @@ END
 
 I_C_T3 DLARREL 55 WIDLARREL55
 == SAFANJ IF ~InParty("Safana") InMyArea("Safana") !StateCheck("Safana",CD_STATE_NOTVALID)~ THEN @10842 /* Please, if we are to continue on this journey, let's take the nice skeleton on his offer shall we? My feet will be very thankful for it. */
+
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10843 /* The accusations Larrel made of me people sicken me t' the core. We should take whatever route gets us to Dorn's Deep fastest ta settle this feelin' in me gut. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10843 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10843 
+
 == HEXXATJ IF ~InParty("Hexxat") InMyArea("Hexxat") !StateCheck("Hexxat",CD_STATE_NOTVALID)~ THEN @10844 /* A dwarven stronghold would be a rich location for exotic valuables. If we are fortunate, some ill will have befallen it to allow us to take we will without complication. */
+
 // BG1inBG2 == 7XSkiJ IF ~InParty("7XSki") InMyArea("7XSki") !StateCheck("7XSki",CD_STATE_NOTVALID)~ THEN @10845
 
 == SKIEJ IF ~InParty("Skie") InMyArea("Skie") !StateCheck("Skie",CD_STATE_NOTVALID)~ THEN @10845 /* I'm sorry, I wasn't paying attention... my coat has this tear in it... where are we going now? */
+
 == DLARREL @10846 /* If you insist on heading that way, allow me to cast a spell to save you the days of travel through the frost. */
 END
 
@@ -2300,6 +2396,11 @@ END
 
 I_C_T DBANDOTH 14 WIDBANDOTH14
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10864 /* Isn't noone who should be down there then priests ta' tend to the ancestors. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10864 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10864 
+
 END
 
 I_C_T DBANDOTH 16 WIDBANDOTH16
@@ -2350,6 +2451,11 @@ END
 
 I_C_T3 DBANDOTH 29 WIDBANDOTH29
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10881 /* A lead! We should track down the whereabouts of this girl, and in doin' so clear the name of the Dwarves who lived here. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10881 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10881 
+
 == AERIEJ IF ~InParty("Aerie") InMyArea("Aerie") !StateCheck("Aerie",CD_STATE_NOTVALID)~ THEN @10882 /* Then we are getting close. We must find what happened to her. I think... I think maybe it might help us lift the curse left on Larrel.  */
 END
 
@@ -2406,7 +2512,13 @@ END
 
 I_C_T3 DNORLINO 3 WIDNORLINO3
 == XZARJ IF ~InParty("Xzar") InMyArea("Xzar") !StateCheck("Xzar",CD_STATE_NOTVALID)~ THEN @10899 /* When opportunity knocks, one must answer (hehe). */
+
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10900 /* A necromancer weavin' their black arts ‘mongst our honored dead? Nay, say it isn't so... */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10900 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10900 
+
 END
 
 I_C_T3 DNORLINO 4 WIDNORLINO4
@@ -2424,6 +2536,11 @@ END
 
 I_C_T3 DNORLINO 10 WIDNORLINO10
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10905 /* A blessing from Moradin! Glad I am to hear that our people's faith remained strong in those dark hours. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10905 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10905 
+
 == KAGAIJ IF ~InParty("Kagain") InMyArea("Kagain") !StateCheck("Kagain",CD_STATE_NOTVALID)~ THEN @10906 /* Buncha rubbish. More interested in seeing that weapon he had... */
 END
 
@@ -2445,21 +2562,41 @@ END
 
 I_C_T3 DNORLINO 20 WIDNORLINO20
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10913 /* Finally, clarity and vindication. I can breathe easier knowin' it weren't our kind ta' blame for all this. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10913 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10913 
+
 == KIVANJ IF ~InParty("Kivan") InMyArea("Kivan") !StateCheck("Kivan",CD_STATE_NOTVALID)~ THEN @10914 /* The injustices to both our people must be repaid. Know this; I will ensure it is so. */
 END
 
 I_C_T3 DNORLINO 21 WIDNORLINO21
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10915 /* Hail to ye Norlinor. Yeslick, priest of Clangeddin I be. It does me heart ill to see such a great forge cold and ill-used. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10915 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10915 
+
 == KAGAIJ IF ~InParty("Kagain") InMyArea("Kagain") !StateCheck("Kagain",CD_STATE_NOTVALID)~ THEN @10916 /* Well that's whatcha get for payin' lip service to the gods. Like a savvy businessman, once they get your business, they'll never let ya go. */
 END
 
 I_C_T3 DNORLINO 22 WIDNORLINO22
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10917 /* A fouler intention than I even imagined. A stop must be put to this necromancer at once, ‘fore this sacred place is defiled further. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10917 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10917 
+
 == TIAXJ IF ~InParty("Tiax") InMyArea("Tiax") !StateCheck("Tiax",CD_STATE_NOTVALID)~ THEN @10918 /* Unacceptable! All the dead should serve Tiax, as the living do! Oh Tiax will smite all of them! */
 END
 
 I_C_T3 DNORLINO 27 WIDNORLINO27
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10919 /* And upon ye as well. May ye be warmed by hearth and forge in the lands of our ancestors. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10919 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10919 
+
 == DNORLINO @10920 /* You as well, honored cleric of Clangeddin */
 END
 
@@ -2627,6 +2764,11 @@ END
 
 I_C_T DSOTH 8 WIDSOTH8
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10977 /* Dugmaren always was an odd fellow, as are his priests. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10977 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10977 
+
 END
 
 I_C_T3 DSOTH 9 WIDSOTH9
@@ -2694,7 +2836,13 @@ END
 
 I_C_T3 DVOICEDA 2 WIDVOICEDA2
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @10997 /* But it is a dwarven hold! Even if ye be kindred in intention, these be not your lands to protect. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @10997 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @10997 
+
 == MONTAJ IF ~InParty("Montaron") InMyArea("Montaron") !StateCheck("Montaron",CD_STATE_NOTVALID)~ THEN @10998 /* Great... bloody spirit paladin be in our way. As if a livin' paladin wasn't aggravatin' enough... */
+
 == KELDORJ IF ~InParty("Keldorn") InMyArea("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN @10999 /* While this paladin's faith is true, I sense something has perverted his sense of duty. Inquire further and maybe we can find what it is that has actually bound him here. */
 END
 
@@ -2885,11 +3033,27 @@ END
 
 I_C_T3 DNYM 8 WIDNYM8
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11069 /* Ye mean that ye were the reason fer all of this? Yer stinkin' theft murdered thousands! How can ye justify it?! */
-== DNYM IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11070 /* If all it takes is one merchant to bring an end to a people, then they weren't that strong to begin with. It was not I who made the dwarves and darthiir mistrust each other so. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11069 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11069 
+
+== DNYM IF ~OR(3) InParty("Yeslick") InParty("lk#yeslk") InParty("7XYES")
+OR(3) InMyArea("Yeslick") InMyArea("lk#yeslk") InMyArea("7XYES")
+OR(3) !StateCheck("Yeslick",CD_STATE_NOTVALID) !StateCheck("lk#yeslk",CD_STATE_NOTVALID) !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11070 /* If all it takes is one merchant to bring an end to a people, then they weren't that strong to begin with. It was not I who made the dwarves and darthiir mistrust each other so. */
+
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11071 /* Bah! Leave me sight now. I never want ta see yer smug face again. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11071 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11071 
+
 == KAGAIJ IF ~InParty("Kagain") InMyArea("Kagain") !StateCheck("Kagain",CD_STATE_NOTVALID)~ THEN @11072 /* Now that's a savvy play. And while all sides fought, you was laughing all the way to the bank heh heh. */
+
 == KIVANJ IF ~InParty("Kivan") InMyArea("Kivan") !StateCheck("Kivan",CD_STATE_NOTVALID)~ THEN @11073 /* Say the word <CHARNAME> and I will strike him down where he stands. His crimes are many, and I am not in a forgiving mood. */
+
 == YOSHJ IF ~InParty("Yoshimo") InMyArea("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ THEN @11074 /* And thus with one card removed, this trader brought down both houses. One must admire his cunning, even if the results were rather... well, messy. */
+
 == DNYM @11075 /* The blocks were set to fall before I got there. If it was not I who tipped them over, someone else would have in time. */
 END
 
@@ -2986,6 +3150,11 @@ END
 
 I_C_T DCALLARD 3 WIDCALLARD3
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11108 /* Aye, it'd bring any grown dwarf ta tears it does. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11108 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11108 
+
 END
 
 I_C_T DCALLARD 5 WIDCALLARD5
@@ -3152,6 +3321,11 @@ END
 
 I_C_T DMARKETH 4 WIDMARKETH4
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11151 /* Those were me people ye cad! Ye can't just take a man's hard work and sell it as yer own! It ain't right! */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11151 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11151 
+
 END
 
 I_C_T3 DMARKETH 5 WIDMARKETH5
@@ -3243,6 +3417,11 @@ END
 
 I_C_T DPERDIEM 13 WIDPERDIEM13
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11182 /* Aye well, Berronar be forgivin' enough if ye repent with sincerity. It's not like these be yer own actions, but rather the actions of a far darker will. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11182 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11182 
+
 END
 
 I_C_T3 DPERDIEM 15 WIDPERDIEM15
@@ -3354,6 +3533,11 @@ I_C_T3 DBELHIFE 12 WIDBELHIFE12
 == XZARJ IF ~InParty("Xzar") InMyArea("Xzar") !StateCheck("Xzar",CD_STATE_NOTVALID)~ THEN @11220 /* An army from the hells, descending upon the realms? Tis a delight to consider but no, no my work must continue unabated by such reveries. There will be no disruptions, damn you! */
 == CORANJ IF ~InParty("Coran") InMyArea("Coran") !StateCheck("Coran",CD_STATE_NOTVALID)~ THEN @11221 /* Well this adventure certainly did go places! Let's finish this up quickly, and afterwards return to our time for a drink and regale a few gorgeous maidens with our exploits.  */
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11222 /* Ye've desecrated the home o' me kin and angered the gods! Me hammer falls down upon ye! */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11222 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11222 
+
 == KAGAIJ IF ~InParty("Kagain") InMyArea("Kagain") !StateCheck("Kagain",CD_STATE_NOTVALID)~ THEN @11223 /* All this talk ain't worth a gibberling's fart. Let's kill this thing and get to counting the loot. */
 == TIAXJ IF ~InParty("Tiax") InMyArea("Tiax") !StateCheck("Tiax",CD_STATE_NOTVALID)~ THEN @11224 /* You are not allowed to call upon an army from hell! That is Tiax's army! You will be punished severely for attempting to usurp his rule! */
 == CERNDJ IF ~InParty("Cernd") InMyArea("Cernd") !StateCheck("Cernd",CD_STATE_NOTVALID)~ THEN @11225 /* A creature of the lower planes does not belong in this world. Begone, and take your corruption with you. */
@@ -3462,6 +3646,11 @@ END
 
 I_C_T DHJOLLDE 36 WIDHJOLLDE36
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11269 /* Aye, but it be a wise man who questions the judgement of a dishonest king. A king's law's only's as good as his word. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11269 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11269 
+
 END
 
 I_C_T DHJOLLDE 49 WIDHJOLLDE49
@@ -3639,10 +3828,27 @@ END
 
 I_C_T DROALD 1 WIDROALD1
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11330 /* I be Yeslick Orothair of Cloakwood. Pleased to be meetin' you I am. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11330 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11330 
+
 == DROALD @11331 /* Ahh... well hail there Yeslick. A long way from home ye are */
+
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11332 /* Aye that be true, but by Clangeddin a great need has called me north. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11332 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11332 
+
 == DROALD @11333 /* Moradin's blessins upon yer quest then Yeslick. May yer hammer always strike true. */
+
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11334 /* And yers as well. Always a blessed day to meet kind kin from afar! */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11334 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11334 
+
 END
 
 I_C_T DROALD 4 WIDROALD4
@@ -4335,6 +4541,11 @@ END
 
 I_C_T3 DTIERNON 1 WIDTIERNON1
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11567 /* Tiernon... nay... it cannae be so. Ye... I be honored ta be in yer presence. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11567 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11567 
+
 == GARRIJ IF ~InParty("Garrick") InMyArea("Garrick") !StateCheck("Garrick",CD_STATE_NOTVALID)~ THEN @11568 /* I've heard tales of a great dwarven smith of clan Hearthstone who disappeared under mysterious circumstances. Could this be the great weaponsmith himself?! Do you think he'd give me an autograph? */
 END
 
@@ -4361,18 +4572,34 @@ END
 
 I_C_T3 DTIERNON 19 WIDTIERNON19
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11575 /* *gasp* Ye speak truly? The call... still I await mine... */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11575 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11575 
+
 == KAGAIJ IF ~InParty("Kagain") InMyArea("Kagain") !StateCheck("Kagain",CD_STATE_NOTVALID)~ THEN @11576 /* Speak for yourself. Was never forges that drew me. Mints on the other hand... heh. */
 == KORGANJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @11577 /* Nay, just kinship for what comes outta them. Specifically what's made ta kill a man. */
 END
 
 I_C_T3 DTIERNON 20 WIDTIERNON19
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11575 /* *gasp* Ye speak truly? The call... still I await mine... */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11575 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11575 
+
 == KAGAIJ IF ~InParty("Kagain") InMyArea("Kagain") !StateCheck("Kagain",CD_STATE_NOTVALID)~ THEN @11576 /* Speak for yourself. Was never forges that drew me. Mints on the other hand... heh. */
+
 == KORGANJ IF ~InParty("Korgan") InMyArea("Korgan") !StateCheck("Korgan",CD_STATE_NOTVALID)~ THEN @11578 /* Nay, just kinship for what comes outta them, specifically what's made ta kill a man. */
 END
 
 I_C_T DTIERNON 22 WIDTIERNON22
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11579 /* But a dwarf can die happy knowin his greatest craft is behind him. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11579 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11579 
+
 END
 
 I_C_T DTIERNON 23 WIDTIERNON23
@@ -4381,6 +4608,11 @@ END
 
 I_C_T DTIERNON 25 WIDTIERNON25
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11581 /* Have ye lost your mind? Tis... tis not right for a dwarf to stray so far from trusty stone and metal! */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11581 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11581 
+
 == DTIERNON @11582 /* I wouldn't nae expect ye to understand. */
 END
 
@@ -4388,6 +4620,11 @@ I_C_T3 DTIERNON 30 WIDTIERNON30
 == HAERDAJ IF ~InParty("HaerDalis") InMyArea("HaerDalis") !StateCheck("HaerDalis",CD_STATE_NOTVALID)~ THEN @11583 /* Congratulations are in order my hound! You have crafted a weapon which spits in the face of reality and revels in the impossibility of its creation! Quite the uncommon sight in the Prime. */
 == YOSHJ IF ~InParty("Yoshimo") InMyArea("Yoshimo") !StateCheck("Yoshimo",CD_STATE_NOTVALID)~ THEN @11584 /* A truly remarkable work. I had not believed it was possible to create such a thing... even now I question its existence.  */
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11585 /* The craftsmanship is... remarkable. Yet still... it spits upon what it is to be dwarf. I just... I cannae condone it in good faith. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11585 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11585 
+
 END
 
 I_C_T DTIERNON 31 WIDTIERNON31
@@ -4641,6 +4878,11 @@ I_C_T3 10HEDRON 20 WI10HEDRON20
 == TIAXJ IF ~InParty("Tiax") InMyArea("Tiax") !StateCheck("Tiax",CD_STATE_NOTVALID)~ THEN @10060 /* ... */ 
 == TIAXJ IF ~InParty("Tiax") InMyArea("Tiax") !StateCheck("Tiax",CD_STATE_NOTVALID)~ THEN @11669 /* Why is nobody groveling! I will smite you ALL! */ 
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11670 /* The north's got an infestation! Goblins, an ancient foe to my people. By Clanggedin's will, green heads will roll this day! */ 
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11670 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11670 
+
 == CORANJ IF ~InParty("Coran") InMyArea("Coran") !StateCheck("Coran",CD_STATE_NOTVALID)~ THEN @11671 /* I suppose my wanderings were bound to lead here eventually, this most isolated and desolate of regions. And few so dangerous as the present situation shows... Ah well let us take a chance shall we? For whatever dangers ahead lies even greater rewards! */ 
 == IMOEN2J IF ~InParty("Imoen2") InMyArea("Imoen2") !StateCheck("Imoen2",CD_STATE_NOTVALID)~ THEN @11672 /* Ya' know, when I promised ta' stick with ya ta the s of Faerun an' back, I didn't think ya'd take it so literal! Oh <CHARNAME> what're ya gettin us inta now? */
 == DYNAHJ IF ~InParty("Dynaheir") InMyArea("Dynaheir") !StateCheck("Dynaheir",CD_STATE_NOTVALID)~ THEN @11673 /* Was such a long trek really necessary? I appreciate the need of these people but beware thou art deferring thy destiny for quite some time in such a journey. */
@@ -4851,6 +5093,10 @@ I_C_T3 10FIRTHA 16 WI10Firtha16
 
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11764 /* Wait now, did one of ye rob this woman? Have ye no decency? Oh I'll have to pray twice as hard to Clangeddin today ta be rid of the guilt... */
 
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11764 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11764 
+
 == JANJ IF ~InParty("Jan") InMyArea("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @11765 /* <CHARNAME> how could you? For shame... for shame indeed (how's a guy supposed to know he's stealing from a sighted woman?) */
 
 == KELDORJ IF ~InParty("Keldorn") InMyArea("Keldorn") !StateCheck("Keldorn",CD_STATE_NOTVALID)~ THEN @11766 /* <CHARNAME>, you know I'm not one to preach about the virtues of not robbing your elders, as that seems entirely self-evident, but I do hope you at least give some thought about what you've done. */
@@ -4867,6 +5113,10 @@ I_C_T3 10FIRTHA 17 WI10Firtha17
 == ALORAJ IF ~InParty("Alora") InMyArea("Alora") !StateCheck("Alora",CD_STATE_NOTVALID)~ THEN @11763 /* But but... there were shinies and I... ohhh now I feel awful... */
 
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11764 /* Wait now, did one of ye rob this woman? Have ye no decency? Oh I'll have to pray twice as hard to Clangeddin today ta be rid of the guilt... */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11764 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11764 
 
 == JANJ IF ~InParty("Jan") InMyArea("Jan") !StateCheck("Jan",CD_STATE_NOTVALID)~ THEN @11765 /* <CHARNAME> how could you? For shame... for shame indeed (how's a guy supposed to know he's stealing from a sighted woman?) */
 
@@ -4918,6 +5168,11 @@ END
 
 I_C_T 10JORUN 2 WI10Jorun2
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11784 /* Ye got care for yer craft and are willin' ta defend it with steel. Clangeddin's blessins on ye. */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11784 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11784 
+
 == 10Jorun @11785 /* A priest of Clangeddin? We don't get many of our kind out here. Glad to see someone holding our people's faith among us. */
 END
 
@@ -4927,6 +5182,11 @@ END
 
 I_C_T 10JORUN 18 WI10Jorun18
 == YESLIJ IF ~InParty("Yeslick") InMyArea("Yeslick") !StateCheck("Yeslick",CD_STATE_NOTVALID)~ THEN @11787 /* Shapin' wood? But how do ye forge it without burnin' it ta ash or shatterin' it ta splinters with yer hammer? */
+
+// Yeslick for BG2 == lk#yesj IF ~InParty("lk#yeslk") InMyArea("lk#yeslk") !StateCheck("lk#yeslk",CD_STATE_NOTVALID)~ THEN @11787 
+
+// BG1inBG2 == 7XYESJ IF ~InParty("7XYES") InMyArea("7XYES") !StateCheck("7XYES",CD_STATE_NOTVALID)~ THEN @11787 
+
 == 10JORUN @11788 /* Clangeddin never did demand those with exceptional smarts tae serve him... */
 END
 
