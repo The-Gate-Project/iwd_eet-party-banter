@@ -1,0 +1,25 @@
+IF
+  Global("WIDornLonewood","ID9100",0)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  InParty("Dorn")
+  InMyArea("Dorn")
+  !StateCheck("Dorn",CD_STATE_NOTVALID)
+THEN
+  RESPONSE #100
+    SetGlobal("WIDornLonewood","ID9100",1)
+	DisplayString("Dorn",@2350 /* I’ve never been so north as this. This hard land; there be plenty of opportunities for bloody work to be done here. And should these weaklings no longer provide our due rewards, remember that we are isolated enough that we can simply take what we wish, so long as we're thorough enough to leave no witnesses behind. */)
+END
+
+IF
+  Global("WIBaelLonewood","ID9100",0)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  InParty("Baeloth")
+  InMyArea("Baeloth")
+  !StateCheck("Baeloth",CD_STATE_NOTVALID)
+THEN
+  RESPONSE #100
+    SetGlobal("WIBaelLonewood","ID9100",1)
+	DisplayString("Baeloth",@2351 /* Great. More snow. More slack jawed yokels to stare at me. Have I ever told you how pleasant an experience my time on the surface has been? No? I wonder why not... */)
+END

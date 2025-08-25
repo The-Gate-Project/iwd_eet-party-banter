@@ -1,0 +1,12 @@
+IF
+  Global("WIBranBarbCamp","ID9200",0)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  InParty("Branwen")
+  InMyArea("Branwen")
+  !StateCheck("Branwen",CD_STATE_NOTVALID)
+THEN
+  RESPONSE #100
+    SetGlobal("WIBranBarbCamp","ID9200",1)
+	DisplayString("Branwen",@2451 /* They heed the call of Tempus and ready themselves for war. But could this really be what Tempus wills? He has been silent to my prayers thus far. Bloodshed honors him, but not when tis done so needless. */)
+END

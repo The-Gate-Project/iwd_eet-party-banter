@@ -1,0 +1,12 @@
+IF
+  Global("WITiaxGloomfrost","ID9501",0)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  InParty("Tiax")
+  InMyArea("Tiax") 
+  !StateCheck("Tiax",CD_STATE_NOTVALID)
+THEN
+  RESPONSE #100
+    SetGlobal("WITiaxGloomfrost","ID9501",1)
+	DisplayString("Tiax",@2601 /* Th-th-this cold do-does not bother T-tiax. It is a m-m-mere trifling... bu-but when he rules, he will b-break this place like a fe-feeble ice sculpture for th-this inconvenience. */)
+END

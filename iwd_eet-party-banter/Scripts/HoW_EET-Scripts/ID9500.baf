@@ -1,0 +1,12 @@
+IF
+  Global("WIGariGloomF","ID9500",0)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  InParty("Garrick")
+  InMyArea("Garrick")
+  !StateCheck("Garrick",CD_STATE_NOTVALID)
+THEN
+  RESPONSE #100
+    SetGlobal("WIGariGloomF","ID9500",1)
+	DisplayString("Garrick",@2551 /* For-forgive if my s-songs don't have q-quite the imp-impact they usually d-do. My v-voice seems to freeze over as f-fast as it can leave my lips. */)
+END

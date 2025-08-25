@@ -1,0 +1,35 @@
+
+
+ACTION_IF GAME_IS ~bgee~ BEGIN
+		INCLUDE ~iwd_eet-party-banter/Lib/g3_bgee_cpmvars.tpa~
+		PRINT ~Game is BGEE and HOW_EET is installed
+		~
+
+COMPILE EVALUATE_BUFFER ~iwd_eet-party-banter/Dialogue/Interject-HoW_EET.d~ USING ~iwd_eet-party-banter/Languages/%s/Interject.tra~
+
+EXTEND_TOP ~ID9501.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/HoW_EET-Scripts/ID9501.baf~
+EXTEND_TOP ~ID9300.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/HoW_EET-Scripts/ID9300.baf~
+EXTEND_TOP ~ID9100.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/HoW_EET-Scripts/ID9100.baf~
+EXTEND_TOP ~ID9101.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/HoW_EET-Scripts/ID9101.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ID9200.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/HoW_EET-Scripts/ID9200.baf~
+EXTEND_TOP ~ID9500.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/HoW_EET-Scripts/ID9500.baf~
+EXTEND_TOP ~ID9502.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/HoW_EET-Scripts/ID9502.baf~
+EXTEND_TOP ~ID9600.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/HoW_EET-Scripts/ID9600.baf~
+
+	END ELSE ACTION_IF GAME_IS ~eet~ BEGIN
+		INCLUDE ~eet/other/cpmvars/eet_cpmvars.tpa~
+		PRINT ~Game is EET and HOW_EET is installed
+		~
+
+COMPILE EVALUATE_BUFFER ~iwd_eet-party-banter/Dialogue/Interject-HoW_EET.d~ USING ~iwd_eet-party-banter/Languages/%s/Interject.tra~
+
+EXTEND_TOP ~ID9501.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/HoW_EET-Scripts/ID9501.baf~
+EXTEND_TOP ~ID9300.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/HoW_EET-Scripts/ID9300.baf~
+EXTEND_TOP ~ID9100.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/HoW_EET-Scripts/ID9100.baf~
+EXTEND_TOP ~ID9101.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/HoW_EET-Scripts/ID9101.baf~ EVALUATE_BUFFER
+EXTEND_TOP ~ID9200.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/HoW_EET-Scripts/ID9200.baf~
+EXTEND_TOP ~ID9500.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/HoW_EET-Scripts/ID9500.baf~
+EXTEND_TOP ~ID9502.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/HoW_EET-Scripts/ID9502.baf~
+EXTEND_TOP ~ID9600.bcs~ ~iwd_eet-party-banter/Party-banter_for-all/HoW_EET-Scripts/ID9600.baf~
+
+	END

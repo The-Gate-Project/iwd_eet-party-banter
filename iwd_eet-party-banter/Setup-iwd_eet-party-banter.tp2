@@ -14,9 +14,16 @@ BEGIN @0
 DESIGNATED 0
 LABEL ~AWizardDidIt-party-banter~
 
+ACTION_IF (MOD_IS_INSTALLED ~SETUP-HOW_EET.TP2~ ~0~ AND NOT MOD_IS_INSTALLED ~SETUP-IWD1_EET.TP2~ ~1~) BEGIN
+		INCLUDE ~iwd_eet-party-banter/Lib/iwd_eet-party-banter-HoW_EET.tph~
+
+	END ELSE BEGIN
+		PRINT ~IWD1_EET and IWD2_EET are installed
+		~
+
 COPY ~iwd_eet-party-banter/Dialogue/Interject.d~ ~weidu_external/iwd_eet-party-banter/Dialogue/Interject.d~
 
-INCLUDE ~iwd_eet-party-banter/Party-banter_for-all.tph~
+INCLUDE ~iwd_eet-party-banter/Lib/Party-banter_for-all.tph~
 
 COMPILE ~weidu_external/iwd_eet-party-banter/Dialogue/Interject.d~
 
@@ -70,7 +77,9 @@ EXTEND_TOP ~ID8004.bcs~ ~iwd_eet-party-banter/Scripts/ID8004.baf~
 EXTEND_TOP ~ID8013.bcs~ ~iwd_eet-party-banter/Scripts/ID8013.baf~
 EXTEND_TOP ~ID9101.bcs~ ~iwd_eet-party-banter/Scripts/ID9101.baf~ // Eldoth
 EXTEND_TOP ~ID9200.bcs~ ~iwd_eet-party-banter/Scripts/ID9200.baf~
-EXTEND_TOP ~ID9300.bcs~ ~iwd_eet-party-banter/Scripts/ID9300.baf~
+// EXTEND_TOP ~ID9300.bcs~ ~iwd_eet-party-banter/Scripts/ID9300.baf~ Duplicate
 EXTEND_TOP ~ID9500.bcs~ ~iwd_eet-party-banter/Scripts/ID9500.baf~
 EXTEND_TOP ~ID9502.bcs~ ~iwd_eet-party-banter/Scripts/ID9502.baf~
 EXTEND_TOP ~ID9600.bcs~ ~iwd_eet-party-banter/Scripts/ID9600.baf~
+
+	END

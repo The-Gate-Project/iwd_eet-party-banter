@@ -1,0 +1,12 @@
+IF
+  Global("WIKhalSeaofIce","ID9600",0)
+  !StateCheck(Player1,CD_STATE_NOTVALID)
+  CombatCounter(0)
+  InParty("Khalid")
+  InMyArea("Khalid") 
+  !StateCheck("Khalid",CD_STATE_NOTVALID)
+THEN
+  RESPONSE #100
+    SetGlobal("WIKhalSeaofIce","ID9600",1)
+	DisplayString("Khalid",@2700 /* R-ready yourselves, we must assault the dragon's fortress b-before they can array a defense against us. Form up, and st-strike quickly. */)
+END
