@@ -20,7 +20,7 @@ INCLUDE ~iwd_eet-party-banter/Party-banter_for-all.tph~
 
 COMPILE ~weidu_external/iwd_eet-party-banter/Dialogue/Interject.d~
 
-EXTEND_TOP ~ID1001.bcs~ ~iwd_eet-party-banter/Scripts/ID1001.baf~
+EXTEND_TOP ~ID1001.bcs~ ~iwd_eet-party-banter/Scripts/ID1001.baf~ // Yeslick
 EXTEND_TOP ~ID1200.bcs~ ~iwd_eet-party-banter/Scripts/ID1200.baf~
 EXTEND_TOP ~ID1201.bcs~ ~iwd_eet-party-banter/Scripts/ID1201.baf~
 EXTEND_TOP ~ID3000.bcs~ ~iwd_eet-party-banter/Scripts/ID3000.baf~// Alora
@@ -51,7 +51,7 @@ EXTEND_TOP ~ID7004.bcs~ ~iwd_eet-party-banter/Scripts/ID7004.baf~
 EXTEND_TOP ~IW1100.bcs~ ~iwd_eet-party-banter/Scripts/IW1100.baf~
 EXTEND_TOP ~ID1005.bcs~ ~iwd_eet-party-banter/Scripts/ID1005.baf~
 EXTEND_TOP ~ID4001.bcs~ ~iwd_eet-party-banter/Scripts/ID4001.baf~ // Xan
-EXTEND_TOP ~ID2103.bcs~ ~iwd_eet-party-banter/Scripts/ID2103.baf~
+EXTEND_TOP ~ID2103.bcs~ ~iwd_eet-party-banter/Scripts/ID2103.baf~ // Yeslick
 EXTEND_TOP ~ID2107.bcs~ ~iwd_eet-party-banter/Scripts/ID2107.baf~
 EXTEND_TOP ~ID3602.bcs~ ~iwd_eet-party-banter/Scripts/ID3602.baf~
 EXTEND_TOP ~ID4004.bcs~ ~iwd_eet-party-banter/Scripts/ID4004.baf~
@@ -62,9 +62,9 @@ EXTEND_TOP ~ID5304.bcs~ ~iwd_eet-party-banter/Scripts/ID5304.baf~
 EXTEND_TOP ~ID6000.bcs~ ~iwd_eet-party-banter/Scripts/ID6000.baf~
 EXTEND_TOP ~ID6001.bcs~ ~iwd_eet-party-banter/Scripts/ID6001.baf~
 EXTEND_TOP ~ID6003.bcs~ ~iwd_eet-party-banter/Scripts/ID6003.baf~
-EXTEND_TOP ~ID6004.bcs~ ~iwd_eet-party-banter/Scripts/ID6004.baf~
+EXTEND_TOP ~ID6004.bcs~ ~iwd_eet-party-banter/Scripts/ID6004.baf~ // Yeslick
 EXTEND_TOP ~ID6011.bcs~ ~iwd_eet-party-banter/Scripts/ID6011.baf~
-EXTEND_TOP ~ID6013.bcs~ ~iwd_eet-party-banter/Scripts/ID6013.baf~
+EXTEND_TOP ~ID6013.bcs~ ~iwd_eet-party-banter/Scripts/ID6013.baf~ // Yeslick
 EXTEND_TOP ~ID8001.bcs~ ~iwd_eet-party-banter/Scripts/ID8001.baf~
 EXTEND_TOP ~ID8004.bcs~ ~iwd_eet-party-banter/Scripts/ID8004.baf~
 EXTEND_TOP ~ID8013.bcs~ ~iwd_eet-party-banter/Scripts/ID8013.baf~
