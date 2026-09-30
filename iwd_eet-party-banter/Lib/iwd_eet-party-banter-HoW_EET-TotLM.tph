@@ -1,0 +1,28 @@
+
+		ACTION_IF MOD_IS_INSTALLED ~SETUP-HOW_EET.TP2~ ~0~ BEGIN
+			PRINT ~HOW_EET is installed
+			~
+
+				COMPILE EVALUATE_BUFFER ~iwd_eet-party-banter/Dialogue/Interject-HoW_EET.d~ USING ~iwd_eet-party-banter/Languages/%s/Interject.tra~
+
+				EXTEND_TOP ~ID9501.bcs~ ~iwd_eet-party-banter/Scripts/ID9501.baf~
+				EXTEND_TOP ~ID9300.bcs~ ~iwd_eet-party-banter/Scripts/ID9300.baf~
+				EXTEND_TOP ~ID9100.bcs~ ~iwd_eet-party-banter/Scripts/ID9100.baf~
+				EXTEND_TOP ~ID9101.bcs~ ~iwd_eet-party-banter/Scripts/ID9101.baf~ EVALUATE_BUFFER
+				EXTEND_TOP ~ID9200.bcs~ ~iwd_eet-party-banter/Scripts/ID9200.baf~
+				EXTEND_TOP ~ID9500.bcs~ ~iwd_eet-party-banter/Scripts/ID9500.baf~
+				EXTEND_TOP ~ID9502.bcs~ ~iwd_eet-party-banter/Scripts/ID9502.baf~
+				EXTEND_TOP ~ID9600.bcs~ ~iwd_eet-party-banter/Scripts/ID9600.baf~
+
+		END
+
+		ACTION_IF MOD_IS_INSTALLED ~A7-TotLM-BG2EE.TP2~ ~0~ BEGIN
+			PRINT ~TotLM is installed
+			~
+
+				COMPILE EVALUATE_BUFFER ~iwd_eet-party-banter/Dialogue/Interject-TotLM.d~ USING ~iwd_eet-party-banter/Languages/%s/Interject.tra~
+
+
+				EXTEND_TOP ~ID9800.bcs~ ~iwd_eet-party-banter/Scripts/ID9800.baf~
+
+		END

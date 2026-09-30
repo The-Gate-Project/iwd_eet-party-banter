@@ -4,7 +4,7 @@ IF
   PartyHasItem("EREJOUR")
   CombatCounter(0)
   InParty("Xan")
-  InMyArea("Branwen")
+  InMyArea("Xan")
   !StateCheck("Xan",CD_STATE_NOTVALID)
 THEN
   RESPONSE #100

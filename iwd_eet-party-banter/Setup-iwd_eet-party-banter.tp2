@@ -3,6 +3,49 @@ AUTHOR ~AWizardDidIt~
 
 VERSION ~v1.0~
 
+ALWAYS
+
+	ACTION_IF GAME_IS ~bgee~ BEGIN
+		INCLUDE ~iwd_eet-party-banter/Lib/g3_bgee_cpmvars.tpa~
+		PRINT ~Game is BGEE
+		~
+	END
+	ACTION_IF GAME_IS ~eet~ BEGIN
+		INCLUDE ~eet/other/cpmvars/eet_cpmvars.tpa~
+		PRINT ~Game is EET
+		~
+	END
+	ACTION_IF GAME_IS ~bg2ee~ BEGIN
+			OUTER_SPRINT "IMOEN_JOINED" "IMOEN2J"
+			OUTER_SPRINT "EDWIN_JOINED" "EDWINJ"
+			OUTER_SPRINT "JAHEIRA_JOINED" "JAHEIRAJ"
+			OUTER_SPRINT "MINSC_JOINED" "MINSCJ"
+			OUTER_SPRINT "VICONIA_JOINED" "VICONIJ"
+			OUTER_SPRINT "IMOEN_DV" "imoen2"
+		PRINT ~Game is BG2EE
+		~
+	END
+END
+
+ALLOW_MISSING ~YOSHJ.dlg~
+              ~ANOMENJ.dlg~
+              ~HAERDAJ.dlg~
+              ~KORGANJ.dlg~
+              ~JANJ.dlg~
+              ~VALYGARJ.dlg~
+              ~AERIEJ.dlg~
+              ~KELDORJ.dlg~
+              ~HEXXATJ.dlg~
+              ~MAZZYJ.dlg~
+              ~CERNDJ.dlg~
+              ~NALIAJ.dlg~
+              ~SAREV25J.dlg~
+              ~BAELOTHJ.dlg~
+              ~DYNAHJ.dlg~
+              ~KHALIJ.dlg~
+              ~CORANJ.dlg~
+              ~ELDOTJ.dlg~
+
 AUTO_TRA ~iwd_eet-party-banter/Languages/%s~
 AUTO_TRA ~iwd_eet-party-banter/Languages/%s/baf_tra~
 
@@ -11,13 +54,22 @@ LANGUAGE ~English~
          ~iwd_eet-party-banter/Languages/English/Setup-iwd_eet-party-banter.tra~
 
 BEGIN @0
+DESIGNATED 0
+LABEL ~AWizardDidIt-party-banter~
 
-COMPILE ~iwd_eet-party-banter/Dialogue/Interject.d~
+ACTION_IF (MOD_IS_INSTALLED ~HOW_EET.TP2~ ~0~ OR MOD_IS_INSTALLED ~A7-TotLM-BG2EE.TP2~ ~0~ AND NOT MOD_IS_INSTALLED ~IWD1_EET.TP2~ ~1~) BEGIN
+		INCLUDE ~iwd_eet-party-banter/Lib/iwd_eet-party-banter-HoW_EET-TotLM.tph~
 
-EXTEND_TOP ~ID1001.bcs~ ~iwd_eet-party-banter/Scripts/ID1001.baf~
+	END ELSE ACTION_IF (MOD_IS_INSTALLED ~IWD1_EET.TP2~ ~0~ AND MOD_IS_INSTALLED ~IWD2_EET.TP2~ ~1~) BEGIN
+		PRINT ~IWD1_EET and IWD2_EET are installed
+		~
+
+COMPILE EVALUATE_BUFFER ~iwd_eet-party-banter/Dialogue/Interject.d~
+
+EXTEND_TOP ~ID1001.bcs~ ~iwd_eet-party-banter/Scripts/ID1001.baf~ // Yeslick
 EXTEND_TOP ~ID1200.bcs~ ~iwd_eet-party-banter/Scripts/ID1200.baf~
 EXTEND_TOP ~ID1201.bcs~ ~iwd_eet-party-banter/Scripts/ID1201.baf~
-EXTEND_TOP ~ID3000.bcs~ ~iwd_eet-party-banter/Scripts/ID3000.baf~
+EXTEND_TOP ~ID3000.bcs~ ~iwd_eet-party-banter/Scripts/ID3000.baf~// Alora
 EXTEND_TOP ~ID3501.bcs~ ~iwd_eet-party-banter/Scripts/ID3501.baf~
 EXTEND_TOP ~ID3603.bcs~ ~iwd_eet-party-banter/Scripts/ID3603.baf~
 EXTEND_TOP ~ID4003.bcs~ ~iwd_eet-party-banter/Scripts/ID4003.baf~
@@ -27,25 +79,25 @@ EXTEND_TOP ~ID5000.bcs~ ~iwd_eet-party-banter/Scripts/ID5000.baf~
 EXTEND_TOP ~ID6002.bcs~ ~iwd_eet-party-banter/Scripts/ID6002.baf~
 EXTEND_TOP ~ID6010.bcs~ ~iwd_eet-party-banter/Scripts/ID6010.baf~
 EXTEND_TOP ~ID6006.bcs~ ~iwd_eet-party-banter/Scripts/ID6006.baf~
-EXTEND_TOP ~ID7005.bcs~ ~iwd_eet-party-banter/Scripts/ID7005.baf~
+EXTEND_TOP ~ID7005.bcs~ ~iwd_eet-party-banter/Scripts/ID7005.baf~// Alora
 EXTEND_TOP ~ID7001.bcs~ ~iwd_eet-party-banter/Scripts/ID7001.baf~
 EXTEND_TOP ~ID9300.bcs~ ~iwd_eet-party-banter/Scripts/ID9300.baf~
 EXTEND_TOP ~ID9800.bcs~ ~iwd_eet-party-banter/Scripts/ID9800.baf~
 EXTEND_TOP ~ID2111.bcs~ ~iwd_eet-party-banter/Scripts/ID2111.baf~
-EXTEND_TOP ~ID9100.bcs~ ~iwd_eet-party-banter/Scripts/ID9100.baf~
-EXTEND_TOP ~ID1007.bcs~ ~iwd_eet-party-banter/Scripts/ID1007.baf~
-EXTEND_TOP ~ID2001.bcs~ ~iwd_eet-party-banter/Scripts/ID2001.baf~
+EXTEND_TOP ~ID9100.bcs~ ~iwd_eet-party-banter/Scripts/ID9100.baf~ // Baeloth
+EXTEND_TOP ~ID1007.bcs~ ~iwd_eet-party-banter/Scripts/ID1007.baf~ // Skie
+EXTEND_TOP ~ID2001.bcs~ ~iwd_eet-party-banter/Scripts/ID2001.baf~// Alora
 EXTEND_TOP ~ID3600.bcs~ ~iwd_eet-party-banter/Scripts/ID3600.baf~
 EXTEND_TOP ~ID2100.bcs~ ~iwd_eet-party-banter/Scripts/ID2100.baf~
-EXTEND_TOP ~ID2113.bcs~ ~iwd_eet-party-banter/Scripts/ID2113.baf~
+EXTEND_TOP ~ID2113.bcs~ ~iwd_eet-party-banter/Scripts/ID2113.baf~ // Skie
 EXTEND_TOP ~ID1004.bcs~ ~iwd_eet-party-banter/Scripts/ID1004.baf~
-EXTEND_TOP ~ID4000.bcs~ ~iwd_eet-party-banter/Scripts/ID4000.baf~
-EXTEND_TOP ~ID2114.bcs~ ~iwd_eet-party-banter/Scripts/ID2114.baf~
+EXTEND_TOP ~ID4000.bcs~ ~iwd_eet-party-banter/Scripts/ID4000.baf~ // Baeloth
+EXTEND_TOP ~ID2114.bcs~ ~iwd_eet-party-banter/Scripts/ID2114.baf~ // Eldoth
 EXTEND_TOP ~ID7004.bcs~ ~iwd_eet-party-banter/Scripts/ID7004.baf~
 EXTEND_TOP ~IW1100.bcs~ ~iwd_eet-party-banter/Scripts/IW1100.baf~
 EXTEND_TOP ~ID1005.bcs~ ~iwd_eet-party-banter/Scripts/ID1005.baf~
-EXTEND_TOP ~ID4001.bcs~ ~iwd_eet-party-banter/Scripts/ID4001.baf~
-EXTEND_TOP ~ID2103.bcs~ ~iwd_eet-party-banter/Scripts/ID2103.baf~
+EXTEND_TOP ~ID4001.bcs~ ~iwd_eet-party-banter/Scripts/ID4001.baf~ // Xan
+EXTEND_TOP ~ID2103.bcs~ ~iwd_eet-party-banter/Scripts/ID2103.baf~ // Yeslick
 EXTEND_TOP ~ID2107.bcs~ ~iwd_eet-party-banter/Scripts/ID2107.baf~
 EXTEND_TOP ~ID3602.bcs~ ~iwd_eet-party-banter/Scripts/ID3602.baf~
 EXTEND_TOP ~ID4004.bcs~ ~iwd_eet-party-banter/Scripts/ID4004.baf~
@@ -56,15 +108,16 @@ EXTEND_TOP ~ID5304.bcs~ ~iwd_eet-party-banter/Scripts/ID5304.baf~
 EXTEND_TOP ~ID6000.bcs~ ~iwd_eet-party-banter/Scripts/ID6000.baf~
 EXTEND_TOP ~ID6001.bcs~ ~iwd_eet-party-banter/Scripts/ID6001.baf~
 EXTEND_TOP ~ID6003.bcs~ ~iwd_eet-party-banter/Scripts/ID6003.baf~
-EXTEND_TOP ~ID6004.bcs~ ~iwd_eet-party-banter/Scripts/ID6004.baf~
+EXTEND_TOP ~ID6004.bcs~ ~iwd_eet-party-banter/Scripts/ID6004.baf~ // Yeslick
 EXTEND_TOP ~ID6011.bcs~ ~iwd_eet-party-banter/Scripts/ID6011.baf~
-EXTEND_TOP ~ID6013.bcs~ ~iwd_eet-party-banter/Scripts/ID6013.baf~
+EXTEND_TOP ~ID6013.bcs~ ~iwd_eet-party-banter/Scripts/ID6013.baf~ // Yeslick
 EXTEND_TOP ~ID8001.bcs~ ~iwd_eet-party-banter/Scripts/ID8001.baf~
 EXTEND_TOP ~ID8004.bcs~ ~iwd_eet-party-banter/Scripts/ID8004.baf~
 EXTEND_TOP ~ID8013.bcs~ ~iwd_eet-party-banter/Scripts/ID8013.baf~
-EXTEND_TOP ~ID9101.bcs~ ~iwd_eet-party-banter/Scripts/ID9101.baf~
+EXTEND_TOP ~ID9101.bcs~ ~iwd_eet-party-banter/Scripts/ID9101.baf~ // Eldoth
 EXTEND_TOP ~ID9200.bcs~ ~iwd_eet-party-banter/Scripts/ID9200.baf~
-EXTEND_TOP ~ID9300.bcs~ ~iwd_eet-party-banter/Scripts/ID9300.baf~
 EXTEND_TOP ~ID9500.bcs~ ~iwd_eet-party-banter/Scripts/ID9500.baf~
 EXTEND_TOP ~ID9502.bcs~ ~iwd_eet-party-banter/Scripts/ID9502.baf~
 EXTEND_TOP ~ID9600.bcs~ ~iwd_eet-party-banter/Scripts/ID9600.baf~
+
+	END
